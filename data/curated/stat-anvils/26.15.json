@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "gameMode": "Arena",
+  "patch": "26.15",
+  "locale": "zh_CN",
+  "verifiedAt": "2026-08-11",
+  "item": {
+    "id": 220000,
+    "name": "属性锻造器",
+    "englishName": "Stat Anvil",
+    "price": 750
+  },
+  "selectionRules": {
+    "allChoicesHaveSameTier": true,
+    "prismaticGuaranteedRounds": [7, 10],
+    "prismaticCanReroll": false
+  },
+  "tiers": {
+    "silver": [
+      { "id": "ability_haste", "name": "技能急速", "value": 15, "unit": "flat" },
+      { "id": "ability_power", "name": "法术强度", "value": 25, "unit": "flat" },
+      { "id": "armor", "name": "护甲", "value": 15, "unit": "bonus_flat" },
+      { "id": "attack_damage", "name": "攻击力", "value": 15, "unit": "bonus_flat" },
+      { "id": "attack_speed", "name": "攻击速度", "value": 15, "unit": "bonus_percent" },
+      { "id": "critical_strike_chance", "name": "暴击几率", "value": 12.5, "unit": "percentage_points" },
+      { "id": "health", "name": "生命值", "value": 150, "unit": "bonus_flat" },
+      { "id": "lethality", "name": "穿甲", "value": 15, "unit": "flat" },
+      { "id": "magic_penetration_flat", "name": "法术穿透", "value": 15, "unit": "flat" },
+      { "id": "magic_resistance", "name": "魔法抗性", "value": 15, "unit": "bonus_flat" },
+      {
+        "id": "might",
+        "name": "威能",
+        "components": [
+          { "stat": "attack_damage", "value": 10, "unit": "bonus_flat" },
+          { "stat": "ability_power", "value": 15, "unit": "flat" }
+        ]
+      },
+      {
+        "id": "swiftness",
+        "name": "迅捷",
+        "components": [
+          { "stat": "attack_speed", "value": 10, "unit": "bonus_percent" },
+          { "stat": "ability_haste", "value": 10, "unit": "flat" }
+        ]
+      },
+      {
+        "id": "unbreakable",
+        "name": "坚不可摧",
+        "components": [
+          { "stat": "armor", "value": 12, "unit": "bonus_flat" },
+          { "stat": "magic_resistance", "value": 12, "unit": "bonus_flat" }
+        ]
+      }
+    ],
+    "gold": [
+      { "id": "ability_haste", "name": "技能急速", "value": 35, "unit": "flat" },
+      { "id": "ability_power", "name": "法术强度", "value": 50, "unit": "flat" },
+      { "id": "armor", "name": "护甲", "value": 45, "unit": "bonus_flat" },
+      { "id": "attack_damage", "name": "攻击力", "value": 35, "unit": "bonus_flat" },
+      { "id": "attack_speed", "name": "攻击速度", "value": 35, "unit": "bonus_percent" },
+      { "id": "critical_strike_chance", "name": "暴击几率", "value": 25, "unit": "percentage_points" },
+      { "id": "health", "name": "生命值", "value": 375, "unit": "bonus_flat" },
+      { "id": "lethality", "name": "穿甲", "value": 20, "unit": "flat" },
+      { "id": "magic_penetration_flat", "name": "法术穿透", "value": 18, "unit": "flat" },
+      { "id": "magic_resistance", "name": "魔法抗性", "value": 45, "unit": "bonus_flat" },
+      {
+        "id": "might",
+        "name": "威能",
+        "components": [
+          { "stat": "attack_damage", "value": 25, "unit": "bonus_flat" },
+          { "stat": "ability_power", "value": 25, "unit": "flat" }
+        ]
+      },
+      {
+        "id": "swiftness",
+        "name": "迅捷",
+        "components": [
+          { "stat": "attack_speed", "value": 25, "unit": "bonus_percent" },
+          { "stat": "ability_haste", "value": 20, "unit": "flat" }
+        ]
+      },
+      {
+        "id": "unbreakable",
+        "name": "坚不可摧",
+        "components": [
+          { "stat": "armor", "value": 30, "unit": "bonus_flat" },
+          { "stat": "magic_resistance", "value": 30, "unit": "bonus_flat" }
+        ]
+      }
+    ],
+    "prismatic": [
+      {
+        "id": "armor_penetration_percent",
+        "name": "护甲穿透",
+        "value": 17.5,
+        "unit": "percent",
+        "stacking": "multiplicative_with_other_percent_penetration_shards"
+      },
+      {
+        "id": "care_package",
+        "name": "关怀礼包",
+        "value": 500,
+        "unit": "gold_per_round_already_lost"
+      },
+      {
+        "id": "critical_strike_damage",
+        "name": "暴击伤害",
+        "value": 25,
+        "unit": "bonus_percentage_points"
+      },
+      {
+        "id": "fortune",
+        "name": "财富",
+        "immediateGold": 500,
+        "goldEachNewRound": 500
+      },
+      {
+        "id": "health_and_size",
+        "name": "生命值与体型",
+        "components": [
+          { "stat": "maximum_health_from_all_sources", "value": 15, "unit": "additional_percent" },
+          { "stat": "size", "value": 10, "unit": "percent" }
+        ]
+      },
+      {
+        "id": "magic_penetration_percent",
+        "name": "法术穿透",
+        "value": 17.5,
+        "unit": "percent",
+        "stacking": "multiplicative_with_other_percent_penetration_shards"
+      },
+      {
+        "id": "move_speed_and_size_reduction",
+        "name": "移动速度",
+        "components": [
+          { "stat": "movement_speed", "value": 18, "unit": "bonus_percent" },
+          { "stat": "size", "value": -10, "unit": "percent" }
+        ]
+      },
+      {
+        "id": "omnivamp",
+        "name": "全能吸血",
+        "meleeValue": 25,
+        "rangedValue": 15,
+        "unit": "percent"
+      },
+      {
+        "id": "spirit",
+        "name": "精神",
+        "value": 25,
+        "unit": "heal_and_shield_power_percent"
+      },
+      {
+        "id": "tenacity",
+        "name": "韧性",
+        "value": 30,
+        "unit": "percent",
+        "stacking": "group_b_additive"
+      }
+    ]
+  },
+  "shardholder": {
+    "name": "棱彩锻体/Shardholder",
+    "itemGranted": { "id": 220012, "name": "Shardblade" },
+    "baseEffectivenessIncrease": { "minimum": 20, "maximum": 100, "unit": "percent" },
+    "prismaticUpgradeIncrease": { "minimum": 8, "maximum": 25, "unit": "percent" },
+    "eligibility": {
+      "minimumStatAnvilsPurchased": 10,
+      "guaranteedAfterStatAnvilsPurchased": 25,
+      "fortuneCountsTowardPurchases": false,
+      "shopItemPurchaseDisqualifies": true,
+      "potionsDisqualify": false,
+      "statAnvilsDisqualify": false,
+      "freeRoundThreePrismaticItemDisqualifies": false,
+      "undoRestoresEligibility": false
+    },
+    "restrictions": ["获得后不能购买普通装备"],
+    "notes": [
+      "每回合可免费磨砺一次 Shardblade，相当于获得一次免费的属性锻造器。",
+      "若全队成员都获得 Shardblade，每人的总锻体增幅还会增加最后一名队友选择 Shardholder 时的数值。"
+    ]
+  },
+  "sources": [
+    {
+      "type": "client_data",
+      "url": "https://raw.communitydragon.org/latest/game/items.cdtb.bin.json",
+      "supports": ["item_id", "price", "shardblade_id"]
+    },
+    {
+      "type": "client_strings",
+      "url": "https://raw.communitydragon.org/latest/game/zh_cn/data/menu/en_us/lol.stringtable.json",
+      "supports": ["current_names", "tooltip_fields"]
+    },
+    {
+      "type": "wiki_current_values",
+      "url": "https://wiki.leagueoflegends.com/en-us/Stat_Bonus_(Arena)",
+      "pageLastEdited": "2026-08-09",
+      "supports": ["exact_values", "selection_rules", "shardholder_rules"]
+    },
+    {
+      "type": "official_patch_notes",
+      "url": "https://www.leagueoflegends.com/en-us/news/game-updates/league-of-legends-patch-26-9-notes/",
+      "supports": ["silver_values_are_fixed", "2026_anvil_mechanics"]
+    }
+  ],
+  "caveats": [
+    "客户端字符串使用参数占位符，具体数值由当前 Wiki 数据补全，并用 Riot 26.9 官方版本说明交叉验证机制变化。",
+    "该数据按 26.15 整理；游戏更新后应重新核验。"
+  ]
+}
