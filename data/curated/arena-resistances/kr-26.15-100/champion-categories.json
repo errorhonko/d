@@ -1,0 +1,1517 @@
+[
+  {
+    "championId": 1,
+    "championNameZh": "黑暗之女",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 2,
+    "championNameZh": "狂战士",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 3,
+    "championNameZh": "正义巨像",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 4,
+    "championNameZh": "卡牌大师",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 5,
+    "championNameZh": "德邦总管",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 6,
+    "championNameZh": "无畏战车",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 7,
+    "championNameZh": "诡术妖姬",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 8,
+    "championNameZh": "猩红收割者",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 9,
+    "championNameZh": "远古恐惧",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 10,
+    "championNameZh": "正义天使",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 11,
+    "championNameZh": "无极剑圣",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 12,
+    "championNameZh": "牛头酋长",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Support"
+    ]
+  },
+  {
+    "championId": 13,
+    "championNameZh": "符文法师",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 14,
+    "championNameZh": "亡灵战神",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 15,
+    "championNameZh": "战争女神",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 16,
+    "championNameZh": "众星之子",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 17,
+    "championNameZh": "迅捷斥候",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 18,
+    "championNameZh": "麦林炮手",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 19,
+    "championNameZh": "祖安怒兽",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 20,
+    "championNameZh": "雪原双子",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 21,
+    "championNameZh": "赏金猎人",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 22,
+    "championNameZh": "寒冰射手",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Support"
+    ]
+  },
+  {
+    "championId": 23,
+    "championNameZh": "蛮族之王",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 24,
+    "championNameZh": "武器大师",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 25,
+    "championNameZh": "堕落天使",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 26,
+    "championNameZh": "时光守护者",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 27,
+    "championNameZh": "炼金术士",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 28,
+    "championNameZh": "痛苦之拥",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 29,
+    "championNameZh": "瘟疫之源",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 30,
+    "championNameZh": "死亡颂唱者",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 31,
+    "championNameZh": "虚空恐惧",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 32,
+    "championNameZh": "殇之木乃伊",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Support"
+    ]
+  },
+  {
+    "championId": 33,
+    "championNameZh": "披甲龙龟",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank"
+    ]
+  },
+  {
+    "championId": 34,
+    "championNameZh": "冰晶凤凰",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 35,
+    "championNameZh": "恶魔小丑",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 36,
+    "championNameZh": "祖安狂人",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 37,
+    "championNameZh": "琴瑟仙女",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 38,
+    "championNameZh": "虚空行者",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 39,
+    "championNameZh": "刀锋舞者",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 40,
+    "championNameZh": "风暴之怒",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 41,
+    "championNameZh": "海洋之灾",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 42,
+    "championNameZh": "英勇投弹手",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 43,
+    "championNameZh": "天启者",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 44,
+    "championNameZh": "瓦洛兰之盾",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 45,
+    "championNameZh": "邪恶小法师",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 48,
+    "championNameZh": "巨魔之王",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 50,
+    "championNameZh": "诺克萨斯统领",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 51,
+    "championNameZh": "皮城女警",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 53,
+    "championNameZh": "蒸汽机器人",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Support"
+    ]
+  },
+  {
+    "championId": 54,
+    "championNameZh": "熔岩巨兽",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 55,
+    "championNameZh": "不祥之刃",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 56,
+    "championNameZh": "永恒梦魇",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 57,
+    "championNameZh": "扭曲树精",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Support"
+    ]
+  },
+  {
+    "championId": 58,
+    "championNameZh": "荒漠屠夫",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 59,
+    "championNameZh": "德玛西亚皇子",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 60,
+    "championNameZh": "蜘蛛女皇",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 61,
+    "championNameZh": "发条魔灵",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 62,
+    "championNameZh": "齐天大圣",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 63,
+    "championNameZh": "复仇焰魂",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 64,
+    "championNameZh": "盲僧",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 67,
+    "championNameZh": "暗夜猎手",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 68,
+    "championNameZh": "机械公敌",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 69,
+    "championNameZh": "魔蛇之拥",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 72,
+    "championNameZh": "上古领主",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 74,
+    "championNameZh": "大发明家",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 75,
+    "championNameZh": "沙漠死神",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 76,
+    "championNameZh": "狂野女猎手",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 77,
+    "championNameZh": "兽灵行者",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 78,
+    "championNameZh": "圣锤之毅",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 79,
+    "championNameZh": "酒桶",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 80,
+    "championNameZh": "不屈之枪",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 81,
+    "championNameZh": "探险家",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 82,
+    "championNameZh": "铁铠冥魂",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 83,
+    "championNameZh": "牧魂人",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 84,
+    "championNameZh": "离群之刺",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 85,
+    "championNameZh": "狂暴之心",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 86,
+    "championNameZh": "德玛西亚之力",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 89,
+    "championNameZh": "曙光女神",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Support"
+    ]
+  },
+  {
+    "championId": 90,
+    "championNameZh": "虚空先知",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 91,
+    "championNameZh": "刀锋之影",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 92,
+    "championNameZh": "放逐之刃",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 96,
+    "championNameZh": "深渊巨口",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 98,
+    "championNameZh": "暮光之眼",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank"
+    ]
+  },
+  {
+    "championId": 99,
+    "championNameZh": "光辉女郎",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 101,
+    "championNameZh": "远古巫灵",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 102,
+    "championNameZh": "龙血武姬",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 103,
+    "championNameZh": "九尾妖狐",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 104,
+    "championNameZh": "法外狂徒",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 105,
+    "championNameZh": "潮汐海灵",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin",
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 106,
+    "championNameZh": "不灭狂雷",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 107,
+    "championNameZh": "傲之追猎者",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin",
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 110,
+    "championNameZh": "惩戒之箭",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 111,
+    "championNameZh": "深海泰坦",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Support"
+    ]
+  },
+  {
+    "championId": 112,
+    "championNameZh": "奥术先驱",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 113,
+    "championNameZh": "北地之怒",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank"
+    ]
+  },
+  {
+    "championId": 114,
+    "championNameZh": "无双剑姬",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 115,
+    "championNameZh": "爆破鬼才",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 117,
+    "championNameZh": "仙灵女巫",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 119,
+    "championNameZh": "荣耀行刑官",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 120,
+    "championNameZh": "战争之影",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 121,
+    "championNameZh": "虚空掠夺者",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 122,
+    "championNameZh": "诺克萨斯之手",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 126,
+    "championNameZh": "未来守护者",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 127,
+    "championNameZh": "冰霜女巫",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 131,
+    "championNameZh": "皎月女神",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 133,
+    "championNameZh": "德玛西亚之翼",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 134,
+    "championNameZh": "暗黑元首",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 136,
+    "championNameZh": "铸星龙王",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 141,
+    "championNameZh": "影流之镰",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 142,
+    "championNameZh": "暮光星灵",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 143,
+    "championNameZh": "荆棘之兴",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 145,
+    "championNameZh": "虚空之女",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 147,
+    "championNameZh": "星籁歌姬",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 150,
+    "championNameZh": "迷失之牙",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 154,
+    "championNameZh": "生化魔人",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 157,
+    "championNameZh": "疾风剑豪",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 161,
+    "championNameZh": "虚空之眼",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 163,
+    "championNameZh": "岩雀",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 164,
+    "championNameZh": "青钢影",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 166,
+    "championNameZh": "影哨",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 200,
+    "championNameZh": "虚空女皇",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 201,
+    "championNameZh": "弗雷尔卓德之心",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Support"
+    ]
+  },
+  {
+    "championId": 202,
+    "championNameZh": "戏命师",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 203,
+    "championNameZh": "永猎双子",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 221,
+    "championNameZh": "祖安花火",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 222,
+    "championNameZh": "暴走萝莉",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 223,
+    "championNameZh": "河流之王",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Support"
+    ]
+  },
+  {
+    "championId": 233,
+    "championNameZh": "狂厄蔷薇",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 234,
+    "championNameZh": "破败之王",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 235,
+    "championNameZh": "涤魂圣枪",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 236,
+    "championNameZh": "圣枪游侠",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 238,
+    "championNameZh": "影流之主",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 240,
+    "championNameZh": "暴怒骑士",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 245,
+    "championNameZh": "时间刺客",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 246,
+    "championNameZh": "元素女皇",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 254,
+    "championNameZh": "皮城执法官",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 266,
+    "championNameZh": "暗裔剑魔",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 267,
+    "championNameZh": "唤潮鲛姬",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 268,
+    "championNameZh": "沙漠皇帝",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 350,
+    "championNameZh": "魔法猫咪",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 360,
+    "championNameZh": "沙漠玫瑰",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 412,
+    "championNameZh": "魂锁典狱长",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 420,
+    "championNameZh": "海兽祭司",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 421,
+    "championNameZh": "虚空遁地兽",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 427,
+    "championNameZh": "翠神",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 429,
+    "championNameZh": "复仇之矛",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 432,
+    "championNameZh": "星界游神",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 497,
+    "championNameZh": "幻翎",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support"
+    ]
+  },
+  {
+    "championId": 498,
+    "championNameZh": "逆羽",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 516,
+    "championNameZh": "山隐之焰",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank"
+    ]
+  },
+  {
+    "championId": 517,
+    "championNameZh": "解脱者",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 518,
+    "championNameZh": "万花通灵",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 523,
+    "championNameZh": "残月之肃",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 526,
+    "championNameZh": "镕铁少女",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Support"
+    ]
+  },
+  {
+    "championId": 555,
+    "championNameZh": "血港鬼影",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 711,
+    "championNameZh": "愁云使者",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage"
+    ]
+  },
+  {
+    "championId": 777,
+    "championNameZh": "封魔剑魂",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 799,
+    "championNameZh": "铁血狼母",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 800,
+    "championNameZh": "流光镜影",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 804,
+    "championNameZh": "不破之誓",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman"
+    ]
+  },
+  {
+    "championId": 805,
+    "championNameZh": "灰烬驱魔人",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 875,
+    "championNameZh": "腕豪",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Tank"
+    ]
+  },
+  {
+    "championId": 876,
+    "championNameZh": "含羞蓓蕾",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 887,
+    "championNameZh": "灵罗娃娃",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 888,
+    "championNameZh": "炼金男爵",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 893,
+    "championNameZh": "双界灵兔",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 895,
+    "championNameZh": "不羁之悦",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 897,
+    "championNameZh": "纳祖芒荣耀",
+    "primaryCategory": "Tank",
+    "categories": [
+      "Tank",
+      "Fighter"
+    ]
+  },
+  {
+    "championId": 901,
+    "championNameZh": "炽炎雏龙",
+    "primaryCategory": "Marksman",
+    "categories": [
+      "Marksman",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 902,
+    "championNameZh": "明烛",
+    "primaryCategory": "Support",
+    "categories": [
+      "Support",
+      "Mage"
+    ]
+  },
+  {
+    "championId": 904,
+    "championNameZh": "不落魔锋",
+    "primaryCategory": "Fighter",
+    "categories": [
+      "Fighter",
+      "Assassin"
+    ]
+  },
+  {
+    "championId": 910,
+    "championNameZh": "异画师",
+    "primaryCategory": "Mage",
+    "categories": [
+      "Mage",
+      "Support"
+    ]
+  },
+  {
+    "championId": 950,
+    "championNameZh": "百裂冥犬",
+    "primaryCategory": "Assassin",
+    "categories": [
+      "Assassin",
+      "Fighter"
+    ]
+  }
+]

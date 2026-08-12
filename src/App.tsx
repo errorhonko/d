@@ -2,6 +2,7 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
+import { statAnvilCatalog } from './domain/stat-anvils'
 import './App.css'
 
 function App() {
@@ -18,7 +19,8 @@ function App() {
         <div>
           <h1>Get started</h1>
           <p>
-            Edit <code>src/App.tsx</code> and save to test <code>HMR</code>
+            已加载 {statAnvilCatalog.patch} 版本属性锻造器数据，共{' '}
+            {statAnvilCatalog.optionsById.size} 种选项。
           </p>
         </div>
         <button

@@ -34,3 +34,117 @@ pnpm preview
 ```
 
 `pnpm-lock.yaml` 应提交到版本库，以保证团队和部署环境使用一致的依赖版本。
+
+## 射手英雄计算核心
+
+计算器目前提供远程英雄版本的纯函数接口：
+
+```ts
+import {
+  calculateRangedChampion,
+  findStatAnvilOption,
+} from './src/domain/calculation'
+
+const result = calculateRangedChampion({
+  initialStats: {
+    health: 2000,
+    attack_damage: 100,
+    attack_speed: 0.7,
+    movement_speed: 350,
+  },
+  attackSpeedRatio: 0.65,
+  selections: [
+    { option: findStatAnvilOption('silver', 'attack_damage') },
+    { option: findStatAnvilOption('gold', 'attack_speed') },
+  ],
+})
+
+console.log(result.finalStats)
+console.log(result.steps)
+```
+
+百分比属性使用百分数口径，例如 `25` 表示 `25%`。`steps` 包含每次选择前后的完整属性、属性增量和金币变化，可直接用于后续界面的逐轮明细。
+
+### 护甲与魔抗
+
+计算结果的 `initialDefense` 和 `finalDefense` 会分别给出物理、魔法伤害倍率、减伤百分比和有效生命值。正抗性的伤害倍率为 `100 / (100 + resistance)`；负抗性使用 `2 - 100 / (100 - resistance)`。
+
+```ts
+console.log(result.finalDefense.armor.damageReductionPercent)
+console.log(result.finalDefense.physicalEffectiveHealth)
+```
+
+当前防御摘要使用英雄自身最终双抗，尚未代入攻击者的抗性削减、百分比穿透和固定穿透。
+
+## 射手秒伤模型
+
+`calculateRangedDps` 使用射手的最终属性，对固定护甲、魔抗目标计算期望秒伤：
+
+```ts
+import { calculateRangedDps } from './src/domain/calculation'
+
+const dps = calculateRangedDps({
+  stats: result.finalStats,
+  target: { armor: 100, magicResistance: 80 },
+  profile: {
+    magicOnHitPerAttack: 30,
+    additionalPhysicalDps: 50,
+  },
+})
+
+console.log(dps.physical.afterMitigation)
+console.log(dps.magic.afterMitigation)
+console.log(dps.totalDps)
+```
+
+普攻 AD 部分的暴击期望倍率为 `1 + 暴击率 × (暴击伤害倍率 - 1)`。原始物理、魔法和真实秒伤分别结算；百分比穿透先于固定穿透，真实伤害不受双抗影响。
+
+首版暂不处理技能施放循环、攻击前后摇、走位损失、攻速上限、动态减抗和目标防御随时间变化。
+
+## 锻造器收益
+
+`calculateRangedAnvilBenefit` 会在当前全部锻体选择之后追加一个候选碎片，分别重算前后 DPS、防御有效生命和金币：
+
+```ts
+import {
+  calculateRangedAnvilBenefit,
+  findStatAnvilOption,
+} from './src/domain/calculation'
+
+const benefit = calculateRangedAnvilBenefit({
+  champion: calculationInput,
+  target: { armor: 100, magicResistance: 80 },
+  candidate: {
+    option: findStatAnvilOption('gold', 'attack_speed'),
+  },
+})
+
+console.log(benefit.totalDps.absolute)
+console.log(benefit.totalDps.percent)
+```
+
+候选收益使用 `候选后数值 - 当前数值`；百分比收益使用 `(候选后数值 / 当前数值 - 1) × 100%`。攻击属性主要比较 DPS，生命和双抗分别比较物理/魔法有效生命，经济碎片比较金币。基准值为 0 时，百分比收益返回 `null`。
+
+### 按敌方大类和回合计算收益
+
+韩服 26.15 的 100 场斗魂样本已经加工为“敌方英雄主类别 × 回合”双抗。默认使用双抗
+中位数，并一次比较指定品质的全部锻体选项：
+
+```ts
+import { calculateCategoryRoundAnvilBenefits } from './src/domain/calculation'
+
+const comparison = calculateCategoryRoundAnvilBenefits({
+  champion: calculationInput,
+  targetCategory: 'Marksman',
+  round: 10,
+  tier: 'gold',
+})
+
+console.log(comparison.target.armor)
+console.log(comparison.target.magicResistance)
+console.log(comparison.benefits)
+```
+
+目标类别支持 `Marksman`、`Fighter`、`Mage`、`Assassin`、`Tank` 和 `Support`。
+`statistic` 可选 `median`（默认）、`mean`、`p25` 或 `p75`。第 13 回合置信度为中等，
+第 14 回合以后为低；界面应同时展示 `observations` 和 `confidence`。

@@ -11,6 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+.env
+!.env.example
+
+# Riot API collection cache (raw responses can be regenerated)
+.cache/riot-api/
 
 # Editor directories and files
 .vscode/*

@@ -1,0 +1,815 @@
+{
+  "collectedAt": "2026-08-11T15:54:21.979Z",
+  "platform": "kr",
+  "regionalRoute": "asia",
+  "queueId": 1750,
+  "mapId": 30,
+  "requestedMatches": 100,
+  "collectedMatches": 100,
+  "historyStartTime": "2026-07-28T15:50:10.000Z",
+  "visitedPlayers": 3,
+  "uniqueMatchesInspected": 100,
+  "frameObservations": 46710,
+  "matches": [
+    {
+      "matchId": "KR_8319056972",
+      "gameVersion": "16.15.799.6036",
+      "gameCreation": 1785332163203,
+      "gameDuration": 1286,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8319016550",
+      "gameVersion": "16.15.799.6036",
+      "gameCreation": 1785330830615,
+      "gameDuration": 1334,
+      "participants": 18,
+      "timelineFrames": 24
+    },
+    {
+      "matchId": "KR_8336047629",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786433570799,
+      "gameDuration": 1401,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8336020761",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786432041470,
+      "gameDuration": 1315,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8335990931",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786430370893,
+      "gameDuration": 1417,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8335969888",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786428967180,
+      "gameDuration": 1667,
+      "participants": 18,
+      "timelineFrames": 29
+    },
+    {
+      "matchId": "KR_8335962440",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786427983873,
+      "gameDuration": 1456,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8335950465",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786427069417,
+      "gameDuration": 1507,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8335351611",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786369512853,
+      "gameDuration": 1827,
+      "participants": 18,
+      "timelineFrames": 32
+    },
+    {
+      "matchId": "KR_8335336177",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786368678211,
+      "gameDuration": 1403,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8335273706",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786367088604,
+      "gameDuration": 1587,
+      "participants": 18,
+      "timelineFrames": 28
+    },
+    {
+      "matchId": "KR_8335227839",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786365689042,
+      "gameDuration": 1484,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8335180714",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786364010052,
+      "gameDuration": 1470,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8335143596",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786362633715,
+      "gameDuration": 1534,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8334174221",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786284149419,
+      "gameDuration": 1337,
+      "participants": 18,
+      "timelineFrames": 24
+    },
+    {
+      "matchId": "KR_8334116469",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786282592167,
+      "gameDuration": 1300,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8334058852",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786281145545,
+      "gameDuration": 1501,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8334021583",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786279842415,
+      "gameDuration": 1508,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8333985381",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786278806902,
+      "gameDuration": 1603,
+      "participants": 18,
+      "timelineFrames": 28
+    },
+    {
+      "matchId": "KR_8331025913",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786112699940,
+      "gameDuration": 1844,
+      "participants": 18,
+      "timelineFrames": 32
+    },
+    {
+      "matchId": "KR_8330984645",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786111376867,
+      "gameDuration": 1452,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8328048688",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1785918115556,
+      "gameDuration": 1249,
+      "participants": 18,
+      "timelineFrames": 22
+    },
+    {
+      "matchId": "KR_8328042424",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1785917066321,
+      "gameDuration": 1370,
+      "participants": 18,
+      "timelineFrames": 24
+    },
+    {
+      "matchId": "KR_8328009867",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1785916060559,
+      "gameDuration": 1547,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8328001411",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1785914715346,
+      "gameDuration": 1396,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8327983019",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1785913193947,
+      "gameDuration": 1460,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8326138296",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785768943739,
+      "gameDuration": 1442,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8326113487",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785768053189,
+      "gameDuration": 1519,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8326069430",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785766683696,
+      "gameDuration": 1515,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8325997328",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785764382233,
+      "gameDuration": 1515,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8325964190",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785763225918,
+      "gameDuration": 1318,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8325910352",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785761753102,
+      "gameDuration": 1184,
+      "participants": 18,
+      "timelineFrames": 21
+    },
+    {
+      "matchId": "KR_8325855933",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785760370649,
+      "gameDuration": 1412,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8325809736",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785758707926,
+      "gameDuration": 1477,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8325781372",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785757385581,
+      "gameDuration": 1513,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8325740540",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785755965272,
+      "gameDuration": 1484,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8325713184",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785754563516,
+      "gameDuration": 1636,
+      "participants": 18,
+      "timelineFrames": 29
+    },
+    {
+      "matchId": "KR_8325676939",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785753540933,
+      "gameDuration": 1574,
+      "participants": 18,
+      "timelineFrames": 28
+    },
+    {
+      "matchId": "KR_8321685065",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785507902820,
+      "gameDuration": 1501,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8321641206",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785506586735,
+      "gameDuration": 1374,
+      "participants": 18,
+      "timelineFrames": 24
+    },
+    {
+      "matchId": "KR_8321573703",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785505033861,
+      "gameDuration": 1428,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8321541167",
+      "gameVersion": "16.15.801.3452",
+      "gameCreation": 1785503687797,
+      "gameDuration": 1336,
+      "participants": 18,
+      "timelineFrames": 24
+    },
+    {
+      "matchId": "KR_8320431395",
+      "gameVersion": "16.15.800.8073",
+      "gameCreation": 1785422942220,
+      "gameDuration": 1435,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8319221524",
+      "gameVersion": "16.15.799.6036",
+      "gameCreation": 1785337642528,
+      "gameDuration": 1470,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8319181757",
+      "gameVersion": "16.15.799.6036",
+      "gameCreation": 1785336428749,
+      "gameDuration": 1760,
+      "participants": 18,
+      "timelineFrames": 31
+    },
+    {
+      "matchId": "KR_8319154620",
+      "gameVersion": "16.15.799.6036",
+      "gameCreation": 1785335304856,
+      "gameDuration": 1327,
+      "participants": 18,
+      "timelineFrames": 24
+    },
+    {
+      "matchId": "KR_8319102846",
+      "gameVersion": "16.15.799.6036",
+      "gameCreation": 1785333592729,
+      "gameDuration": 1533,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8319021864",
+      "gameVersion": "16.15.799.6036",
+      "gameCreation": 1785331067909,
+      "gameDuration": 1304,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8318931699",
+      "gameVersion": "16.15.799.6036",
+      "gameCreation": 1785327953636,
+      "gameDuration": 1507,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8318893669",
+      "gameVersion": "16.15.799.6036",
+      "gameCreation": 1785326707052,
+      "gameDuration": 1526,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8318857353",
+      "gameVersion": "16.15.799.6036",
+      "gameCreation": 1785324841268,
+      "gameDuration": 1648,
+      "participants": 18,
+      "timelineFrames": 29
+    },
+    {
+      "matchId": "KR_8318814966",
+      "gameVersion": "16.15.799.6036",
+      "gameCreation": 1785323278481,
+      "gameDuration": 1522,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8318761567",
+      "gameVersion": "16.15.799.6036",
+      "gameCreation": 1785320542349,
+      "gameDuration": 1578,
+      "participants": 18,
+      "timelineFrames": 28
+    },
+    {
+      "matchId": "KR_8336376020",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786450080203,
+      "gameDuration": 1370,
+      "participants": 18,
+      "timelineFrames": 24
+    },
+    {
+      "matchId": "KR_8336313893",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786448386141,
+      "gameDuration": 1609,
+      "participants": 18,
+      "timelineFrames": 28
+    },
+    {
+      "matchId": "KR_8336290227",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786446798075,
+      "gameDuration": 1706,
+      "participants": 18,
+      "timelineFrames": 30
+    },
+    {
+      "matchId": "KR_8336236741",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786444805574,
+      "gameDuration": 1272,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8336203922",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786443263260,
+      "gameDuration": 1293,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8336175776",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786441576950,
+      "gameDuration": 1654,
+      "participants": 18,
+      "timelineFrames": 29
+    },
+    {
+      "matchId": "KR_8336160066",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786439829427,
+      "gameDuration": 1463,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8336120882",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786438360415,
+      "gameDuration": 1581,
+      "participants": 18,
+      "timelineFrames": 28
+    },
+    {
+      "matchId": "KR_8336096509",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786436509001,
+      "gameDuration": 1504,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8336070562",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786434887004,
+      "gameDuration": 1294,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8335002976",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786356782688,
+      "gameDuration": 1546,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8334987554",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786355456453,
+      "gameDuration": 1403,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8334965581",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786354178629,
+      "gameDuration": 1291,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8334952043",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786352821674,
+      "gameDuration": 1332,
+      "participants": 18,
+      "timelineFrames": 24
+    },
+    {
+      "matchId": "KR_8334915604",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786351288188,
+      "gameDuration": 1318,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8334912140",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786350534744,
+      "gameDuration": 1294,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8334882292",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786349023159,
+      "gameDuration": 1500,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8333932258",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786277093219,
+      "gameDuration": 1653,
+      "participants": 18,
+      "timelineFrames": 29
+    },
+    {
+      "matchId": "KR_8333883969",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786276078141,
+      "gameDuration": 1303,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8333855350",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786274682745,
+      "gameDuration": 1309,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8333809274",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786273140486,
+      "gameDuration": 1543,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8333763190",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786271348930,
+      "gameDuration": 1611,
+      "participants": 18,
+      "timelineFrames": 28
+    },
+    {
+      "matchId": "KR_8333711452",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786269485326,
+      "gameDuration": 1630,
+      "participants": 18,
+      "timelineFrames": 29
+    },
+    {
+      "matchId": "KR_8333670572",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786268022018,
+      "gameDuration": 1382,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8333629479",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786266352984,
+      "gameDuration": 1509,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8333579956",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786264700062,
+      "gameDuration": 1351,
+      "participants": 18,
+      "timelineFrames": 24
+    },
+    {
+      "matchId": "KR_8333528986",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786262956298,
+      "gameDuration": 1599,
+      "participants": 18,
+      "timelineFrames": 28
+    },
+    {
+      "matchId": "KR_8333498787",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786261660503,
+      "gameDuration": 1385,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8329463657",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786016050663,
+      "gameDuration": 1653,
+      "participants": 18,
+      "timelineFrames": 29
+    },
+    {
+      "matchId": "KR_8329427763",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786014473313,
+      "gameDuration": 1474,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8329395559",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786012684034,
+      "gameDuration": 1483,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8329362949",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786011217217,
+      "gameDuration": 1480,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8329333857",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786009685036,
+      "gameDuration": 1304,
+      "participants": 18,
+      "timelineFrames": 23
+    },
+    {
+      "matchId": "KR_8329312824",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786008284357,
+      "gameDuration": 1360,
+      "participants": 18,
+      "timelineFrames": 24
+    },
+    {
+      "matchId": "KR_8329298424",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786006904971,
+      "gameDuration": 1829,
+      "participants": 18,
+      "timelineFrames": 32
+    },
+    {
+      "matchId": "KR_8329278286",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786005559198,
+      "gameDuration": 1422,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8329246392",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786003872533,
+      "gameDuration": 1440,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8329218696",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786002520530,
+      "gameDuration": 1635,
+      "participants": 18,
+      "timelineFrames": 29
+    },
+    {
+      "matchId": "KR_8329204623",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786001673744,
+      "gameDuration": 1414,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8329178572",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1786000028523,
+      "gameDuration": 1514,
+      "participants": 18,
+      "timelineFrames": 27
+    },
+    {
+      "matchId": "KR_8329150747",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1785998561808,
+      "gameDuration": 1328,
+      "participants": 18,
+      "timelineFrames": 24
+    },
+    {
+      "matchId": "KR_8328478737",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1785936920853,
+      "gameDuration": 1437,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8328448516",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1785935875092,
+      "gameDuration": 1335,
+      "participants": 18,
+      "timelineFrames": 24
+    },
+    {
+      "matchId": "KR_8328405157",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1785934262914,
+      "gameDuration": 1490,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8328349660",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1785932591259,
+      "gameDuration": 1482,
+      "participants": 18,
+      "timelineFrames": 26
+    },
+    {
+      "matchId": "KR_8328316372",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1785931092793,
+      "gameDuration": 1382,
+      "participants": 18,
+      "timelineFrames": 25
+    },
+    {
+      "matchId": "KR_8328272468",
+      "gameVersion": "16.15.802.4387",
+      "gameCreation": 1785929506892,
+      "gameDuration": 1436,
+      "participants": 18,
+      "timelineFrames": 25
+    }
+  ]
+}
