@@ -59,6 +59,20 @@ if (ashe) {
 
 `championInitialStatBlock` 可以把英雄数据转换为属性块；`championCalculationBase` 会同时带入英雄独立的攻速收益系数，可直接展开到锻体计算输入。基础数据来自版本化的 Riot Data Dragon 快照，攻击力成长与攻速收益系数由固定版本的 League Wiki 加工快照补充。运行 `pnpm data:champions:curate` 可重复生成业务数据；详情见 [`data/curated/champions/README.md`](./data/curated/champions/README.md)。
 
+### 斗魂锻体属性来源
+
+`arenaChampionCalculationInput` 按模式规则分开组合英雄等级属性、第二回合棱彩装备的静态属性、历次属性锻造器和最终碎片之刃增幅。符文、英雄特殊机制和装备被动不会被偷偷混入初始属性，需由调用方在对应的伤害或特殊机制模型中显式提供。
+
+```ts
+const input = arenaChampionCalculationInput({
+  champion: ashe,
+  level: 18,
+  prismaticItemStats: { attack_damage: 70, health: 500 },
+  statAnvils: selections,
+  shardbladeEffectivenessPercent: 120,
+})
+```
+
 ## 射手英雄计算核心
 
 计算器目前提供远程英雄版本的纯函数接口：

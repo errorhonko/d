@@ -1,5 +1,11 @@
 export { championCatalog } from './catalog'
-export { championCalculationBase, championInitialStatBlock } from './calculation'
+export {
+  arenaChampionCalculationInput,
+  championCalculationBase,
+  championInitialStatBlock,
+  championStatsAtLevel,
+} from './calculation'
+export type { ArenaChampionBuildInput } from './calculation'
 export type {
   ChampionBaseStats,
   ChampionCatalog,
