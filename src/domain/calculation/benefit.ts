@@ -35,11 +35,17 @@ export function calculateRangedAnvilBenefit(
     stats: beforeCalculation.finalStats,
     target: input.target,
     ...(input.profile === undefined ? {} : { profile: input.profile }),
+    ...(input.champion.prismaticItemDps === undefined
+      ? {}
+      : { prismaticItem: input.champion.prismaticItemDps }),
   })
   const afterDps = calculateRangedDps({
     stats: afterCalculation.finalStats,
     target: input.target,
     ...(input.profile === undefined ? {} : { profile: input.profile }),
+    ...(input.champion.prismaticItemDps === undefined
+      ? {}
+      : { prismaticItem: input.champion.prismaticItemDps }),
   })
   const beforeDefense = beforeCalculation.finalDefense
   const afterDefense = afterCalculation.finalDefense

@@ -61,7 +61,7 @@ if (ashe) {
 
 ### 斗魂锻体属性来源
 
-`arenaChampionCalculationInput` 按模式规则分开组合英雄等级属性、第二回合棱彩装备表中的静态属性、历次属性锻造器和最终碎片之刃增幅。调用方必须传入 `findPrismaticItem` 返回的版本化装备，不再接受手填装备数值。符文、英雄特殊机制和装备被动不会被偷偷混入初始属性，需在对应的伤害或特殊机制模型中显式提供。
+`arenaChampionCalculationInput` 按模式规则分开组合英雄等级属性、第二回合棱彩装备表中的静态属性、历次属性锻造器和最终碎片之刃增幅。调用方必须传入 `findPrismaticItem` 返回的版本化装备，不再接受手填装备数值。符文和英雄特殊机制不会被偷偷混入初始属性；已结构化的装备被动会作为独立伤害来源进入 DPS。
 
 ```ts
 const input = arenaChampionCalculationInput({
@@ -72,6 +72,36 @@ const input = arenaChampionCalculationInput({
   shardbladeEffectivenessPercent: 120,
 })
 ```
+
+可用 `combatScenario` 指定周期效果的折算口径；默认按 10 秒、3000 最大生命、目标满血、主动使用一次和盈能触发一次计算：
+
+```ts
+const input = arenaChampionCalculationInput({
+  champion: ashe,
+  level: 18,
+  prismaticItem: findPrismaticItem(443090),
+  statAnvils: selections,
+  combatScenario: {
+    durationSeconds: 10,
+    targetMaxHealth: 3000,
+    targetCurrentHealthPercent: 50,
+    activeUses: 1,
+    energizedProcs: 1,
+  },
+})
+```
+
+示例局面可以按照韩服 100 场中同类英雄的实际装备保留频率抽取棱彩装备，而不是在全部装备中等概率随机：
+
+```ts
+import { sampleMarksmanPrismaticItem } from './src/domain/prismatic-items'
+
+const sampled = sampleMarksmanPrismaticItem()
+console.log(sampled.item.name)
+console.log(sampled.probability)
+```
+
+射手分布覆盖 334 名玩家，其中 321 名最终装备栏可识别到棱彩装备。多件棱彩装备的玩家会在装备间均分个人权重，因此每名玩家对分布的总贡献相同。Riot 时间线没有暴露锻造器直接授予装备的顺序，所以该概率是玩家归一化的最终保留频率，并非官方掉率或严格的第二回合首选率。
 
 ## 射手英雄计算核心
 
@@ -137,7 +167,9 @@ console.log(dps.totalDps)
 
 普攻 AD 部分的暴击期望倍率为 `1 + 暴击率 × (暴击伤害倍率 - 1)`。原始物理、魔法和真实秒伤分别结算；百分比穿透先于固定穿透，真实伤害不受双抗影响。
 
-首版暂不处理技能施放循环、攻击前后摇、走位损失、攻速上限、动态减抗和目标防御随时间变化。
+当前已对射手样本最常见的断筋者、狂风之力、收割者的过路费、神圣之剑、爆鸣和海克斯弹丸配枪建立装备效果模型。装备贡献会随候选锻造后的攻击力、攻速和暴击重新计算，并通过 `prismaticItemContribution` 单独返回。
+
+首版暂不处理技能施放循环、攻击前后摇、走位损失、攻速上限、动态减抗和目标防御随时间变化。海克斯弹丸配枪的额外弩箭目前计算自身伤害，尚未复制英雄或其他来源的攻击特效；爆鸣的换目标机制由调用方通过 `energizedProcs` 给定触发次数。
 
 ## 锻造器收益
 

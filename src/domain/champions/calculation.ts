@@ -1,5 +1,6 @@
 import type {
   InitialStatBlock,
+  RangedCombatScenario,
   RangedChampionCalculationInput,
   RangedChampionSelection,
 } from '../calculation'
@@ -14,6 +15,13 @@ export interface ArenaChampionBuildInput {
   readonly statAnvils: readonly RangedChampionSelection[]
   /** 碎片之刃对全部属性锻体的最终效率，100 表示没有增幅。 */
   readonly shardbladeEffectivenessPercent?: number
+  readonly combatScenario?: Partial<RangedCombatScenario>
+  readonly prismaticItemState?: Readonly<{
+    readonly roundWins?: number
+    readonly roundLosses?: number
+    readonly dragonSouls?: number
+    readonly sovereignTakedowns?: number
+  }>
 }
 
 function levelGrowth(growth: number, level: number): number {
@@ -105,20 +113,107 @@ export function arenaChampionCalculationInput(
 
   const championStats = championStatsAtLevel(input.champion, input.level)
   const item = input.prismaticItem
-  const initialStats = addStatBlocks(championStats, item?.staticStats)
+  const adaptiveAttackDamage = (item?.adaptiveForce ?? 0) * 0.6
+  const sovereignAttackDamage =
+    (item?.attackDamagePerSovereignTakedown ?? 0) *
+    (input.prismaticItemState?.sovereignTakedowns ?? 0)
+  const initialStats = addStatBlocks(
+    championStats,
+    addStatBlocks(item?.staticStats ?? {}, {
+      attack_damage: adaptiveAttackDamage,
+      lethality: item?.lethality ?? 0,
+      ...(sovereignAttackDamage === 0
+        ? {}
+        : { attack_damage: adaptiveAttackDamage + sovereignAttackDamage }),
+    }),
+  )
   const itemAttackSpeed =
     input.champion.base.attackSpeedRatio *
     ((item?.bonusAttackSpeedPercent ?? 0) / 100)
+  const attackSpeedMultiplier =
+    1 + (item?.multiplicativeAttackSpeedPercent ?? 0) / 100
+  const movementSpeedMultiplier = 1 + (item?.movementSpeedPercent ?? 0) / 100
 
   return {
     initialStats: {
       ...initialStats,
-      attack_speed: (initialStats.attack_speed ?? 0) + itemAttackSpeed,
+      attack_speed:
+        ((initialStats.attack_speed ?? 0) + itemAttackSpeed) *
+        attackSpeedMultiplier,
+      movement_speed:
+        (initialStats.movement_speed ?? 0) * movementSpeedMultiplier,
       critical_strike_chance:
         (initialStats.critical_strike_chance ?? 0) +
         (item?.criticalStrikeChance ?? 0),
     },
-    attackSpeedRatio: input.champion.base.attackSpeedRatio,
+    attackSpeedRatio:
+      input.champion.base.attackSpeedRatio * attackSpeedMultiplier,
+    ...(item === undefined
+      ? {}
+      : {
+          prismaticItemDps: {
+            item,
+            championLevel: input.level,
+            baseAttackDamage: championStats.attack_damage ?? 0,
+            baseArmor: championStats.armor ?? 0,
+            baseHealth: championStats.health ?? 0,
+            ...(input.combatScenario === undefined
+              ? {}
+              : { scenario: input.combatScenario }),
+          },
+        }),
+    statAmplificationPercent: {
+      armor:
+        (item?.armorAmplificationPercent ?? 0) +
+        (item?.coreStatAmplification?.basePercent ?? 0) +
+        (item?.coreStatAmplification?.percentPerRoundWin ?? 0) *
+          (input.prismaticItemState?.roundWins ?? 0) +
+        (item?.coreStatAmplification?.percentPerRoundLoss ?? 0) *
+          (input.prismaticItemState?.roundLosses ?? 0) +
+        (item?.coreStatAmplification?.percentPerDragonSoul ?? 0) *
+          (input.prismaticItemState?.dragonSouls ?? 0),
+      magic_resistance:
+        (item?.magicResistanceAmplificationPercent ?? 0) +
+        (item?.coreStatAmplification?.basePercent ?? 0) +
+        (item?.coreStatAmplification?.percentPerRoundWin ?? 0) *
+          (input.prismaticItemState?.roundWins ?? 0) +
+        (item?.coreStatAmplification?.percentPerRoundLoss ?? 0) *
+          (input.prismaticItemState?.roundLosses ?? 0) +
+        (item?.coreStatAmplification?.percentPerDragonSoul ?? 0) *
+          (input.prismaticItemState?.dragonSouls ?? 0),
+      health:
+        (item?.coreStatAmplification?.basePercent ?? 0) +
+        (item?.coreStatAmplification?.percentPerRoundWin ?? 0) *
+          (input.prismaticItemState?.roundWins ?? 0) +
+        (item?.coreStatAmplification?.percentPerRoundLoss ?? 0) *
+          (input.prismaticItemState?.roundLosses ?? 0) +
+        (item?.coreStatAmplification?.percentPerDragonSoul ?? 0) *
+          (input.prismaticItemState?.dragonSouls ?? 0),
+      attack_damage:
+        (item?.coreStatAmplification?.basePercent ?? 0) +
+        (item?.coreStatAmplification?.percentPerRoundWin ?? 0) *
+          (input.prismaticItemState?.roundWins ?? 0) +
+        (item?.coreStatAmplification?.percentPerRoundLoss ?? 0) *
+          (input.prismaticItemState?.roundLosses ?? 0) +
+        (item?.coreStatAmplification?.percentPerDragonSoul ?? 0) *
+          (input.prismaticItemState?.dragonSouls ?? 0),
+      ability_power:
+        (item?.coreStatAmplification?.basePercent ?? 0) +
+        (item?.coreStatAmplification?.percentPerRoundWin ?? 0) *
+          (input.prismaticItemState?.roundWins ?? 0) +
+        (item?.coreStatAmplification?.percentPerRoundLoss ?? 0) *
+          (input.prismaticItemState?.roundLosses ?? 0) +
+        (item?.coreStatAmplification?.percentPerDragonSoul ?? 0) *
+          (input.prismaticItemState?.dragonSouls ?? 0),
+      attack_speed:
+        (item?.coreStatAmplification?.basePercent ?? 0) +
+        (item?.coreStatAmplification?.percentPerRoundWin ?? 0) *
+          (input.prismaticItemState?.roundWins ?? 0) +
+        (item?.coreStatAmplification?.percentPerRoundLoss ?? 0) *
+          (input.prismaticItemState?.roundLosses ?? 0) +
+        (item?.coreStatAmplification?.percentPerDragonSoul ?? 0) *
+          (input.prismaticItemState?.dragonSouls ?? 0),
+    },
     selections: input.statAnvils.map((selection) => ({
       ...selection,
       effectivenessPercent:

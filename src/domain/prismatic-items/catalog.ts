@@ -1,7 +1,7 @@
 import rawCatalog from '../../../data/curated/prismatic-items/26.15.json'
 import type { PrismaticItem, PrismaticItemCatalog } from './model'
 
-const items: readonly PrismaticItem[] = rawCatalog.items
+const items = rawCatalog.items as readonly PrismaticItem[]
 const itemsById = new Map(items.map((item) => [item.id, item]))
 
 if (rawCatalog.schemaVersion !== 1 || items.length !== itemsById.size) {

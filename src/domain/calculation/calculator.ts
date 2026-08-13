@@ -23,11 +23,19 @@ interface CalculationState {
   readonly initial: MutableStatBlock
   readonly current: MutableStatBlock
   readonly attackSpeedRatio: number
+  readonly statAmplificationPercent: Readonly<Partial<Record<StatKey, number>>>
   attackSpeedBonusPercent: number
   movementSpeedBonusPercent: number
   healthFlatBonus: number
   maximumHealthAdditionalPercent: number
   gold: number
+}
+
+function amplificationMultiplier(
+  state: Pick<CalculationState, 'statAmplificationPercent'>,
+  stat: StatKey,
+): number {
+  return 1 + (state.statAmplificationPercent[stat] ?? 0) / 100
 }
 
 const PERCENT_PENETRATION_STATS = new Set<StatKey>([
@@ -97,7 +105,9 @@ function applyStatEffect(
   effect: Extract<AnvilEffect, { kind: 'stat' }>,
   scale: number,
 ): void {
-  const value = clean(effect.value * scale)
+  const value = clean(
+    effect.value * scale * amplificationMultiplier(state, effect.stat),
+  )
 
   if (effect.unit === 'bonus_percent' && effect.stat === 'attack_speed') {
     state.attackSpeedBonusPercent += value
@@ -186,15 +196,23 @@ export function findStatAnvilOption(tier: AnvilTier, id: string): AnvilOption {
 export function calculateRangedChampion(
   input: RangedChampionCalculationInput,
 ): RangedChampionCalculationResult {
+  const statAmplificationPercent = input.statAmplificationPercent ?? {}
   const initial = createStatBlock(input.initialStats)
+  for (const stat of STAT_KEYS) {
+    initial[stat] = clean(
+      initial[stat] * (1 + (statAmplificationPercent[stat] ?? 0) / 100),
+    )
+  }
   const attackSpeedRatio = assertNonNegative(
-    input.attackSpeedRatio ?? initial.attack_speed,
+    (input.attackSpeedRatio ?? initial.attack_speed) *
+      (1 + (statAmplificationPercent.attack_speed ?? 0) / 100),
     'attackSpeedRatio',
   )
   const state: CalculationState = {
     initial,
     current: cloneStats(initial),
     attackSpeedRatio,
+    statAmplificationPercent,
     attackSpeedBonusPercent: 0,
     movementSpeedBonusPercent: 0,
     healthFlatBonus: 0,

@@ -1,2 +1,14 @@
 export { findPrismaticItem, prismaticItemCatalog } from './catalog'
-export type { PrismaticItem, PrismaticItemCatalog } from './model'
+export {
+  getPrismaticItemSelectionDistribution,
+  sampleMarksmanPrismaticItem,
+  samplePrismaticItemForCategory,
+} from './selection'
+export type {
+  PrismaticItem,
+  PrismaticItemCatalog,
+  PrismaticDpsEffect,
+  PrismaticItemSelectionDistribution,
+  PrismaticItemSelectionProbability,
+  SampledPrismaticItem,
+} from './model'

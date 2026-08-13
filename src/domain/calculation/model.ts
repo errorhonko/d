@@ -3,6 +3,7 @@ import type {
   AnvilOption,
   StatKey,
 } from '../stat-anvils'
+import type { PrismaticItemDpsContext } from './dps-model'
 
 export type StatBlock = Readonly<Record<StatKey, number>>
 
@@ -24,6 +25,8 @@ export interface RangedChampionCalculationInput {
   /** 攻速成长所使用的英雄攻击速度比率；未提供时使用初始攻击速度。 */
   readonly attackSpeedRatio?: number
   readonly selections: readonly RangedChampionSelection[]
+  readonly prismaticItemDps?: PrismaticItemDpsContext
+  readonly statAmplificationPercent?: Readonly<Partial<Record<StatKey, number>>>
 }
 
 export interface AppliedEffect {

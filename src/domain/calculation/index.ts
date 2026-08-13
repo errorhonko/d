@@ -26,6 +26,8 @@ export type {
 export type {
   DamageTypeDps,
   FixedDefenseTarget,
+  PrismaticItemDpsContext,
+  RangedCombatScenario,
   RangedDamageProfile,
   RangedDpsInput,
   RangedDpsResult,

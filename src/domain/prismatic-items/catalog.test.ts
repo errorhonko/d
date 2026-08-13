@@ -3,10 +3,12 @@ import { findPrismaticItem, prismaticItemCatalog } from './catalog'
 
 describe('prismaticItemCatalog', () => {
   it('只加载 26.15 核验过的棱彩装备', () => {
-    expect(prismaticItemCatalog.items).toHaveLength(21)
+    expect(prismaticItemCatalog.items).toHaveLength(48)
     expect(findPrismaticItem(447103).name).toBe('血术师之盔')
     expect(findPrismaticItem(443054).name).toBe('暗钢利爪')
     expect(findPrismaticItem(226630).name).toBe('渴血战斧')
+    expect(findPrismaticItem(446671).name).toBe('狂风之力')
+    expect(findPrismaticItem(443090).name).toBe('收割者的过路费')
   })
 
   it('拒绝把连续 ID 范围中的普通装备当作棱彩装备', () => {
