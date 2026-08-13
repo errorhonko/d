@@ -4,7 +4,7 @@ import {
   calculateRangedDps,
   findStatAnvilOption,
 } from '../calculation'
-import { championInitialStatBlock } from './calculation'
+import { championCalculationBase } from './calculation'
 import { championCatalog } from './catalog'
 
 const representativeSelections = [
@@ -21,7 +21,7 @@ describe('英雄初始属性与计算模型集成', () => {
     expect(ashe).toBeDefined()
 
     const result = calculateRangedChampion({
-      initialStats: championInitialStatBlock(ashe!),
+      ...championCalculationBase(ashe!),
       selections: representativeSelections,
     })
     const dps = calculateRangedDps({
@@ -53,7 +53,7 @@ describe('英雄初始属性与计算模型集成', () => {
   it('全部英雄初始属性都能通过锻体、防御和 DPS 计算', () => {
     for (const champion of championCatalog.champions) {
       const result = calculateRangedChampion({
-        initialStats: championInitialStatBlock(champion),
+        ...championCalculationBase(champion),
         selections: representativeSelections,
       })
       const dps = calculateRangedDps({
@@ -68,5 +68,17 @@ describe('英雄初始属性与计算模型集成', () => {
       expect(Number.isFinite(dps.totalDps), champion.key).toBe(true)
       expect(dps.totalDps, champion.key).toBeGreaterThanOrEqual(0)
     }
+  })
+
+  it('uses Akshan independent attack-speed ratio instead of base attack speed', () => {
+    const akshan = championCatalog.championsByKey.get('Akshan')!
+    const result = calculateRangedChampion({
+      ...championCalculationBase(akshan),
+      selections: [{ option: findStatAnvilOption('gold', 'attack_speed') }],
+    })
+
+    expect(akshan.base.attackSpeed).toBe(0.638)
+    expect(akshan.base.attackSpeedRatio).toBe(0.4)
+    expect(result.finalStats.attack_speed).toBeCloseTo(0.778)
   })
 })

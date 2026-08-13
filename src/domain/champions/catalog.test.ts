@@ -20,11 +20,13 @@ describe('championCatalog', () => {
         health: 610,
         attackDamage: 59,
         attackSpeed: 0.658,
+        attackSpeedRatio: 0.658,
         armor: 26,
         magicResistance: 30,
       },
       growth: {
         health: 101,
+        attackDamage: 3.5,
         attackSpeedPercent: 3,
       },
     })
@@ -34,5 +36,14 @@ describe('championCatalog', () => {
     expect(
       championCatalog.champions.some((champion) => champion.key.startsWith('Jade_')),
     ).toBe(false)
+  })
+
+  it('loads independent attack-speed ratios and valid AD growth exceptions', () => {
+    expect(championCatalog.championsByKey.get('Akshan')).toMatchObject({
+      base: { attackSpeed: 0.638, attackSpeedRatio: 0.4 },
+      growth: { attackDamage: 3 },
+    })
+    expect(championCatalog.championsByKey.get('Senna')?.growth.attackDamage).toBe(0)
+    expect(championCatalog.championsByKey.get('Jhin')?.base.attackSpeedRatio).toBe(0)
   })
 })

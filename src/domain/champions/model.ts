@@ -5,6 +5,7 @@ export interface ChampionBaseStats {
   readonly resourceRegen: number
   readonly attackDamage: number
   readonly attackSpeed: number
+  readonly attackSpeedRatio: number
   readonly armor: number
   readonly magicResistance: number
   readonly movementSpeed: number

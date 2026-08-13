@@ -42,6 +42,7 @@ pnpm preview
 ```ts
 import {
   championCatalog,
+  championCalculationBase,
   championInitialStatBlock,
 } from './src/domain/champions'
 
@@ -52,10 +53,11 @@ console.log(ashe?.growth.attackSpeedPercent)
 if (ashe) {
   const initialStats = championInitialStatBlock(ashe)
   console.log(initialStats.health)
+  console.log(championCalculationBase(ashe).attackSpeedRatio)
 }
 ```
 
-`championInitialStatBlock` 可以把英雄数据转换为锻体计算器输入，并补入通用的初始暴击伤害和体型。数据由版本化的 Riot Data Dragon 快照加工生成。运行 `pnpm data:champions:curate` 可重复生成业务数据；详情见 [`data/curated/champions/README.md`](./data/curated/champions/README.md)。
+`championInitialStatBlock` 可以把英雄数据转换为属性块；`championCalculationBase` 会同时带入英雄独立的攻速收益系数，可直接展开到锻体计算输入。基础数据来自版本化的 Riot Data Dragon 快照，攻击力成长与攻速收益系数由固定版本的 League Wiki 加工快照补充。运行 `pnpm data:champions:curate` 可重复生成业务数据；详情见 [`data/curated/champions/README.md`](./data/curated/champions/README.md)。
 
 ## 射手英雄计算核心
 

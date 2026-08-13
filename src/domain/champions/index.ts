@@ -1,5 +1,5 @@
 export { championCatalog } from './catalog'
-export { championInitialStatBlock } from './calculation'
+export { championCalculationBase, championInitialStatBlock } from './calculation'
 export type {
   ChampionBaseStats,
   ChampionCatalog,
