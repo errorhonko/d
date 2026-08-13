@@ -4,7 +4,9 @@ import type {
   MetricGain,
   RangedAnvilBenefitInput,
   RangedAnvilBenefitResult,
+  SingleStatAnvilPurchaseResult,
 } from './benefit-model'
+import { ANVIL_TIERS, statAnvilCatalog } from '../stat-anvils'
 
 function clean(value: number): number {
   const rounded = Math.round(value * 1_000_000_000_000) / 1_000_000_000_000
@@ -95,4 +97,60 @@ export function compareRangedAnvilBenefits(
       candidate,
     }),
   )
+}
+
+/** 比较当前局面下白银、黄金和棱彩品质的全部属性锻造器。 */
+export function compareAllRangedAnvilBenefits(
+  input: Omit<RangedAnvilBenefitInput, 'candidate'> & {
+    readonly effectivenessPercent?: number
+    readonly roundsAlreadyLost?: number
+    readonly newRoundsAfterSelection?: number
+  },
+): readonly RangedAnvilBenefitResult[] {
+  const candidates = ANVIL_TIERS.flatMap((tier) =>
+    statAnvilCatalog.optionsByTier[tier].map((option) => ({
+      option,
+      ...(input.effectivenessPercent === undefined
+        ? {}
+        : { effectivenessPercent: input.effectivenessPercent }),
+      ...(input.roundsAlreadyLost === undefined
+        ? {}
+        : { roundsAlreadyLost: input.roundsAlreadyLost }),
+      ...(input.newRoundsAfterSelection === undefined
+        ? {}
+        : { newRoundsAfterSelection: input.newRoundsAfterSelection }),
+    })),
+  )
+
+  return compareRangedAnvilBenefits({
+    champion: input.champion,
+    target: input.target,
+    ...(input.profile === undefined ? {} : { profile: input.profile }),
+    candidates,
+  })
+}
+
+/**
+ * 模拟购买一次属性锻造器，并按随机到的白银、黄金、棱彩品质列出每种属性结果。
+ * 当前规则数据没有品质概率，不能据此计算跨品质期望收益。
+ */
+export function simulateSingleStatAnvilPurchase(
+  input: Omit<RangedAnvilBenefitInput, 'candidate'> & {
+    readonly effectivenessPercent?: number
+    readonly roundsAlreadyLost?: number
+    readonly newRoundsAfterSelection?: number
+  },
+): SingleStatAnvilPurchaseResult {
+  const allOutcomes = compareAllRangedAnvilBenefits(input)
+
+  return {
+    price: statAnvilCatalog.item.price,
+    allChoicesHaveSameTier:
+      statAnvilCatalog.selectionRules.allChoicesHaveSameTier,
+    tierProbabilities: null,
+    tiers: ANVIL_TIERS.map((tier) => ({
+      tier,
+      outcomes: allOutcomes.filter((benefit) => benefit.option.tier === tier),
+    })),
+  }
 }

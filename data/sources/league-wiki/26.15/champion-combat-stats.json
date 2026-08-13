@@ -1,0 +1,705 @@
+{
+  "schemaVersion": 1,
+  "patch": "26.15",
+  "retrievedAt": "2026-08-13",
+  "source": {
+    "type": "League of Legends Wiki data via league-combat-calculator snapshot",
+    "repository": "https://github.com/koimari/league-combat-calculator",
+    "path": "data/champions.json",
+    "commit": "e5917c4d7d94e6ac32fab5c7f120db4d00c3cfeb"
+  },
+  "champions": {
+    "Aatrox": {
+      "attackDamagePerLevel": 5,
+      "attackSpeedRatio": 0.651
+    },
+    "Ahri": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Akali": {
+      "attackDamagePerLevel": 3.3,
+      "attackSpeedRatio": 0.625
+    },
+    "Akshan": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.4
+    },
+    "Alistar": {
+      "attackDamagePerLevel": 3.75,
+      "attackSpeedRatio": 0.625
+    },
+    "Ambessa": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Amumu": {
+      "attackDamagePerLevel": 3.8,
+      "attackSpeedRatio": 0.638000011444091
+    },
+    "Anivia": {
+      "attackDamagePerLevel": 3.2,
+      "attackSpeedRatio": 0.625
+    },
+    "Annie": {
+      "attackDamagePerLevel": 2.65,
+      "attackSpeedRatio": 0.625
+    },
+    "Aphelios": {
+      "attackDamagePerLevel": 2.3,
+      "attackSpeedRatio": 0.658
+    },
+    "Ashe": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.657999992370605
+    },
+    "AurelionSol": {
+      "attackDamagePerLevel": 3.2,
+      "attackSpeedRatio": 0.625
+    },
+    "Aurora": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.668
+    },
+    "Azir": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.694
+    },
+    "Bard": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.658
+    },
+    "Belveth": {
+      "attackDamagePerLevel": 1.5,
+      "attackSpeedRatio": 0.67
+    },
+    "Blitzcrank": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.625
+    },
+    "Brand": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Braum": {
+      "attackDamagePerLevel": 3.2,
+      "attackSpeedRatio": 0.643999993801116
+    },
+    "Briar": {
+      "attackDamagePerLevel": 2.5,
+      "attackSpeedRatio": 0.669
+    },
+    "Caitlyn": {
+      "attackDamagePerLevel": 3.8,
+      "attackSpeedRatio": 0.625
+    },
+    "Camille": {
+      "attackDamagePerLevel": 3.8,
+      "attackSpeedRatio": 0.643999993801116
+    },
+    "Cassiopeia": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.647000014781951
+    },
+    "Chogath": {
+      "attackDamagePerLevel": 4.2,
+      "attackSpeedRatio": 0.625
+    },
+    "Corki": {
+      "attackDamagePerLevel": 2.5,
+      "attackSpeedRatio": 0.644
+    },
+    "Darius": {
+      "attackDamagePerLevel": 5,
+      "attackSpeedRatio": 0.625
+    },
+    "Diana": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.694
+    },
+    "DrMundo": {
+      "attackDamagePerLevel": 2.5,
+      "attackSpeedRatio": 0.625
+    },
+    "Draven": {
+      "attackDamagePerLevel": 3.4,
+      "attackSpeedRatio": 0.67900002002716
+    },
+    "Ekko": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Elise": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Evelynn": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.666999995708465
+    },
+    "Ezreal": {
+      "attackDamagePerLevel": 3.75,
+      "attackSpeedRatio": 0.625
+    },
+    "Fiddlesticks": {
+      "attackDamagePerLevel": 2.65,
+      "attackSpeedRatio": 0.625
+    },
+    "Fiora": {
+      "attackDamagePerLevel": 3.3,
+      "attackSpeedRatio": 0.689999997615814
+    },
+    "Fizz": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.657999992370605
+    },
+    "Galio": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.625
+    },
+    "Gangplank": {
+      "attackDamagePerLevel": 4.2,
+      "attackSpeedRatio": 0.69
+    },
+    "Garen": {
+      "attackDamagePerLevel": 4.5,
+      "attackSpeedRatio": 0.625
+    },
+    "Gnar": {
+      "attackDamagePerLevel": 3.2,
+      "attackSpeedRatio": 0.625
+    },
+    "Gragas": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.625
+    },
+    "Graves": {
+      "attackDamagePerLevel": 4,
+      "attackSpeedRatio": 0.490000009536743
+    },
+    "Gwen": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.69
+    },
+    "Hecarim": {
+      "attackDamagePerLevel": 3.7,
+      "attackSpeedRatio": 0.6700000166893
+    },
+    "Heimerdinger": {
+      "attackDamagePerLevel": 2.7,
+      "attackSpeedRatio": 0.625
+    },
+    "Hwei": {
+      "attackDamagePerLevel": 3.3,
+      "attackSpeedRatio": 0.658
+    },
+    "Illaoi": {
+      "attackDamagePerLevel": 5,
+      "attackSpeedRatio": 0.625
+    },
+    "Irelia": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.656000018119812
+    },
+    "Ivern": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.643999993801116
+    },
+    "Janna": {
+      "attackDamagePerLevel": 2.5,
+      "attackSpeedRatio": 0.625
+    },
+    "JarvanIV": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.657999992370605
+    },
+    "Jax": {
+      "attackDamagePerLevel": 4.25,
+      "attackSpeedRatio": 0.638000011444091
+    },
+    "Jayce": {
+      "attackDamagePerLevel": 4.25,
+      "attackSpeedRatio": 0.657999992370605
+    },
+    "Jhin": {
+      "attackDamagePerLevel": 4.4,
+      "attackSpeedRatio": 0
+    },
+    "Jinx": {
+      "attackDamagePerLevel": 3.25,
+      "attackSpeedRatio": 0.625
+    },
+    "KSante": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.625
+    },
+    "Kaisa": {
+      "attackDamagePerLevel": 2.6,
+      "attackSpeedRatio": 0.643999993801116
+    },
+    "Kalista": {
+      "attackDamagePerLevel": 4.75,
+      "attackSpeedRatio": 0.694000005722045
+    },
+    "Karma": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Karthus": {
+      "attackDamagePerLevel": 3.25,
+      "attackSpeedRatio": 0.625
+    },
+    "Kassadin": {
+      "attackDamagePerLevel": 3.9,
+      "attackSpeedRatio": 0.639999985694885
+    },
+    "Katarina": {
+      "attackDamagePerLevel": 3.2,
+      "attackSpeedRatio": 0.657999992370605
+    },
+    "Kayle": {
+      "attackDamagePerLevel": 2.5,
+      "attackSpeedRatio": 0.666999995708465
+    },
+    "Kayn": {
+      "attackDamagePerLevel": 3.3,
+      "attackSpeedRatio": 0.669000029563903
+    },
+    "Kennen": {
+      "attackDamagePerLevel": 3.75,
+      "attackSpeedRatio": 0.689999997615814
+    },
+    "Khazix": {
+      "attackDamagePerLevel": 3.1,
+      "attackSpeedRatio": 0.667999982833862
+    },
+    "Kindred": {
+      "attackDamagePerLevel": 3.25,
+      "attackSpeedRatio": 0.625
+    },
+    "Kled": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.625
+    },
+    "KogMaw": {
+      "attackDamagePerLevel": 3.1,
+      "attackSpeedRatio": 0.665000021457672
+    },
+    "Leblanc": {
+      "attackDamagePerLevel": 2.2,
+      "attackSpeedRatio": 0.4
+    },
+    "LeeSin": {
+      "attackDamagePerLevel": 3.4,
+      "attackSpeedRatio": 0.651000022888183
+    },
+    "Leona": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Lillia": {
+      "attackDamagePerLevel": 3.1,
+      "attackSpeedRatio": 0.625
+    },
+    "Lissandra": {
+      "attackDamagePerLevel": 2.7,
+      "attackSpeedRatio": 0.625
+    },
+    "Locke": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Lucian": {
+      "attackDamagePerLevel": 2.5,
+      "attackSpeedRatio": 0.638000011444091
+    },
+    "Lulu": {
+      "attackDamagePerLevel": 2.6,
+      "attackSpeedRatio": 0.625
+    },
+    "Lux": {
+      "attackDamagePerLevel": 3.3,
+      "attackSpeedRatio": 0.625
+    },
+    "Malphite": {
+      "attackDamagePerLevel": 4,
+      "attackSpeedRatio": 0.638000011444091
+    },
+    "Malzahar": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Maokai": {
+      "attackDamagePerLevel": 3.3,
+      "attackSpeedRatio": 0.694999992847442
+    },
+    "MasterYi": {
+      "attackDamagePerLevel": 2.5,
+      "attackSpeedRatio": 0.67900002002716
+    },
+    "Mel": {
+      "attackDamagePerLevel": 3.3,
+      "attackSpeedRatio": 0.625
+    },
+    "Milio": {
+      "attackDamagePerLevel": 3.2,
+      "attackSpeedRatio": 0.625
+    },
+    "MissFortune": {
+      "attackDamagePerLevel": 2.4,
+      "attackSpeedRatio": 0.656000018119812
+    },
+    "MonkeyKing": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.657999992370605
+    },
+    "Mordekaiser": {
+      "attackDamagePerLevel": 4,
+      "attackSpeedRatio": 0.625
+    },
+    "Morgana": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.625
+    },
+    "Naafiri": {
+      "attackDamagePerLevel": 2,
+      "attackSpeedRatio": 0.625
+    },
+    "Nami": {
+      "attackDamagePerLevel": 3.1,
+      "attackSpeedRatio": 0.643999993801116
+    },
+    "Nasus": {
+      "attackDamagePerLevel": 4,
+      "attackSpeedRatio": 0.638000011444091
+    },
+    "Nautilus": {
+      "attackDamagePerLevel": 3.3,
+      "attackSpeedRatio": 0.611999988555908
+    },
+    "Neeko": {
+      "attackDamagePerLevel": 2.5,
+      "attackSpeedRatio": 0.67
+    },
+    "Nidalee": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.638000011444091
+    },
+    "Nilah": {
+      "attackDamagePerLevel": 2,
+      "attackSpeedRatio": 0.67
+    },
+    "Nocturne": {
+      "attackDamagePerLevel": 2.6,
+      "attackSpeedRatio": 0.721
+    },
+    "Nunu": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Olaf": {
+      "attackDamagePerLevel": 4.7,
+      "attackSpeedRatio": 0.694
+    },
+    "Orianna": {
+      "attackDamagePerLevel": 2.6,
+      "attackSpeedRatio": 0.657999992370605
+    },
+    "Ornn": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.625
+    },
+    "Pantheon": {
+      "attackDamagePerLevel": 3.3,
+      "attackSpeedRatio": 0.658
+    },
+    "Poppy": {
+      "attackDamagePerLevel": 4,
+      "attackSpeedRatio": 0.625
+    },
+    "Pyke": {
+      "attackDamagePerLevel": 2,
+      "attackSpeedRatio": 0.666999995708465
+    },
+    "Qiyana": {
+      "attackDamagePerLevel": 3.1,
+      "attackSpeedRatio": 0.625
+    },
+    "Quinn": {
+      "attackDamagePerLevel": 3.2,
+      "attackSpeedRatio": 0.667999982833862
+    },
+    "Rakan": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.634999990463256
+    },
+    "Rammus": {
+      "attackDamagePerLevel": 2.75,
+      "attackSpeedRatio": 0.625
+    },
+    "RekSai": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.666999995708465
+    },
+    "Rell": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Renata": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Renekton": {
+      "attackDamagePerLevel": 4.15,
+      "attackSpeedRatio": 0.665000021457672
+    },
+    "Rengar": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.666999995708465
+    },
+    "Riven": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Rumble": {
+      "attackDamagePerLevel": 3.2,
+      "attackSpeedRatio": 0.643999993801116
+    },
+    "Ryze": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Samira": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.658
+    },
+    "Sejuani": {
+      "attackDamagePerLevel": 4,
+      "attackSpeedRatio": 0.625
+    },
+    "Senna": {
+      "attackDamagePerLevel": 0,
+      "attackSpeedRatio": 0.4
+    },
+    "Seraphine": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Sett": {
+      "attackDamagePerLevel": 4,
+      "attackSpeedRatio": 0.625
+    },
+    "Shaco": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.694000005722045
+    },
+    "Shen": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.651000022888183
+    },
+    "Shyvana": {
+      "attackDamagePerLevel": 4,
+      "attackSpeedRatio": 0.638
+    },
+    "Singed": {
+      "attackDamagePerLevel": 3.4,
+      "attackSpeedRatio": 0.69
+    },
+    "Sion": {
+      "attackDamagePerLevel": 4,
+      "attackSpeedRatio": 0.67900002002716
+    },
+    "Sivir": {
+      "attackDamagePerLevel": 2.5,
+      "attackSpeedRatio": 0.625
+    },
+    "Skarner": {
+      "attackDamagePerLevel": 5,
+      "attackSpeedRatio": 0.625
+    },
+    "Smolder": {
+      "attackDamagePerLevel": 2.3,
+      "attackSpeedRatio": 0.638
+    },
+    "Sona": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.643999993801116
+    },
+    "Soraka": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Swain": {
+      "attackDamagePerLevel": 2.7,
+      "attackSpeedRatio": 0.625
+    },
+    "Sylas": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.644999980926513
+    },
+    "Syndra": {
+      "attackDamagePerLevel": 2.9,
+      "attackSpeedRatio": 0.625
+    },
+    "TahmKench": {
+      "attackDamagePerLevel": 3.2,
+      "attackSpeedRatio": 0.657999992370605
+    },
+    "Taliyah": {
+      "attackDamagePerLevel": 3.3,
+      "attackSpeedRatio": 0.625
+    },
+    "Talon": {
+      "attackDamagePerLevel": 3.1,
+      "attackSpeedRatio": 0.625
+    },
+    "Taric": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.625
+    },
+    "Teemo": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.689999997615814
+    },
+    "Thresh": {
+      "attackDamagePerLevel": 2.2,
+      "attackSpeedRatio": 0.625
+    },
+    "Tristana": {
+      "attackDamagePerLevel": 3.4,
+      "attackSpeedRatio": 0.694
+    },
+    "Trundle": {
+      "attackDamagePerLevel": 4.5,
+      "attackSpeedRatio": 0.6700000166893
+    },
+    "Tryndamere": {
+      "attackDamagePerLevel": 4.5,
+      "attackSpeedRatio": 0.725
+    },
+    "TwistedFate": {
+      "attackDamagePerLevel": 2.5,
+      "attackSpeedRatio": 0.651000022888183
+    },
+    "Twitch": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.67900002002716
+    },
+    "Udyr": {
+      "attackDamagePerLevel": 4,
+      "attackSpeedRatio": 0.6499999761581421
+    },
+    "Urgot": {
+      "attackDamagePerLevel": 4,
+      "attackSpeedRatio": 0.625
+    },
+    "Varus": {
+      "attackDamagePerLevel": 3.4,
+      "attackSpeedRatio": 0.657999992370605
+    },
+    "Vayne": {
+      "attackDamagePerLevel": 2.35,
+      "attackSpeedRatio": 0.657999992370605
+    },
+    "Veigar": {
+      "attackDamagePerLevel": 2.7,
+      "attackSpeedRatio": 0.625
+    },
+    "Velkoz": {
+      "attackDamagePerLevel": 3.1416,
+      "attackSpeedRatio": 0.625
+    },
+    "Vex": {
+      "attackDamagePerLevel": 2.75,
+      "attackSpeedRatio": 0.625
+    },
+    "Vi": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.643999993801116
+    },
+    "Viego": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.658
+    },
+    "Viktor": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.657999992370605
+    },
+    "Vladimir": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.657999992370605
+    },
+    "Volibear": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.7
+    },
+    "Warwick": {
+      "attackDamagePerLevel": 2.5,
+      "attackSpeedRatio": 0.638000011444091
+    },
+    "Xayah": {
+      "attackDamagePerLevel": 3.5,
+      "attackSpeedRatio": 0.658
+    },
+    "Xerath": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "XinZhao": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.644999980926513
+    },
+    "Yasuo": {
+      "attackDamagePerLevel": 2.5,
+      "attackSpeedRatio": 0.6700000166893
+    },
+    "Yone": {
+      "attackDamagePerLevel": 2,
+      "attackSpeedRatio": 0.625
+    },
+    "Yorick": {
+      "attackDamagePerLevel": 5,
+      "attackSpeedRatio": 0.625
+    },
+    "Yunara": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.65
+    },
+    "Yuumi": {
+      "attackDamagePerLevel": 3.1,
+      "attackSpeedRatio": 0.625
+    },
+    "Zaahen": {
+      "attackDamagePerLevel": 4,
+      "attackSpeedRatio": 0.625
+    },
+    "Zac": {
+      "attackDamagePerLevel": 3.4,
+      "attackSpeedRatio": 0.638000011444091
+    },
+    "Zed": {
+      "attackDamagePerLevel": 3.4,
+      "attackSpeedRatio": 0.651000022888183
+    },
+    "Zeri": {
+      "attackDamagePerLevel": 2,
+      "attackSpeedRatio": 0.625
+    },
+    "Ziggs": {
+      "attackDamagePerLevel": 3.1,
+      "attackSpeedRatio": 0.656000018119812
+    },
+    "Zilean": {
+      "attackDamagePerLevel": 3,
+      "attackSpeedRatio": 0.625
+    },
+    "Zoe": {
+      "attackDamagePerLevel": 3.3,
+      "attackSpeedRatio": 0.625
+    },
+    "Zyra": {
+      "attackDamagePerLevel": 3.2,
+      "attackSpeedRatio": 0.625
+    }
+  }
+}
