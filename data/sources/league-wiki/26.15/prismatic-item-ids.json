@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "patch": "26.15",
+  "category": "Prismatic items",
+  "verifiedAt": "2026-08-13",
+  "source": "https://wiki.leagueoflegends.com/en-us/Category:Prismatic_items",
+  "arenaMapId": 30,
+  "itemIds": [
+    447122,
+    443059,
+    444644,
+    447109,
+    443054,
+    447106,
+    447105,
+    443061,
+    443055,
+    447101,
+    226630,
+    443069,
+    447103,
+    443081,
+    447116,
+    447118,
+    447114,
+    447108,
+    443062,
+    443058,
+    447121
+  ]
+}
