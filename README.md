@@ -35,6 +35,28 @@ pnpm preview
 
 `pnpm-lock.yaml` 应提交到版本库，以保证团队和部署环境使用一致的依赖版本。
 
+## 英雄初始属性
+
+`championCatalog` 保存 26.15 版本的 173 位英雄，包括简体中文名称、1 级基础属性和每级成长字段：
+
+```ts
+import {
+  championCatalog,
+  championInitialStatBlock,
+} from './src/domain/champions'
+
+const ashe = championCatalog.championsByKey.get('Ashe')
+console.log(ashe?.base.attackDamage)
+console.log(ashe?.growth.attackSpeedPercent)
+
+if (ashe) {
+  const initialStats = championInitialStatBlock(ashe)
+  console.log(initialStats.health)
+}
+```
+
+`championInitialStatBlock` 可以把英雄数据转换为锻体计算器输入，并补入通用的初始暴击伤害和体型。数据由版本化的 Riot Data Dragon 快照加工生成。运行 `pnpm data:champions:curate` 可重复生成业务数据；详情见 [`data/curated/champions/README.md`](./data/curated/champions/README.md)。
+
 ## 射手英雄计算核心
 
 计算器目前提供远程英雄版本的纯函数接口：

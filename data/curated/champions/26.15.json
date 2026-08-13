@@ -1,0 +1,5856 @@
+{
+  "schemaVersion": 1,
+  "patch": "26.15",
+  "dataDragonVersion": "16.15.1",
+  "locale": "zh_CN",
+  "updatedAt": "2026-08-13",
+  "championCount": 173,
+  "source": "https://ddragon.leagueoflegends.com/cdn/16.15.1/data/zh_CN/champion.json",
+  "notes": [
+    "仅保留召唤师峡谷英雄；已排除 Data Dragon 中以 Jade_ 开头的模式单位。",
+    "base 为 1 级基础属性，growth 为每级成长字段；实际等级属性需按游戏的非线性成长公式计算。",
+    "Data Dragon 不提供独立的攻击速度收益系数，attackSpeed 仅表示 1 级基础攻速。"
+  ],
+  "champions": [
+    {
+      "id": 1,
+      "key": "Annie",
+      "name": "黑暗之女",
+      "title": "安妮",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 560,
+        "resource": 418,
+        "healthRegen": 5.5,
+        "resourceRegen": 8,
+        "attackDamage": 50,
+        "attackSpeed": 0.61,
+        "armor": 23,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 625,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 96,
+        "resource": 25,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.36,
+        "armor": 4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 2,
+      "key": "Olaf",
+      "name": "狂战士",
+      "title": "奥拉夫",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 645,
+        "resource": 316,
+        "healthRegen": 6.5,
+        "resourceRegen": 7.5,
+        "attackDamage": 68,
+        "attackSpeed": 0.72,
+        "armor": 35,
+        "magicResistance": 32,
+        "movementSpeed": 350,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 119,
+        "resource": 50,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.6,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.7,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 3,
+      "key": "Galio",
+      "name": "正义巨像",
+      "title": "加里奥",
+      "tags": [
+        "Tank",
+        "Mage"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 410,
+        "healthRegen": 8,
+        "resourceRegen": 9.5,
+        "attackDamage": 59,
+        "attackSpeed": 0.625,
+        "armor": 24,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 126,
+        "resource": 40,
+        "healthRegen": 0.8,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.5,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 4,
+      "key": "TwistedFate",
+      "name": "卡牌大师",
+      "title": "崔斯特",
+      "tags": [
+        "Mage",
+        "Marksman"
+      ],
+      "base": {
+        "health": 604,
+        "resource": 333,
+        "healthRegen": 5.5,
+        "resourceRegen": 8,
+        "attackDamage": 52,
+        "attackSpeed": 0.625,
+        "armor": 24,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 108,
+        "resource": 39,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.35,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 5,
+      "key": "XinZhao",
+      "name": "德邦总管",
+      "title": "赵信",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 620,
+        "resource": 274,
+        "healthRegen": 8,
+        "resourceRegen": 7.25,
+        "attackDamage": 63,
+        "attackSpeed": 0.645,
+        "armor": 35,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 106,
+        "resource": 55,
+        "healthRegen": 0.7,
+        "resourceRegen": 0.45,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 4.4,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 6,
+      "key": "Urgot",
+      "name": "无畏战车",
+      "title": "厄加特",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 655,
+        "resource": 340,
+        "healthRegen": 7.5,
+        "resourceRegen": 7.25,
+        "attackDamage": 63,
+        "attackSpeed": 0.625,
+        "armor": 36,
+        "magicResistance": 32,
+        "movementSpeed": 330,
+        "attackRange": 350,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 102,
+        "resource": 45,
+        "healthRegen": 0.7,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.75,
+        "armor": 5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 7,
+      "key": "Leblanc",
+      "name": "诡术妖姬",
+      "title": "乐芙兰",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "base": {
+        "health": 598,
+        "resource": 400,
+        "healthRegen": 7.5,
+        "resourceRegen": 8,
+        "attackDamage": 55,
+        "attackSpeed": 0.658,
+        "armor": 22,
+        "magicResistance": 30,
+        "movementSpeed": 340,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 108,
+        "resource": 25,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.35,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 8,
+      "key": "Vladimir",
+      "name": "猩红收割者",
+      "title": "弗拉基米尔",
+      "tags": [
+        "Mage",
+        "Fighter"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 2,
+        "healthRegen": 7,
+        "resourceRegen": 0,
+        "attackDamage": 55,
+        "attackSpeed": 0.658,
+        "armor": 24,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 450,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 0,
+        "healthRegen": 0.6,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 9,
+      "key": "Fiddlesticks",
+      "name": "远古恐惧",
+      "title": "费德提克",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 650,
+        "resource": 500,
+        "healthRegen": 5.5,
+        "resourceRegen": 8,
+        "attackDamage": 55,
+        "attackSpeed": 0.625,
+        "armor": 34,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 480,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 106,
+        "resource": 28,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.11,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 10,
+      "key": "Kayle",
+      "name": "正义天使",
+      "title": "凯尔",
+      "tags": [
+        "Mage",
+        "Marksman"
+      ],
+      "base": {
+        "health": 670,
+        "resource": 330,
+        "healthRegen": 5,
+        "resourceRegen": 8,
+        "attackDamage": 50,
+        "attackSpeed": 0.625,
+        "armor": 26,
+        "magicResistance": 22,
+        "movementSpeed": 335,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 92,
+        "resource": 50,
+        "healthRegen": 0.5,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.5,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 11,
+      "key": "MasterYi",
+      "name": "无极剑圣",
+      "title": "易",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 640,
+        "resource": 251,
+        "healthRegen": 7.5,
+        "resourceRegen": 7.25,
+        "attackDamage": 65,
+        "attackSpeed": 0.679,
+        "armor": 33,
+        "magicResistance": 32,
+        "movementSpeed": 355,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 105,
+        "resource": 42,
+        "healthRegen": 0.65,
+        "resourceRegen": 0.45,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 12,
+      "key": "Alistar",
+      "name": "牛头酋长",
+      "title": "阿利斯塔",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "base": {
+        "health": 685,
+        "resource": 350,
+        "healthRegen": 8.5,
+        "resourceRegen": 8.5,
+        "attackDamage": 62,
+        "attackSpeed": 0.625,
+        "armor": 40,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 120,
+        "resource": 40,
+        "healthRegen": 0.85,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.125,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 13,
+      "key": "Ryze",
+      "name": "符文法师",
+      "title": "瑞兹",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 620,
+        "resource": 300,
+        "healthRegen": 8,
+        "resourceRegen": 8,
+        "attackDamage": 55,
+        "attackSpeed": 0.658,
+        "armor": 22,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 124,
+        "resource": 70,
+        "healthRegen": 0.8,
+        "resourceRegen": 1,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.11,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 14,
+      "key": "Sion",
+      "name": "亡灵战神",
+      "title": "赛恩",
+      "tags": [
+        "Tank",
+        "Fighter"
+      ],
+      "base": {
+        "health": 655,
+        "resource": 400,
+        "healthRegen": 9,
+        "resourceRegen": 8,
+        "attackDamage": 68,
+        "attackSpeed": 0.679,
+        "armor": 36,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 87,
+        "resource": 52,
+        "healthRegen": 0.8,
+        "resourceRegen": 0.6,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.3,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 15,
+      "key": "Sivir",
+      "name": "战争女神",
+      "title": "希维尔",
+      "tags": [
+        "Marksman"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 340,
+        "healthRegen": 3.25,
+        "resourceRegen": 6,
+        "attackDamage": 60,
+        "attackSpeed": 0.625,
+        "armor": 30,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 500,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 45,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.6,
+        "armor": 4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 16,
+      "key": "Soraka",
+      "name": "众星之子",
+      "title": "索拉卡",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 605,
+        "resource": 425,
+        "healthRegen": 2.5,
+        "resourceRegen": 11.5,
+        "attackDamage": 50,
+        "attackSpeed": 0.625,
+        "armor": 32,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 88,
+        "resource": 40,
+        "healthRegen": 0.5,
+        "resourceRegen": 0.4,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.14,
+        "armor": 5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 17,
+      "key": "Teemo",
+      "name": "迅捷斥候",
+      "title": "提莫",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "base": {
+        "health": 615,
+        "resource": 334,
+        "healthRegen": 5.5,
+        "resourceRegen": 9.6,
+        "attackDamage": 54,
+        "attackSpeed": 0.69,
+        "armor": 24,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 500,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 25,
+        "healthRegen": 0.65,
+        "resourceRegen": 0.45,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.38,
+        "armor": 4.5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 18,
+      "key": "Tristana",
+      "name": "麦林炮手",
+      "title": "崔丝塔娜",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "base": {
+        "health": 640,
+        "resource": 300,
+        "healthRegen": 4,
+        "resourceRegen": 7.2,
+        "attackDamage": 60,
+        "attackSpeed": 0.656,
+        "armor": 30,
+        "magicResistance": 28,
+        "movementSpeed": 325,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 102,
+        "resource": 32,
+        "healthRegen": 0.5,
+        "resourceRegen": 0.45,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.5,
+        "armor": 4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 19,
+      "key": "Warwick",
+      "name": "祖安怒兽",
+      "title": "沃里克",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 620,
+        "resource": 280,
+        "healthRegen": 4,
+        "resourceRegen": 7.45,
+        "attackDamage": 65,
+        "attackSpeed": 0.638,
+        "armor": 33,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 35,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.6,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.4,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 20,
+      "key": "Nunu",
+      "name": "雪原双子",
+      "title": "努努和威朗普",
+      "tags": [
+        "Tank",
+        "Mage"
+      ],
+      "base": {
+        "health": 610,
+        "resource": 280,
+        "healthRegen": 5,
+        "resourceRegen": 7,
+        "attackDamage": 61,
+        "attackSpeed": 0.625,
+        "armor": 29,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 90,
+        "resource": 42,
+        "healthRegen": 0.8,
+        "resourceRegen": 0.5,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.25,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 21,
+      "key": "MissFortune",
+      "name": "赏金猎人",
+      "title": "厄运小姐",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "base": {
+        "health": 625,
+        "resource": 300,
+        "healthRegen": 3.75,
+        "resourceRegen": 8,
+        "attackDamage": 55,
+        "attackSpeed": 0.656,
+        "armor": 25,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 100,
+        "resource": 40,
+        "healthRegen": 0.65,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 22,
+      "key": "Ashe",
+      "name": "寒冰射手",
+      "title": "艾希",
+      "tags": [
+        "Marksman",
+        "Support"
+      ],
+      "base": {
+        "health": 610,
+        "resource": 280,
+        "healthRegen": 3.5,
+        "resourceRegen": 7,
+        "attackDamage": 59,
+        "attackSpeed": 0.658,
+        "armor": 26,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 600,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 101,
+        "resource": 35,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.65,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4.6,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 23,
+      "key": "Tryndamere",
+      "name": "蛮族之王",
+      "title": "泰达米尔",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 696,
+        "resource": 100,
+        "healthRegen": 8.5,
+        "resourceRegen": 0,
+        "attackDamage": 66,
+        "attackSpeed": 0.67,
+        "armor": 33,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 108,
+        "resource": 0,
+        "healthRegen": 0.9,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.4,
+        "armor": 4.8,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 24,
+      "key": "Jax",
+      "name": "武器大师",
+      "title": "贾克斯",
+      "tags": [
+        "Fighter"
+      ],
+      "base": {
+        "health": 650,
+        "resource": 339,
+        "healthRegen": 8.5,
+        "resourceRegen": 8.2,
+        "attackDamage": 68,
+        "attackSpeed": 0.638,
+        "armor": 36,
+        "magicResistance": 32,
+        "movementSpeed": 350,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 103,
+        "resource": 52,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.4,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 25,
+      "key": "Morgana",
+      "name": "堕落天使",
+      "title": "莫甘娜",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 340,
+        "healthRegen": 5.5,
+        "resourceRegen": 11,
+        "attackDamage": 56,
+        "attackSpeed": 0.625,
+        "armor": 25,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 450,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 60,
+        "healthRegen": 0.4,
+        "resourceRegen": 0.4,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.53,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 26,
+      "key": "Zilean",
+      "name": "时光守护者",
+      "title": "基兰",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 574,
+        "resource": 452,
+        "healthRegen": 5.5,
+        "resourceRegen": 11.35,
+        "attackDamage": 52,
+        "attackSpeed": 0.658,
+        "armor": 24,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 96,
+        "resource": 50,
+        "healthRegen": 0.5,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.13,
+        "armor": 5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 27,
+      "key": "Singed",
+      "name": "炼金术士",
+      "title": "辛吉德",
+      "tags": [
+        "Tank",
+        "Mage"
+      ],
+      "base": {
+        "health": 650,
+        "resource": 330,
+        "healthRegen": 9.5,
+        "resourceRegen": 7.5,
+        "attackDamage": 63,
+        "attackSpeed": 0.7,
+        "armor": 34,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 96,
+        "resource": 45,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.55,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.9,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 28,
+      "key": "Evelynn",
+      "name": "痛苦之拥",
+      "title": "伊芙琳",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "base": {
+        "health": 642,
+        "resource": 315,
+        "healthRegen": 8.5,
+        "resourceRegen": 8.11,
+        "attackDamage": 61,
+        "attackSpeed": 0.667,
+        "armor": 37,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 98,
+        "resource": 42,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.6,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.1,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 29,
+      "key": "Twitch",
+      "name": "瘟疫之源",
+      "title": "图奇",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 300,
+        "healthRegen": 3.75,
+        "resourceRegen": 7.25,
+        "attackDamage": 59,
+        "attackSpeed": 0.679,
+        "armor": 27,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 98,
+        "resource": 40,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 30,
+      "key": "Karthus",
+      "name": "死亡颂唱者",
+      "title": "卡尔萨斯",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 620,
+        "resource": 467,
+        "healthRegen": 6.5,
+        "resourceRegen": 8,
+        "attackDamage": 46,
+        "attackSpeed": 0.625,
+        "armor": 21,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 450,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 31,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.11,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 31,
+      "key": "Chogath",
+      "name": "虚空恐惧",
+      "title": "科加斯",
+      "tags": [
+        "Tank",
+        "Mage"
+      ],
+      "base": {
+        "health": 644,
+        "resource": 270,
+        "healthRegen": 9,
+        "resourceRegen": 7.2,
+        "attackDamage": 69,
+        "attackSpeed": 0.658,
+        "armor": 38,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 94,
+        "resource": 60,
+        "healthRegen": 0.85,
+        "resourceRegen": 0.45,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.44,
+        "armor": 4.5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 32,
+      "key": "Amumu",
+      "name": "殇之木乃伊",
+      "title": "阿木木",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "base": {
+        "health": 685,
+        "resource": 285,
+        "healthRegen": 9,
+        "resourceRegen": 7.4,
+        "attackDamage": 57,
+        "attackSpeed": 0.736,
+        "armor": 33,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 94,
+        "resource": 40,
+        "healthRegen": 0.85,
+        "resourceRegen": 0.55,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.18,
+        "armor": 4,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 33,
+      "key": "Rammus",
+      "name": "披甲龙龟",
+      "title": "拉莫斯",
+      "tags": [
+        "Tank"
+      ],
+      "base": {
+        "health": 645,
+        "resource": 310,
+        "healthRegen": 8,
+        "resourceRegen": 7.85,
+        "attackDamage": 65,
+        "attackSpeed": 0.7,
+        "armor": 35,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 100,
+        "resource": 33,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.5,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.215,
+        "armor": 4.5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 34,
+      "key": "Anivia",
+      "name": "冰晶凤凰",
+      "title": "艾尼维亚",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 550,
+        "resource": 495,
+        "healthRegen": 5.5,
+        "resourceRegen": 8,
+        "attackDamage": 51,
+        "attackSpeed": 0.658,
+        "armor": 19,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 600,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 92,
+        "resource": 45,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.68,
+        "armor": 4.1,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 35,
+      "key": "Shaco",
+      "name": "恶魔小丑",
+      "title": "萨科",
+      "tags": [
+        "Assassin"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 297,
+        "healthRegen": 8.5,
+        "resourceRegen": 6,
+        "attackDamage": 63,
+        "attackSpeed": 0.694,
+        "armor": 30,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 40,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.35,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 36,
+      "key": "DrMundo",
+      "name": "祖安狂人",
+      "title": "蒙多医生",
+      "tags": [
+        "Tank",
+        "Fighter"
+      ],
+      "base": {
+        "health": 640,
+        "resource": 0,
+        "healthRegen": 7,
+        "resourceRegen": 0,
+        "attackDamage": 61,
+        "attackSpeed": 0.67,
+        "armor": 32,
+        "magicResistance": 29,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 103,
+        "resource": 0,
+        "healthRegen": 0.5,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.3,
+        "armor": 4.5,
+        "magicResistance": 2.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 37,
+      "key": "Sona",
+      "name": "琴瑟仙女",
+      "title": "娑娜",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 550,
+        "resource": 340,
+        "healthRegen": 5.5,
+        "resourceRegen": 11.5,
+        "attackDamage": 49,
+        "attackSpeed": 0.644,
+        "armor": 26,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 91,
+        "resource": 45,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.4,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.3,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 38,
+      "key": "Kassadin",
+      "name": "虚空行者",
+      "title": "卡萨丁",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "base": {
+        "health": 646,
+        "resource": 400,
+        "healthRegen": 6,
+        "resourceRegen": 6,
+        "attackDamage": 59,
+        "attackSpeed": 0.64,
+        "armor": 21,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 113,
+        "resource": 87,
+        "healthRegen": 0.5,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.7,
+        "armor": 4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 39,
+      "key": "Irelia",
+      "name": "刀锋舞者",
+      "title": "艾瑞莉娅",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 350,
+        "healthRegen": 3.5,
+        "resourceRegen": 8,
+        "attackDamage": 65,
+        "attackSpeed": 0.656,
+        "armor": 36,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 200,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 115,
+        "resource": 50,
+        "healthRegen": 0.85,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 40,
+      "key": "Janna",
+      "name": "风暴之怒",
+      "title": "迦娜",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 570,
+        "resource": 360,
+        "healthRegen": 5.5,
+        "resourceRegen": 11.5,
+        "attackDamage": 47,
+        "attackSpeed": 0.625,
+        "armor": 28,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 90,
+        "resource": 50,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.4,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4.5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 41,
+      "key": "Gangplank",
+      "name": "海洋之灾",
+      "title": "普朗克",
+      "tags": [
+        "Fighter"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 280,
+        "healthRegen": 6,
+        "resourceRegen": 8,
+        "attackDamage": 64,
+        "attackSpeed": 0.658,
+        "armor": 31,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 114,
+        "resource": 60,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.2,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 42,
+      "key": "Corki",
+      "name": "英勇投弹手",
+      "title": "库奇",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "base": {
+        "health": 610,
+        "resource": 350,
+        "healthRegen": 5.5,
+        "resourceRegen": 7.4,
+        "attackDamage": 52,
+        "attackSpeed": 0.644,
+        "armor": 27,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 100,
+        "resource": 40,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.8,
+        "armor": 4.5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 43,
+      "key": "Karma",
+      "name": "天启者",
+      "title": "卡尔玛",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 374,
+        "healthRegen": 5.5,
+        "resourceRegen": 13,
+        "attackDamage": 49,
+        "attackSpeed": 0.625,
+        "armor": 28,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 40,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.3,
+        "armor": 5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 44,
+      "key": "Taric",
+      "name": "瓦洛兰之盾",
+      "title": "塔里克",
+      "tags": [
+        "Support",
+        "Tank"
+      ],
+      "base": {
+        "health": 645,
+        "resource": 300,
+        "healthRegen": 6,
+        "resourceRegen": 8.5,
+        "attackDamage": 55,
+        "attackSpeed": 0.625,
+        "armor": 40,
+        "magicResistance": 28,
+        "movementSpeed": 340,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 60,
+        "healthRegen": 0.5,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.3,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 45,
+      "key": "Veigar",
+      "name": "邪恶小法师",
+      "title": "维迦",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 580,
+        "resource": 490,
+        "healthRegen": 6.5,
+        "resourceRegen": 8,
+        "attackDamage": 52,
+        "attackSpeed": 0.625,
+        "armor": 18,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 108,
+        "resource": 26,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.24,
+        "armor": 5.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 48,
+      "key": "Trundle",
+      "name": "巨魔之王",
+      "title": "特朗德尔",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 650,
+        "resource": 340,
+        "healthRegen": 6,
+        "resourceRegen": 7.5,
+        "attackDamage": 68,
+        "attackSpeed": 0.67,
+        "armor": 37,
+        "magicResistance": 32,
+        "movementSpeed": 350,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 45,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.6,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.9,
+        "armor": 4.5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 50,
+      "key": "Swain",
+      "name": "诺克萨斯统领",
+      "title": "斯维因",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 595,
+        "resource": 400,
+        "healthRegen": 3,
+        "resourceRegen": 10,
+        "attackDamage": 58,
+        "attackSpeed": 0.625,
+        "armor": 25,
+        "magicResistance": 31,
+        "movementSpeed": 330,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 29,
+        "healthRegen": 0.5,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.11,
+        "armor": 4.7,
+        "magicResistance": 1.55,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 51,
+      "key": "Caitlyn",
+      "name": "皮城女警",
+      "title": "凯特琳",
+      "tags": [
+        "Marksman"
+      ],
+      "base": {
+        "health": 580,
+        "resource": 315,
+        "healthRegen": 3.5,
+        "resourceRegen": 7.4,
+        "attackDamage": 62,
+        "attackSpeed": 0.681,
+        "armor": 27,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 650,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 107,
+        "resource": 40,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 4,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 53,
+      "key": "Blitzcrank",
+      "name": "蒸汽机器人",
+      "title": "布里茨",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 267,
+        "healthRegen": 7.5,
+        "resourceRegen": 8.5,
+        "attackDamage": 62,
+        "attackSpeed": 0.625,
+        "armor": 37,
+        "magicResistance": 32,
+        "movementSpeed": 325,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 40,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.13,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 54,
+      "key": "Malphite",
+      "name": "熔岩巨兽",
+      "title": "墨菲特",
+      "tags": [
+        "Tank",
+        "Mage"
+      ],
+      "base": {
+        "health": 665,
+        "resource": 280,
+        "healthRegen": 7,
+        "resourceRegen": 7.3,
+        "attackDamage": 62,
+        "attackSpeed": 0.736,
+        "armor": 40,
+        "magicResistance": 28,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 60,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.55,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.4,
+        "armor": 4.95,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 55,
+      "key": "Katarina",
+      "name": "不祥之刃",
+      "title": "卡特琳娜",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "base": {
+        "health": 672,
+        "resource": 0,
+        "healthRegen": 7.5,
+        "resourceRegen": 0,
+        "attackDamage": 58,
+        "attackSpeed": 0.658,
+        "armor": 32,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 108,
+        "resource": 0,
+        "healthRegen": 0.7,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.74,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 56,
+      "key": "Nocturne",
+      "name": "永恒梦魇",
+      "title": "魔腾",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 655,
+        "resource": 275,
+        "healthRegen": 7,
+        "resourceRegen": 7,
+        "attackDamage": 62,
+        "attackSpeed": 0.721,
+        "armor": 38,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 35,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.45,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.7,
+        "armor": 4.2,
+        "magicResistance": 1.55,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 57,
+      "key": "Maokai",
+      "name": "扭曲树精",
+      "title": "茂凯",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "base": {
+        "health": 665,
+        "resource": 375,
+        "healthRegen": 5,
+        "resourceRegen": 6,
+        "attackDamage": 64,
+        "attackSpeed": 0.8,
+        "armor": 35,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 43,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.6,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.125,
+        "armor": 5.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 58,
+      "key": "Renekton",
+      "name": "荒漠屠夫",
+      "title": "雷克顿",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 660,
+        "resource": 100,
+        "healthRegen": 8,
+        "resourceRegen": 0,
+        "attackDamage": 69,
+        "attackSpeed": 0.665,
+        "armor": 35,
+        "magicResistance": 28,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 111,
+        "resource": 0,
+        "healthRegen": 0.75,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.75,
+        "armor": 5.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 59,
+      "key": "JarvanIV",
+      "name": "德玛西亚皇子",
+      "title": "嘉文四世",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 640,
+        "resource": 300,
+        "healthRegen": 8,
+        "resourceRegen": 6.5,
+        "attackDamage": 64,
+        "attackSpeed": 0.658,
+        "armor": 36,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 55,
+        "healthRegen": 0.7,
+        "resourceRegen": 0.45,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.6,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 60,
+      "key": "Elise",
+      "name": "蜘蛛女皇",
+      "title": "伊莉丝",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "base": {
+        "health": 620,
+        "resource": 324,
+        "healthRegen": 5.5,
+        "resourceRegen": 6,
+        "attackDamage": 55,
+        "attackSpeed": 0.625,
+        "armor": 30,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 50,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.75,
+        "armor": 4.5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 61,
+      "key": "Orianna",
+      "name": "发条魔灵",
+      "title": "奥莉安娜",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 565,
+        "resource": 418,
+        "healthRegen": 7,
+        "resourceRegen": 8,
+        "attackDamage": 44,
+        "attackSpeed": 0.658,
+        "armor": 20,
+        "magicResistance": 26,
+        "movementSpeed": 325,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 25,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 62,
+      "key": "MonkeyKing",
+      "name": "齐天大圣",
+      "title": "孙悟空",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 610,
+        "resource": 330,
+        "healthRegen": 3.5,
+        "resourceRegen": 8,
+        "attackDamage": 66,
+        "attackSpeed": 0.69,
+        "armor": 31,
+        "magicResistance": 28,
+        "movementSpeed": 340,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 65,
+        "healthRegen": 0.65,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 63,
+      "key": "Brand",
+      "name": "复仇焰魂",
+      "title": "布兰德",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 570,
+        "resource": 469,
+        "healthRegen": 5.5,
+        "resourceRegen": 11,
+        "attackDamage": 57,
+        "attackSpeed": 0.681,
+        "armor": 24,
+        "magicResistance": 30,
+        "movementSpeed": 340,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 105,
+        "resource": 21,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.6,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 64,
+      "key": "LeeSin",
+      "name": "盲僧",
+      "title": "李青",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 645,
+        "resource": 200,
+        "healthRegen": 7.5,
+        "resourceRegen": 50,
+        "attackDamage": 66,
+        "attackSpeed": 0.651,
+        "armor": 36,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 108,
+        "resource": 0,
+        "healthRegen": 0.7,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4.5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 67,
+      "key": "Vayne",
+      "name": "暗夜猎手",
+      "title": "薇恩",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "base": {
+        "health": 550,
+        "resource": 232,
+        "healthRegen": 3.5,
+        "resourceRegen": 7,
+        "attackDamage": 60,
+        "attackSpeed": 0.658,
+        "armor": 23,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 103,
+        "resource": 35,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.4,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.3,
+        "armor": 4.6,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 68,
+      "key": "Rumble",
+      "name": "机械公敌",
+      "title": "兰博",
+      "tags": [
+        "Fighter",
+        "Mage"
+      ],
+      "base": {
+        "health": 640,
+        "resource": 150,
+        "healthRegen": 7,
+        "resourceRegen": 0,
+        "attackDamage": 64,
+        "attackSpeed": 0.644,
+        "armor": 36,
+        "magicResistance": 28,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 105,
+        "resource": 0,
+        "healthRegen": 0.6,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.85,
+        "armor": 4.7,
+        "magicResistance": 1.55,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 69,
+      "key": "Cassiopeia",
+      "name": "魔蛇之拥",
+      "title": "卡西奥佩娅",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 480,
+        "healthRegen": 5.5,
+        "resourceRegen": 8,
+        "attackDamage": 53,
+        "attackSpeed": 0.647,
+        "armor": 18,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 98,
+        "resource": 40,
+        "healthRegen": 0.5,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.5,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 72,
+      "key": "Skarner",
+      "name": "上古领主",
+      "title": "斯卡纳",
+      "tags": [
+        "Tank",
+        "Fighter"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 320,
+        "healthRegen": 7.5,
+        "resourceRegen": 7.2,
+        "attackDamage": 63,
+        "attackSpeed": 0.625,
+        "armor": 33,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 40,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.75,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 74,
+      "key": "Heimerdinger",
+      "name": "大发明家",
+      "title": "黑默丁格",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 558,
+        "resource": 385,
+        "healthRegen": 7,
+        "resourceRegen": 8,
+        "attackDamage": 56,
+        "attackSpeed": 0.658,
+        "armor": 19,
+        "magicResistance": 30,
+        "movementSpeed": 340,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 105,
+        "resource": 20,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.36,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 75,
+      "key": "Nasus",
+      "name": "沙漠死神",
+      "title": "内瑟斯",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 650,
+        "resource": 326,
+        "healthRegen": 9,
+        "resourceRegen": 7.45,
+        "attackDamage": 67,
+        "attackSpeed": 0.638,
+        "armor": 34,
+        "magicResistance": 32,
+        "movementSpeed": 350,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 62,
+        "healthRegen": 0.9,
+        "resourceRegen": 0.5,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.48,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 76,
+      "key": "Nidalee",
+      "name": "狂野女猎手",
+      "title": "奈德丽",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "base": {
+        "health": 610,
+        "resource": 295,
+        "healthRegen": 6,
+        "resourceRegen": 6,
+        "attackDamage": 58,
+        "attackSpeed": 0.638,
+        "armor": 32,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 45,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.22,
+        "armor": 5,
+        "magicResistance": 1.45,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 77,
+      "key": "Udyr",
+      "name": "兽灵行者",
+      "title": "乌迪尔",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 664,
+        "resource": 271,
+        "healthRegen": 6,
+        "resourceRegen": 7.5,
+        "attackDamage": 62,
+        "attackSpeed": 0.65,
+        "armor": 31,
+        "magicResistance": 32,
+        "movementSpeed": 350,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 92,
+        "resource": 50,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.45,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 78,
+      "key": "Poppy",
+      "name": "圣锤之毅",
+      "title": "波比",
+      "tags": [
+        "Tank",
+        "Fighter"
+      ],
+      "base": {
+        "health": 610,
+        "resource": 280,
+        "healthRegen": 8,
+        "resourceRegen": 7,
+        "attackDamage": 60,
+        "attackSpeed": 0.658,
+        "armor": 35,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 40,
+        "healthRegen": 0.8,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 79,
+      "key": "Gragas",
+      "name": "酒桶",
+      "title": "古拉加斯",
+      "tags": [
+        "Fighter",
+        "Mage"
+      ],
+      "base": {
+        "health": 640,
+        "resource": 400,
+        "healthRegen": 5.5,
+        "resourceRegen": 6,
+        "attackDamage": 64,
+        "attackSpeed": 0.675,
+        "armor": 38,
+        "magicResistance": 32,
+        "movementSpeed": 330,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 115,
+        "resource": 47,
+        "healthRegen": 0.5,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.05,
+        "armor": 5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 80,
+      "key": "Pantheon",
+      "name": "不屈之枪",
+      "title": "潘森",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 650,
+        "resource": 317,
+        "healthRegen": 6,
+        "resourceRegen": 7.35,
+        "attackDamage": 64,
+        "attackSpeed": 0.658,
+        "armor": 40,
+        "magicResistance": 28,
+        "movementSpeed": 345,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 31,
+        "healthRegen": 0.65,
+        "resourceRegen": 0.45,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.95,
+        "armor": 4.95,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 81,
+      "key": "Ezreal",
+      "name": "探险家",
+      "title": "伊泽瑞尔",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 375,
+        "healthRegen": 4,
+        "resourceRegen": 8.5,
+        "attackDamage": 60,
+        "attackSpeed": 0.625,
+        "armor": 24,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 102,
+        "resource": 70,
+        "healthRegen": 0.65,
+        "resourceRegen": 1,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 82,
+      "key": "Mordekaiser",
+      "name": "铁铠冥魂",
+      "title": "莫德凯撒",
+      "tags": [
+        "Fighter",
+        "Mage"
+      ],
+      "base": {
+        "health": 645,
+        "resource": 100,
+        "healthRegen": 5,
+        "resourceRegen": 0,
+        "attackDamage": 61,
+        "attackSpeed": 0.625,
+        "armor": 37,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 0,
+        "healthRegen": 0.75,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 83,
+      "key": "Yorick",
+      "name": "牧魂人",
+      "title": "约里克",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 650,
+        "resource": 300,
+        "healthRegen": 8,
+        "resourceRegen": 7.5,
+        "attackDamage": 62,
+        "attackSpeed": 0.625,
+        "armor": 36,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 114,
+        "resource": 60,
+        "healthRegen": 0.8,
+        "resourceRegen": 0.75,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 84,
+      "key": "Akali",
+      "name": "离群之刺",
+      "title": "阿卡丽",
+      "tags": [
+        "Assassin"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 200,
+        "healthRegen": 9,
+        "resourceRegen": 50,
+        "attackDamage": 62,
+        "attackSpeed": 0.625,
+        "armor": 23,
+        "magicResistance": 37,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 119,
+        "resource": 0,
+        "healthRegen": 0.9,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.2,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 85,
+      "key": "Kennen",
+      "name": "狂暴之心",
+      "title": "凯南",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 580,
+        "resource": 200,
+        "healthRegen": 5.5,
+        "resourceRegen": 50,
+        "attackDamage": 48,
+        "attackSpeed": 0.625,
+        "armor": 29,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 98,
+        "resource": 0,
+        "healthRegen": 0.65,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.4,
+        "armor": 4.95,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 86,
+      "key": "Garen",
+      "name": "德玛西亚之力",
+      "title": "盖伦",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 690,
+        "resource": 0,
+        "healthRegen": 8,
+        "resourceRegen": 0,
+        "attackDamage": 69,
+        "attackSpeed": 0.625,
+        "armor": 38,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 98,
+        "resource": 0,
+        "healthRegen": 0.5,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.65,
+        "armor": 4.2,
+        "magicResistance": 1.55,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 89,
+      "key": "Leona",
+      "name": "曙光女神",
+      "title": "蕾欧娜",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "base": {
+        "health": 646,
+        "resource": 302,
+        "healthRegen": 8.5,
+        "resourceRegen": 6,
+        "attackDamage": 60,
+        "attackSpeed": 0.625,
+        "armor": 43,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 101,
+        "resource": 40,
+        "healthRegen": 0.85,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.9,
+        "armor": 4.8,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 90,
+      "key": "Malzahar",
+      "name": "虚空先知",
+      "title": "玛尔扎哈",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 580,
+        "resource": 375,
+        "healthRegen": 6,
+        "resourceRegen": 8,
+        "attackDamage": 55,
+        "attackSpeed": 0.625,
+        "armor": 18,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 500,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 101,
+        "resource": 28,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.5,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 91,
+      "key": "Talon",
+      "name": "刀锋之影",
+      "title": "泰隆",
+      "tags": [
+        "Assassin"
+      ],
+      "base": {
+        "health": 658,
+        "resource": 400,
+        "healthRegen": 8.5,
+        "resourceRegen": 7.6,
+        "attackDamage": 68,
+        "attackSpeed": 0.625,
+        "armor": 30,
+        "magicResistance": 36,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 37,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.9,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 92,
+      "key": "Riven",
+      "name": "放逐之刃",
+      "title": "锐雯",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 0,
+        "healthRegen": 8.5,
+        "resourceRegen": 0,
+        "attackDamage": 64,
+        "attackSpeed": 0.625,
+        "armor": 33,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 100,
+        "resource": 0,
+        "healthRegen": 0.5,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 4.4,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 96,
+      "key": "KogMaw",
+      "name": "深渊巨口",
+      "title": "克格莫",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "base": {
+        "health": 635,
+        "resource": 325,
+        "healthRegen": 3.75,
+        "resourceRegen": 8.75,
+        "attackDamage": 61,
+        "attackSpeed": 0.665,
+        "armor": 24,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 500,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 40,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.65,
+        "armor": 4.45,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 98,
+      "key": "Shen",
+      "name": "暮光之眼",
+      "title": "慎",
+      "tags": [
+        "Tank"
+      ],
+      "base": {
+        "health": 610,
+        "resource": 400,
+        "healthRegen": 8.5,
+        "resourceRegen": 50,
+        "attackDamage": 64,
+        "attackSpeed": 0.751,
+        "armor": 34,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 0,
+        "healthRegen": 0.75,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 99,
+      "key": "Lux",
+      "name": "光辉女郎",
+      "title": "拉克丝",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 580,
+        "resource": 440,
+        "healthRegen": 5.5,
+        "resourceRegen": 9,
+        "attackDamage": 54,
+        "attackSpeed": 0.669,
+        "armor": 21,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 23.5,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 5.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 101,
+      "key": "Xerath",
+      "name": "远古巫灵",
+      "title": "泽拉斯",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 596,
+        "resource": 400,
+        "healthRegen": 5.5,
+        "resourceRegen": 6.85,
+        "attackDamage": 55,
+        "attackSpeed": 0.658,
+        "armor": 22,
+        "magicResistance": 30,
+        "movementSpeed": 340,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 106,
+        "resource": 22,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.36,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 102,
+      "key": "Shyvana",
+      "name": "龙血武姬",
+      "title": "希瓦娜",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 625,
+        "resource": 100,
+        "healthRegen": 7,
+        "resourceRegen": 0,
+        "attackDamage": 62,
+        "attackSpeed": 0.638,
+        "armor": 35,
+        "magicResistance": 32,
+        "movementSpeed": 350,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 95,
+        "resource": 0,
+        "healthRegen": 0.65,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 103,
+      "key": "Ahri",
+      "name": "九尾妖狐",
+      "title": "阿狸",
+      "tags": [
+        "Mage",
+        "Assassin"
+      ],
+      "base": {
+        "health": 590,
+        "resource": 418,
+        "healthRegen": 2.5,
+        "resourceRegen": 8,
+        "attackDamage": 53,
+        "attackSpeed": 0.668,
+        "armor": 21,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 25,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.2,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 104,
+      "key": "Graves",
+      "name": "法外狂徒",
+      "title": "格雷福斯",
+      "tags": [
+        "Marksman"
+      ],
+      "base": {
+        "health": 625,
+        "resource": 325,
+        "healthRegen": 8,
+        "resourceRegen": 8,
+        "attackDamage": 66,
+        "attackSpeed": 0.475,
+        "armor": 33,
+        "magicResistance": 30,
+        "movementSpeed": 340,
+        "attackRange": 425,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 106,
+        "resource": 40,
+        "healthRegen": 0.7,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4.6,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 105,
+      "key": "Fizz",
+      "name": "潮汐海灵",
+      "title": "菲兹",
+      "tags": [
+        "Assassin",
+        "Fighter"
+      ],
+      "base": {
+        "health": 640,
+        "resource": 317,
+        "healthRegen": 8,
+        "resourceRegen": 6,
+        "attackDamage": 58,
+        "attackSpeed": 0.658,
+        "armor": 26,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 106,
+        "resource": 52,
+        "healthRegen": 0.7,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.1,
+        "armor": 4.6,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 106,
+      "key": "Volibear",
+      "name": "不灭狂雷",
+      "title": "沃利贝尔",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 650,
+        "resource": 350,
+        "healthRegen": 9,
+        "resourceRegen": 6.25,
+        "attackDamage": 65,
+        "attackSpeed": 0.625,
+        "armor": 35,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 70,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.5,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 5.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 107,
+      "key": "Rengar",
+      "name": "傲之追猎者",
+      "title": "雷恩加尔",
+      "tags": [
+        "Assassin",
+        "Fighter"
+      ],
+      "base": {
+        "health": 590,
+        "resource": 4,
+        "healthRegen": 6,
+        "resourceRegen": 0,
+        "attackDamage": 68,
+        "attackSpeed": 0.667,
+        "armor": 34,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 0,
+        "healthRegen": 0.5,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 110,
+      "key": "Varus",
+      "name": "惩戒之箭",
+      "title": "韦鲁斯",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 320,
+        "healthRegen": 3.5,
+        "resourceRegen": 8,
+        "attackDamage": 59,
+        "attackSpeed": 0.658,
+        "armor": 24,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 575,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 105,
+        "resource": 40,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 111,
+      "key": "Nautilus",
+      "name": "深海泰坦",
+      "title": "诺提勒斯",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "base": {
+        "health": 646,
+        "resource": 400,
+        "healthRegen": 8.5,
+        "resourceRegen": 8.65,
+        "attackDamage": 61,
+        "attackSpeed": 0.706,
+        "armor": 39,
+        "magicResistance": 32,
+        "movementSpeed": 325,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 100,
+        "resource": 47,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.5,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1,
+        "armor": 4.95,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 112,
+      "key": "Viktor",
+      "name": "奥术先驱",
+      "title": "维克托",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 405,
+        "healthRegen": 8,
+        "resourceRegen": 8,
+        "attackDamage": 53,
+        "attackSpeed": 0.658,
+        "armor": 23,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 100,
+        "resource": 45,
+        "healthRegen": 0.65,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.11,
+        "armor": 4.4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 113,
+      "key": "Sejuani",
+      "name": "北地之怒",
+      "title": "瑟庄妮",
+      "tags": [
+        "Tank"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 400,
+        "healthRegen": 8.5,
+        "resourceRegen": 7,
+        "attackDamage": 66,
+        "attackSpeed": 0.688,
+        "armor": 34,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 114,
+        "resource": 40,
+        "healthRegen": 1,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 5.45,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 114,
+      "key": "Fiora",
+      "name": "无双剑姬",
+      "title": "菲奥娜",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 620,
+        "resource": 300,
+        "healthRegen": 8.5,
+        "resourceRegen": 8,
+        "attackDamage": 66,
+        "attackSpeed": 0.69,
+        "armor": 33,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 60,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.2,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 115,
+      "key": "Ziggs",
+      "name": "爆破鬼才",
+      "title": "吉格斯",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 606,
+        "resource": 480,
+        "healthRegen": 6.5,
+        "resourceRegen": 8,
+        "attackDamage": 55,
+        "attackSpeed": 0.656,
+        "armor": 21,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 106,
+        "resource": 23.5,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 117,
+      "key": "Lulu",
+      "name": "仙灵女巫",
+      "title": "璐璐",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 565,
+        "resource": 350,
+        "healthRegen": 6,
+        "resourceRegen": 11,
+        "attackDamage": 47,
+        "attackSpeed": 0.625,
+        "armor": 26,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 92,
+        "resource": 55,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.6,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.25,
+        "armor": 4.6,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 119,
+      "key": "Draven",
+      "name": "荣耀行刑官",
+      "title": "德莱文",
+      "tags": [
+        "Marksman"
+      ],
+      "base": {
+        "health": 675,
+        "resource": 361,
+        "healthRegen": 3.75,
+        "resourceRegen": 8.05,
+        "attackDamage": 62,
+        "attackSpeed": 0.679,
+        "armor": 29,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 39,
+        "healthRegen": 0.7,
+        "resourceRegen": 0.65,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.7,
+        "armor": 4.5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 120,
+      "key": "Hecarim",
+      "name": "战争之影",
+      "title": "赫卡里姆",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 625,
+        "resource": 280,
+        "healthRegen": 7,
+        "resourceRegen": 7,
+        "attackDamage": 66,
+        "attackSpeed": 0.67,
+        "armor": 32,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 106,
+        "resource": 40,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 5.45,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 121,
+      "key": "Khazix",
+      "name": "虚空掠夺者",
+      "title": "卡兹克",
+      "tags": [
+        "Assassin"
+      ],
+      "base": {
+        "health": 643,
+        "resource": 327,
+        "healthRegen": 7.5,
+        "resourceRegen": 7.59,
+        "attackDamage": 60,
+        "attackSpeed": 0.668,
+        "armor": 32,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 40,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.5,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.7,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 122,
+      "key": "Darius",
+      "name": "诺克萨斯之手",
+      "title": "德莱厄斯",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 652,
+        "resource": 263,
+        "healthRegen": 10,
+        "resourceRegen": 6.6,
+        "attackDamage": 64,
+        "attackSpeed": 0.625,
+        "armor": 37,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 114,
+        "resource": 58,
+        "healthRegen": 0.95,
+        "resourceRegen": 0.35,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1,
+        "armor": 5.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 126,
+      "key": "Jayce",
+      "name": "未来守护者",
+      "title": "杰斯",
+      "tags": [
+        "Fighter",
+        "Marksman"
+      ],
+      "base": {
+        "health": 590,
+        "resource": 375,
+        "healthRegen": 6,
+        "resourceRegen": 6,
+        "attackDamage": 59,
+        "attackSpeed": 0.658,
+        "armor": 22,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 45,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 127,
+      "key": "Lissandra",
+      "name": "冰霜女巫",
+      "title": "丽桑卓",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 620,
+        "resource": 475,
+        "healthRegen": 7,
+        "resourceRegen": 8,
+        "attackDamage": 55,
+        "attackSpeed": 0.656,
+        "armor": 22,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 30,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.4,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.5,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 131,
+      "key": "Diana",
+      "name": "皎月女神",
+      "title": "黛安娜",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 640,
+        "resource": 375,
+        "healthRegen": 6.5,
+        "resourceRegen": 8,
+        "attackDamage": 57,
+        "attackSpeed": 0.625,
+        "armor": 31,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 25,
+        "healthRegen": 0.85,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.3,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 133,
+      "key": "Quinn",
+      "name": "德玛西亚之翼",
+      "title": "奎因",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "base": {
+        "health": 565,
+        "resource": 269,
+        "healthRegen": 5.5,
+        "resourceRegen": 7,
+        "attackDamage": 59,
+        "attackSpeed": 0.668,
+        "armor": 28,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 107,
+        "resource": 35,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.4,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.1,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 134,
+      "key": "Syndra",
+      "name": "暗黑元首",
+      "title": "辛德拉",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 583,
+        "resource": 480,
+        "healthRegen": 6.5,
+        "resourceRegen": 8,
+        "attackDamage": 54,
+        "attackSpeed": 0.658,
+        "armor": 25,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 100,
+        "resource": 40,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 136,
+      "key": "AurelionSol",
+      "name": "铸星龙王",
+      "title": "奥瑞利安·索尔",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 530,
+        "healthRegen": 5.5,
+        "resourceRegen": 8,
+        "attackDamage": 58,
+        "attackSpeed": 0.625,
+        "armor": 22,
+        "magicResistance": 30,
+        "movementSpeed": 340,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 90,
+        "resource": 40,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.75,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.5,
+        "armor": 4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 141,
+      "key": "Kayn",
+      "name": "影流之镰",
+      "title": "凯隐",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 655,
+        "resource": 410,
+        "healthRegen": 8,
+        "resourceRegen": 11.5,
+        "attackDamage": 68,
+        "attackSpeed": 0.669,
+        "armor": 38,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 103,
+        "resource": 50,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.95,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.7,
+        "armor": 4.5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 142,
+      "key": "Zoe",
+      "name": "暮光星灵",
+      "title": "佐伊",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 425,
+        "healthRegen": 7.5,
+        "resourceRegen": 8,
+        "attackDamage": 58,
+        "attackSpeed": 0.658,
+        "armor": 21,
+        "magicResistance": 30,
+        "movementSpeed": 340,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 106,
+        "resource": 25,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.65,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 143,
+      "key": "Zyra",
+      "name": "荆棘之兴",
+      "title": "婕拉",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 574,
+        "resource": 418,
+        "healthRegen": 5.5,
+        "resourceRegen": 7,
+        "attackDamage": 53,
+        "attackSpeed": 0.681,
+        "armor": 29,
+        "magicResistance": 30,
+        "movementSpeed": 340,
+        "attackRange": 575,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 93,
+        "resource": 25,
+        "healthRegen": 0.5,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.11,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 145,
+      "key": "Kaisa",
+      "name": "虚空之女",
+      "title": "卡莎",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "base": {
+        "health": 640,
+        "resource": 345,
+        "healthRegen": 4,
+        "resourceRegen": 8.2,
+        "attackDamage": 59,
+        "attackSpeed": 0.644,
+        "armor": 25,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 102,
+        "resource": 40,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.8,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 147,
+      "key": "Seraphine",
+      "name": "星籁歌姬",
+      "title": "萨勒芬妮",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 570,
+        "resource": 360,
+        "healthRegen": 6.5,
+        "resourceRegen": 11.5,
+        "attackDamage": 50,
+        "attackSpeed": 0.669,
+        "armor": 26,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 95,
+        "resource": 40,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.95,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 150,
+      "key": "Gnar",
+      "name": "迷失之牙",
+      "title": "纳尔",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 540,
+        "resource": 100,
+        "healthRegen": 4.5,
+        "resourceRegen": 0,
+        "attackDamage": 60,
+        "attackSpeed": 0.625,
+        "armor": 32,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 79,
+        "resource": 0,
+        "healthRegen": 1.25,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 6,
+        "armor": 3.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 154,
+      "key": "Zac",
+      "name": "生化魔人",
+      "title": "扎克",
+      "tags": [
+        "Tank",
+        "Fighter"
+      ],
+      "base": {
+        "health": 685,
+        "resource": 0,
+        "healthRegen": 5,
+        "resourceRegen": 0,
+        "attackDamage": 60,
+        "attackSpeed": 0.736,
+        "armor": 33,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 0,
+        "healthRegen": 0.5,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.6,
+        "armor": 5.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 157,
+      "key": "Yasuo",
+      "name": "疾风剑豪",
+      "title": "亚索",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 590,
+        "resource": 100,
+        "healthRegen": 6.5,
+        "resourceRegen": 0,
+        "attackDamage": 60,
+        "attackSpeed": 0.697,
+        "armor": 32,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 0,
+        "healthRegen": 0.9,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 4.6,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 161,
+      "key": "Velkoz",
+      "name": "虚空之眼",
+      "title": "维克兹",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 590,
+        "resource": 469,
+        "healthRegen": 5.5,
+        "resourceRegen": 8,
+        "attackDamage": 55,
+        "attackSpeed": 0.643,
+        "armor": 22,
+        "magicResistance": 30,
+        "movementSpeed": 340,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 102,
+        "resource": 21,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.59,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 163,
+      "key": "Taliyah",
+      "name": "岩雀",
+      "title": "塔莉垭",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 550,
+        "resource": 470,
+        "healthRegen": 6.5,
+        "resourceRegen": 8,
+        "attackDamage": 58,
+        "attackSpeed": 0.658,
+        "armor": 18,
+        "magicResistance": 28,
+        "movementSpeed": 330,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 30,
+        "healthRegen": 0.65,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.36,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 164,
+      "key": "Camille",
+      "name": "青钢影",
+      "title": "卡蜜尔",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 650,
+        "resource": 339,
+        "healthRegen": 8.5,
+        "resourceRegen": 8.15,
+        "attackDamage": 68,
+        "attackSpeed": 0.644,
+        "armor": 35,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 52,
+        "healthRegen": 0.8,
+        "resourceRegen": 0.75,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 166,
+      "key": "Akshan",
+      "name": "影哨",
+      "title": "阿克尚",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "base": {
+        "health": 610,
+        "resource": 350,
+        "healthRegen": 3.75,
+        "resourceRegen": 8.2,
+        "attackDamage": 52,
+        "attackSpeed": 0.638,
+        "armor": 26,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 500,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 107,
+        "resource": 40,
+        "healthRegen": 0.65,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 4,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 200,
+      "key": "Belveth",
+      "name": "虚空女皇",
+      "title": "卑尔维斯",
+      "tags": [
+        "Fighter"
+      ],
+      "base": {
+        "health": 580,
+        "resource": 45,
+        "healthRegen": 6,
+        "resourceRegen": 0,
+        "attackDamage": 55,
+        "attackSpeed": 0.67,
+        "armor": 28,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 0,
+        "healthRegen": 0.6,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 0,
+        "armor": 5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 201,
+      "key": "Braum",
+      "name": "弗雷尔卓德之心",
+      "title": "布隆",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "base": {
+        "health": 610,
+        "resource": 311,
+        "healthRegen": 8.5,
+        "resourceRegen": 7,
+        "attackDamage": 55,
+        "attackSpeed": 0.644,
+        "armor": 35,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 112,
+        "resource": 45,
+        "healthRegen": 1,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 202,
+      "key": "Jhin",
+      "name": "戏命师",
+      "title": "烬",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "base": {
+        "health": 655,
+        "resource": 300,
+        "healthRegen": 3.75,
+        "resourceRegen": 6,
+        "attackDamage": 61,
+        "attackSpeed": 0.625,
+        "armor": 24,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 107,
+        "resource": 50,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 0,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 203,
+      "key": "Kindred",
+      "name": "永猎双子",
+      "title": "千珏",
+      "tags": [
+        "Marksman"
+      ],
+      "base": {
+        "health": 595,
+        "resource": 300,
+        "healthRegen": 7,
+        "resourceRegen": 7,
+        "attackDamage": 65,
+        "attackSpeed": 0.625,
+        "armor": 29,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 500,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 35,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.4,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 221,
+      "key": "Zeri",
+      "name": "祖安花火",
+      "title": "泽丽",
+      "tags": [
+        "Marksman"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 250,
+        "healthRegen": 3.25,
+        "resourceRegen": 6,
+        "attackDamage": 56,
+        "attackSpeed": 0.658,
+        "armor": 24,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 45,
+        "healthRegen": 0.7,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 222,
+      "key": "Jinx",
+      "name": "暴走萝莉",
+      "title": "金克丝",
+      "tags": [
+        "Marksman"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 260,
+        "healthRegen": 3.75,
+        "resourceRegen": 6.7,
+        "attackDamage": 59,
+        "attackSpeed": 0.625,
+        "armor": 26,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 105,
+        "resource": 50,
+        "healthRegen": 0.5,
+        "resourceRegen": 1,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 223,
+      "key": "TahmKench",
+      "name": "河流之王",
+      "title": "塔姆",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "base": {
+        "health": 640,
+        "resource": 325,
+        "healthRegen": 6.5,
+        "resourceRegen": 8,
+        "attackDamage": 56,
+        "attackSpeed": 0.658,
+        "armor": 39,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 103,
+        "resource": 50,
+        "healthRegen": 0.55,
+        "resourceRegen": 1,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 233,
+      "key": "Briar",
+      "name": "狂厄蔷薇",
+      "title": "贝蕾亚",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 625,
+        "resource": 0,
+        "healthRegen": 0,
+        "resourceRegen": 0,
+        "attackDamage": 60,
+        "attackSpeed": 0.644,
+        "armor": 30,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 95,
+        "resource": 0,
+        "healthRegen": 0,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 234,
+      "key": "Viego",
+      "name": "破败之王",
+      "title": "佛耶戈",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 10000,
+        "healthRegen": 7,
+        "resourceRegen": 0,
+        "attackDamage": 57,
+        "attackSpeed": 0.658,
+        "armor": 34,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 200,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 0,
+        "healthRegen": 0.7,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.75,
+        "armor": 4.6,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 235,
+      "key": "Senna",
+      "name": "涤魂圣枪",
+      "title": "赛娜",
+      "tags": [
+        "Support",
+        "Marksman"
+      ],
+      "base": {
+        "health": 530,
+        "resource": 350,
+        "healthRegen": 3.5,
+        "resourceRegen": 11.5,
+        "attackDamage": 50,
+        "attackSpeed": 0.625,
+        "armor": 25,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 600,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 89,
+        "resource": 45,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.6,
+        "armor": 4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 236,
+      "key": "Lucian",
+      "name": "圣枪游侠",
+      "title": "卢锡安",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "base": {
+        "health": 641,
+        "resource": 320,
+        "healthRegen": 3.75,
+        "resourceRegen": 7,
+        "attackDamage": 60,
+        "attackSpeed": 0.638,
+        "armor": 28,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 500,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 100,
+        "resource": 43,
+        "healthRegen": 0.65,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 238,
+      "key": "Zed",
+      "name": "影流之主",
+      "title": "劫",
+      "tags": [
+        "Assassin"
+      ],
+      "base": {
+        "health": 654,
+        "resource": 200,
+        "healthRegen": 7,
+        "resourceRegen": 50,
+        "attackDamage": 63,
+        "attackSpeed": 0.651,
+        "armor": 32,
+        "magicResistance": 29,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 0,
+        "healthRegen": 0.65,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.3,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 240,
+      "key": "Kled",
+      "name": "暴怒骑士",
+      "title": "克烈",
+      "tags": [
+        "Fighter"
+      ],
+      "base": {
+        "health": 410,
+        "resource": 100,
+        "healthRegen": 6,
+        "resourceRegen": 0,
+        "attackDamage": 65,
+        "attackSpeed": 0.625,
+        "armor": 35,
+        "magicResistance": 28,
+        "movementSpeed": 345,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 84,
+        "resource": 0,
+        "healthRegen": 0.75,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 5.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 245,
+      "key": "Ekko",
+      "name": "时间刺客",
+      "title": "艾克",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "base": {
+        "health": 655,
+        "resource": 280,
+        "healthRegen": 9,
+        "resourceRegen": 7,
+        "attackDamage": 58,
+        "attackSpeed": 0.688,
+        "armor": 32,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 70,
+        "healthRegen": 0.9,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.3,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 246,
+      "key": "Qiyana",
+      "name": "元素女皇",
+      "title": "奇亚娜",
+      "tags": [
+        "Assassin"
+      ],
+      "base": {
+        "health": 590,
+        "resource": 375,
+        "healthRegen": 8,
+        "resourceRegen": 8,
+        "attackDamage": 64,
+        "attackSpeed": 0.688,
+        "armor": 31,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 115,
+        "resource": 60,
+        "healthRegen": 0.9,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.1,
+        "armor": 4.5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 254,
+      "key": "Vi",
+      "name": "皮城执法官",
+      "title": "蔚",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 655,
+        "resource": 295,
+        "healthRegen": 10,
+        "resourceRegen": 8,
+        "attackDamage": 63,
+        "attackSpeed": 0.644,
+        "armor": 30,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 105,
+        "resource": 65,
+        "healthRegen": 1,
+        "resourceRegen": 0.65,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 266,
+      "key": "Aatrox",
+      "name": "暗裔剑魔",
+      "title": "亚托克斯",
+      "tags": [
+        "Fighter"
+      ],
+      "base": {
+        "health": 650,
+        "resource": 0,
+        "healthRegen": 3,
+        "resourceRegen": 0,
+        "attackDamage": 60,
+        "attackSpeed": 0.651,
+        "armor": 38,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 114,
+        "resource": 0,
+        "healthRegen": 0.5,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.8,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 267,
+      "key": "Nami",
+      "name": "唤潮鲛姬",
+      "title": "娜美",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 560,
+        "resource": 365,
+        "healthRegen": 5.5,
+        "resourceRegen": 11.5,
+        "attackDamage": 54,
+        "attackSpeed": 0.644,
+        "armor": 29,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 88,
+        "resource": 43,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.4,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.61,
+        "armor": 5.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 268,
+      "key": "Azir",
+      "name": "沙漠皇帝",
+      "title": "阿兹尔",
+      "tags": [
+        "Mage",
+        "Marksman"
+      ],
+      "base": {
+        "health": 575,
+        "resource": 320,
+        "healthRegen": 7,
+        "resourceRegen": 8,
+        "attackDamage": 56,
+        "attackSpeed": 0.625,
+        "armor": 25,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 108,
+        "resource": 40,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 5,
+        "armor": 5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 350,
+      "key": "Yuumi",
+      "name": "魔法猫咪",
+      "title": "悠米",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 500,
+        "resource": 440,
+        "healthRegen": 5,
+        "resourceRegen": 10,
+        "attackDamage": 49,
+        "attackSpeed": 0.625,
+        "armor": 25,
+        "magicResistance": 25,
+        "movementSpeed": 330,
+        "attackRange": 425,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 69,
+        "resource": 45,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.4,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1,
+        "armor": 4.2,
+        "magicResistance": 1.1,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 360,
+      "key": "Samira",
+      "name": "沙漠玫瑰",
+      "title": "莎弥拉",
+      "tags": [
+        "Marksman",
+        "Assassin"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 349,
+        "healthRegen": 3.25,
+        "resourceRegen": 8.2,
+        "attackDamage": 57,
+        "attackSpeed": 0.658,
+        "armor": 26,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 500,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 108,
+        "resource": 38,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.3,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 412,
+      "key": "Thresh",
+      "name": "魂锁典狱长",
+      "title": "锤石",
+      "tags": [
+        "Support",
+        "Tank"
+      ],
+      "base": {
+        "health": 620,
+        "resource": 274,
+        "healthRegen": 7,
+        "resourceRegen": 6,
+        "attackDamage": 56,
+        "attackSpeed": 0.625,
+        "armor": 33,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 450,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 120,
+        "resource": 44,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 0,
+        "magicResistance": 1.55,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 420,
+      "key": "Illaoi",
+      "name": "海兽祭司",
+      "title": "俄洛伊",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 656,
+        "resource": 350,
+        "healthRegen": 9.5,
+        "resourceRegen": 7.5,
+        "attackDamage": 65,
+        "attackSpeed": 0.625,
+        "armor": 35,
+        "magicResistance": 32,
+        "movementSpeed": 350,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 115,
+        "resource": 50,
+        "healthRegen": 0.8,
+        "resourceRegen": 0.75,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 421,
+      "key": "RekSai",
+      "name": "虚空遁地兽",
+      "title": "雷克塞",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 100,
+        "healthRegen": 2.5,
+        "resourceRegen": 0,
+        "attackDamage": 62,
+        "attackSpeed": 0.667,
+        "armor": 35,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 0,
+        "healthRegen": 0.5,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 427,
+      "key": "Ivern",
+      "name": "翠神",
+      "title": "艾翁",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 450,
+        "healthRegen": 7,
+        "resourceRegen": 6,
+        "attackDamage": 50,
+        "attackSpeed": 0.644,
+        "armor": 27,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 475,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 60,
+        "healthRegen": 0.85,
+        "resourceRegen": 0.75,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.4,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 429,
+      "key": "Kalista",
+      "name": "复仇之矛",
+      "title": "卡莉丝塔",
+      "tags": [
+        "Marksman"
+      ],
+      "base": {
+        "health": 560,
+        "resource": 300,
+        "healthRegen": 4,
+        "resourceRegen": 6.3,
+        "attackDamage": 57,
+        "attackSpeed": 0.694,
+        "armor": 24,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 114,
+        "resource": 45,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 4.5,
+        "armor": 5.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 432,
+      "key": "Bard",
+      "name": "星界游神",
+      "title": "巴德",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 350,
+        "healthRegen": 5.5,
+        "resourceRegen": 6,
+        "attackDamage": 52,
+        "attackSpeed": 0.658,
+        "armor": 34,
+        "magicResistance": 30,
+        "movementSpeed": 335,
+        "attackRange": 500,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 103,
+        "resource": 50,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.45,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 497,
+      "key": "Rakan",
+      "name": "幻翎",
+      "title": "洛",
+      "tags": [
+        "Support"
+      ],
+      "base": {
+        "health": 610,
+        "resource": 315,
+        "healthRegen": 5,
+        "resourceRegen": 8.75,
+        "attackDamage": 62,
+        "attackSpeed": 0.635,
+        "armor": 30,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 300,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 50,
+        "healthRegen": 0.5,
+        "resourceRegen": 0.5,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4.9,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 498,
+      "key": "Xayah",
+      "name": "逆羽",
+      "title": "霞",
+      "tags": [
+        "Marksman"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 340,
+        "healthRegen": 3.25,
+        "resourceRegen": 8.25,
+        "attackDamage": 60,
+        "attackSpeed": 0.658,
+        "armor": 25,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 107,
+        "resource": 40,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.9,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 516,
+      "key": "Ornn",
+      "name": "山隐之焰",
+      "title": "奥恩",
+      "tags": [
+        "Tank"
+      ],
+      "base": {
+        "health": 660,
+        "resource": 341,
+        "healthRegen": 9,
+        "resourceRegen": 8,
+        "attackDamage": 69,
+        "attackSpeed": 0.625,
+        "armor": 33,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 65,
+        "healthRegen": 0.9,
+        "resourceRegen": 0.6,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 5.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 517,
+      "key": "Sylas",
+      "name": "解脱者",
+      "title": "塞拉斯",
+      "tags": [
+        "Mage",
+        "Assassin"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 400,
+        "healthRegen": 9,
+        "resourceRegen": 8,
+        "attackDamage": 61,
+        "attackSpeed": 0.645,
+        "armor": 29,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 122,
+        "resource": 70,
+        "healthRegen": 0.9,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 5.2,
+        "magicResistance": 2.55,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 518,
+      "key": "Neeko",
+      "name": "万花通灵",
+      "title": "妮蔻",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 610,
+        "resource": 450,
+        "healthRegen": 7.5,
+        "resourceRegen": 7,
+        "attackDamage": 48,
+        "attackSpeed": 0.625,
+        "armor": 21,
+        "magicResistance": 30,
+        "movementSpeed": 340,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 30,
+        "healthRegen": 0.75,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 5.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 523,
+      "key": "Aphelios",
+      "name": "残月之肃",
+      "title": "厄斐琉斯",
+      "tags": [
+        "Marksman"
+      ],
+      "base": {
+        "health": 600,
+        "resource": 348,
+        "healthRegen": 3.25,
+        "resourceRegen": 6.5,
+        "attackDamage": 55,
+        "attackSpeed": 0.665,
+        "armor": 26,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 102,
+        "resource": 42,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.4,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.1,
+        "armor": 4.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 526,
+      "key": "Rell",
+      "name": "镕铁少女",
+      "title": "芮尔",
+      "tags": [
+        "Tank",
+        "Support"
+      ],
+      "base": {
+        "health": 620,
+        "resource": 320,
+        "healthRegen": 7.5,
+        "resourceRegen": 7,
+        "attackDamage": 55,
+        "attackSpeed": 0.625,
+        "armor": 30,
+        "magicResistance": 28,
+        "movementSpeed": 315,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 40,
+        "healthRegen": 0.85,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4,
+        "magicResistance": 1.8,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 555,
+      "key": "Pyke",
+      "name": "血港鬼影",
+      "title": "派克",
+      "tags": [
+        "Support",
+        "Assassin"
+      ],
+      "base": {
+        "health": 670,
+        "resource": 415,
+        "healthRegen": 7,
+        "resourceRegen": 8,
+        "attackDamage": 62,
+        "attackSpeed": 0.667,
+        "armor": 37,
+        "magicResistance": 32,
+        "movementSpeed": 330,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 50,
+        "healthRegen": 0.5,
+        "resourceRegen": 1,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 711,
+      "key": "Vex",
+      "name": "愁云使者",
+      "title": "薇古丝",
+      "tags": [
+        "Mage"
+      ],
+      "base": {
+        "health": 590,
+        "resource": 490,
+        "healthRegen": 6.5,
+        "resourceRegen": 6,
+        "attackDamage": 54,
+        "attackSpeed": 0.669,
+        "armor": 23,
+        "magicResistance": 28,
+        "movementSpeed": 335,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 104,
+        "resource": 32,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1,
+        "armor": 4.45,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 777,
+      "key": "Yone",
+      "name": "封魔剑魂",
+      "title": "永恩",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 620,
+        "resource": 500,
+        "healthRegen": 7.5,
+        "resourceRegen": 0,
+        "attackDamage": 62,
+        "attackSpeed": 0.625,
+        "armor": 33,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 105,
+        "resource": 0,
+        "healthRegen": 0.75,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.5,
+        "armor": 4.6,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 799,
+      "key": "Ambessa",
+      "name": "铁血狼母",
+      "title": "安蓓萨",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 200,
+        "healthRegen": 8.5,
+        "resourceRegen": 50,
+        "attackDamage": 63,
+        "attackSpeed": 0.625,
+        "armor": 35,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 0,
+        "healthRegen": 0.75,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.9,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 800,
+      "key": "Mel",
+      "name": "流光镜影",
+      "title": "梅尔",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 630,
+        "resource": 480,
+        "healthRegen": 6,
+        "resourceRegen": 9,
+        "attackDamage": 54,
+        "attackSpeed": 0.625,
+        "armor": 21,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 99,
+        "resource": 28,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.9,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 5.2,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 804,
+      "key": "Yunara",
+      "name": "不破之誓",
+      "title": "芸阿娜",
+      "tags": [
+        "Marksman"
+      ],
+      "base": {
+        "health": 590,
+        "resource": 275,
+        "healthRegen": 4,
+        "resourceRegen": 7.5,
+        "attackDamage": 55,
+        "attackSpeed": 0.65,
+        "armor": 25,
+        "magicResistance": 30,
+        "movementSpeed": 325,
+        "attackRange": 575,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 45,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.75,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 805,
+      "key": "Locke",
+      "name": "灰烬驱魔人",
+      "title": "洛克",
+      "tags": [
+        "Assassin",
+        "Mage"
+      ],
+      "base": {
+        "health": 620,
+        "resource": 280,
+        "healthRegen": 9,
+        "resourceRegen": 7,
+        "attackDamage": 58,
+        "attackSpeed": 0.688,
+        "armor": 32,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 70,
+        "healthRegen": 0.9,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3.3,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 875,
+      "key": "Sett",
+      "name": "腕豪",
+      "title": "瑟提",
+      "tags": [
+        "Fighter",
+        "Tank"
+      ],
+      "base": {
+        "health": 670,
+        "resource": 0,
+        "healthRegen": 7,
+        "resourceRegen": 0,
+        "attackDamage": 60,
+        "attackSpeed": 0.625,
+        "armor": 33,
+        "magicResistance": 28,
+        "movementSpeed": 340,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 114,
+        "resource": 0,
+        "healthRegen": 0.5,
+        "resourceRegen": 0,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.75,
+        "armor": 4.7,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 876,
+      "key": "Lillia",
+      "name": "含羞蓓蕾",
+      "title": "莉莉娅",
+      "tags": [
+        "Fighter",
+        "Mage"
+      ],
+      "base": {
+        "health": 605,
+        "resource": 410,
+        "healthRegen": 2.5,
+        "resourceRegen": 11.5,
+        "attackDamage": 61,
+        "attackSpeed": 0.625,
+        "armor": 22,
+        "magicResistance": 32,
+        "movementSpeed": 330,
+        "attackRange": 325,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 105,
+        "resource": 50,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.95,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.7,
+        "armor": 4.5,
+        "magicResistance": 1.55,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 887,
+      "key": "Gwen",
+      "name": "灵罗娃娃",
+      "title": "格温",
+      "tags": [
+        "Fighter"
+      ],
+      "base": {
+        "health": 620,
+        "resource": 330,
+        "healthRegen": 9,
+        "resourceRegen": 7.5,
+        "attackDamage": 63,
+        "attackSpeed": 0.69,
+        "armor": 39,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 115,
+        "resource": 40,
+        "healthRegen": 0.9,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.25,
+        "armor": 4.9,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 888,
+      "key": "Renata",
+      "name": "炼金男爵",
+      "title": "烈娜塔 · 戈拉斯克",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 545,
+        "resource": 350,
+        "healthRegen": 5.5,
+        "resourceRegen": 11.5,
+        "attackDamage": 49,
+        "attackSpeed": 0.625,
+        "armor": 27,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 94,
+        "resource": 50,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.5,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.11,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 893,
+      "key": "Aurora",
+      "name": "双界灵兔",
+      "title": "阿萝拉",
+      "tags": [
+        "Mage",
+        "Assassin"
+      ],
+      "base": {
+        "health": 607,
+        "resource": 475,
+        "healthRegen": 6,
+        "resourceRegen": 8,
+        "attackDamage": 53,
+        "attackSpeed": 0.668,
+        "armor": 23,
+        "magicResistance": 32,
+        "movementSpeed": 335,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 110,
+        "resource": 30,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.8,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2,
+        "armor": 4.5,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 895,
+      "key": "Nilah",
+      "name": "不羁之悦",
+      "title": "尼菈",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 570,
+        "resource": 350,
+        "healthRegen": 6,
+        "resourceRegen": 8.2,
+        "attackDamage": 58,
+        "attackSpeed": 0.697,
+        "armor": 27,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 225,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 101,
+        "resource": 35,
+        "healthRegen": 0.9,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 1.25,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 897,
+      "key": "KSante",
+      "name": "纳祖芒荣耀",
+      "title": "奎桑提",
+      "tags": [
+        "Tank",
+        "Fighter"
+      ],
+      "base": {
+        "health": 625,
+        "resource": 320,
+        "healthRegen": 9.5,
+        "resourceRegen": 7,
+        "attackDamage": 64,
+        "attackSpeed": 0.688,
+        "armor": 36,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 150,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 120,
+        "resource": 60,
+        "healthRegen": 1,
+        "resourceRegen": 1,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 5.2,
+        "magicResistance": 2.1,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 901,
+      "key": "Smolder",
+      "name": "炽炎雏龙",
+      "title": "斯莫德",
+      "tags": [
+        "Marksman",
+        "Mage"
+      ],
+      "base": {
+        "health": 575,
+        "resource": 300,
+        "healthRegen": 3.75,
+        "resourceRegen": 8.5,
+        "attackDamage": 58,
+        "attackSpeed": 0.638,
+        "armor": 24,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 100,
+        "resource": 40,
+        "healthRegen": 0.6,
+        "resourceRegen": 0.7,
+        "attackDamage": 0,
+        "attackSpeedPercent": 4,
+        "armor": 4,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 902,
+      "key": "Milio",
+      "name": "明烛",
+      "title": "米利欧",
+      "tags": [
+        "Support",
+        "Mage"
+      ],
+      "base": {
+        "health": 560,
+        "resource": 365,
+        "healthRegen": 5,
+        "resourceRegen": 11.5,
+        "attackDamage": 48,
+        "attackSpeed": 0.625,
+        "armor": 26,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 525,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 88,
+        "resource": 43,
+        "healthRegen": 0.5,
+        "resourceRegen": 0.4,
+        "attackDamage": 0,
+        "attackSpeedPercent": 3,
+        "armor": 4.6,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 904,
+      "key": "Zaahen",
+      "name": "不落魔锋",
+      "title": "亚恒",
+      "tags": [
+        "Fighter",
+        "Assassin"
+      ],
+      "base": {
+        "health": 640,
+        "resource": 350,
+        "healthRegen": 7.5,
+        "resourceRegen": 8.15,
+        "attackDamage": 63,
+        "attackSpeed": 0.625,
+        "armor": 36,
+        "magicResistance": 32,
+        "movementSpeed": 345,
+        "attackRange": 175,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 114,
+        "resource": 55,
+        "healthRegen": 0.8,
+        "resourceRegen": 0.75,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 5,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 910,
+      "key": "Hwei",
+      "name": "异画师",
+      "title": "彗",
+      "tags": [
+        "Mage",
+        "Support"
+      ],
+      "base": {
+        "health": 580,
+        "resource": 480,
+        "healthRegen": 5.5,
+        "resourceRegen": 7.5,
+        "attackDamage": 54,
+        "attackSpeed": 0.69,
+        "armor": 21,
+        "magicResistance": 30,
+        "movementSpeed": 330,
+        "attackRange": 550,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 109,
+        "resource": 30,
+        "healthRegen": 0.55,
+        "resourceRegen": 0.75,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.5,
+        "armor": 4.7,
+        "magicResistance": 1.3,
+        "criticalStrikeChance": 0
+      }
+    },
+    {
+      "id": 950,
+      "key": "Naafiri",
+      "name": "百裂冥犬",
+      "title": "纳亚菲利",
+      "tags": [
+        "Assassin",
+        "Fighter"
+      ],
+      "base": {
+        "health": 610,
+        "resource": 400,
+        "healthRegen": 6.25,
+        "resourceRegen": 7.5,
+        "attackDamage": 55,
+        "attackSpeed": 0.663,
+        "armor": 28,
+        "magicResistance": 32,
+        "movementSpeed": 340,
+        "attackRange": 125,
+        "criticalStrikeChance": 0
+      },
+      "growth": {
+        "health": 105,
+        "resource": 55,
+        "healthRegen": 0.6,
+        "resourceRegen": 1,
+        "attackDamage": 0,
+        "attackSpeedPercent": 2.1,
+        "armor": 4.2,
+        "magicResistance": 2.05,
+        "criticalStrikeChance": 0
+      }
+    }
+  ]
+}
