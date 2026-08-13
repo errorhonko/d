@@ -1,5 +1,10 @@
 export { calculateRangedChampion, findStatAnvilOption } from './calculator'
-export { calculateRangedAnvilBenefit, compareRangedAnvilBenefits } from './benefit'
+export {
+  calculateRangedAnvilBenefit,
+  compareAllRangedAnvilBenefits,
+  compareRangedAnvilBenefits,
+  simulateSingleStatAnvilPurchase,
+} from './benefit'
 export {
   ARENA_CHAMPION_CATEGORIES,
   calculateCategoryRoundAnvilBenefits,
@@ -29,6 +34,8 @@ export type {
   MetricGain,
   RangedAnvilBenefitInput,
   RangedAnvilBenefitResult,
+  SingleStatAnvilPurchaseResult,
+  SingleStatAnvilTierOutcomes,
 } from './benefit-model'
 export type {
   ArenaCategoryRoundTarget,

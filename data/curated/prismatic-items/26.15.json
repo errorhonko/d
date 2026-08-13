@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "patch": "26.15",
+  "dataDragonVersion": "16.15.1",
+  "locale": "zh_CN",
+  "source": "data/sources/riot-data-dragon/16.15.1/zh_CN/item.json",
+  "classificationSource": {
+    "type": "League of Legends Wiki category snapshot",
+    "category": "Prismatic items",
+    "verifiedAt": "2026-08-13"
+  },
+  "items": [
+    {
+      "id": 447122,
+      "name": "黑洞护手",
+      "staticStats": {
+        "health": 900
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 443059,
+      "name": "星夜斗篷",
+      "staticStats": {
+        "health": 300,
+        "magic_resistance": 100
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 444644,
+      "name": "破碎王后之冕",
+      "staticStats": {
+        "health": 350,
+        "ability_power": 85
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 447109,
+      "name": "残忍",
+      "staticStats": {
+        "ability_power": 80,
+        "armor": 30,
+        "magic_resistance": 30
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 443054,
+      "name": "暗钢利爪",
+      "staticStats": {
+        "armor": 55
+      },
+      "bonusAttackSpeedPercent": 50.0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 447106,
+      "name": "龙心",
+      "staticStats": {},
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 447105,
+      "name": "至高天诺言",
+      "staticStats": {
+        "ability_power": 70
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 443061,
+      "name": "熵之力",
+      "staticStats": {
+        "health": 900
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 25.0
+    },
+    {
+      "id": 443055,
+      "name": "爆鸣",
+      "staticStats": {
+        "attack_damage": 55
+      },
+      "bonusAttackSpeedPercent": 45.0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 447101,
+      "name": "投机者之刃",
+      "staticStats": {},
+      "bonusAttackSpeedPercent": 70.0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 226630,
+      "name": "渴血战斧",
+      "staticStats": {
+        "health": 400,
+        "attack_damage": 55
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 443069,
+      "name": "断筋者",
+      "staticStats": {
+        "attack_damage": 45
+      },
+      "bonusAttackSpeedPercent": 40.0,
+      "criticalStrikeChance": 25.0
+    },
+    {
+      "id": 447103,
+      "name": "血术师之盔",
+      "staticStats": {
+        "attack_damage": 70
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 443081,
+      "name": "海克斯弹丸配枪",
+      "staticStats": {
+        "attack_damage": 70
+      },
+      "bonusAttackSpeedPercent": 50.0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 447116,
+      "name": "均衡十手",
+      "staticStats": {
+        "health": 400
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 447118,
+      "name": "炎术师的披风",
+      "staticStats": {
+        "health": 400
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 447114,
+      "name": "混响之刃",
+      "staticStats": {
+        "armor": 35,
+        "magic_resistance": 35
+      },
+      "bonusAttackSpeedPercent": 40.0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 447108,
+      "name": "符文雕刻者",
+      "staticStats": {
+        "ability_power": 80
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 443062,
+      "name": "血色赠礼",
+      "staticStats": {
+        "ability_power": 80
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 443058,
+      "name": "熔石之盾",
+      "staticStats": {
+        "health": 300,
+        "armor": 100
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    },
+    {
+      "id": 447121,
+      "name": "暮色之锋",
+      "staticStats": {
+        "attack_damage": 70,
+        "ability_power": 100
+      },
+      "bonusAttackSpeedPercent": 0,
+      "criticalStrikeChance": 0
+    }
+  ]
+}

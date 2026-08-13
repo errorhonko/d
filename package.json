@@ -9,6 +9,7 @@
     "pnpm": ">=11.0.0"
   },
   "scripts": {
+    "data:champions:curate": "node scripts/curate-champion-stats.mjs",
     "data:arena:kr": "node --env-file-if-exists=.env.local scripts/collect-arena-sample.mjs --region=kr --queue=1750 --matches=100",
     "data:arena:analyze-resistances": "node scripts/analyze-arena-resistances.mjs",
     "dev": "vite",

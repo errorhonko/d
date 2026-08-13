@@ -35,6 +35,44 @@ pnpm preview
 
 `pnpm-lock.yaml` 应提交到版本库，以保证团队和部署环境使用一致的依赖版本。
 
+## 英雄初始属性
+
+`championCatalog` 保存 26.15 版本的 173 位英雄，包括简体中文名称、1 级基础属性和每级成长字段：
+
+```ts
+import {
+  championCatalog,
+  championCalculationBase,
+  championInitialStatBlock,
+} from './src/domain/champions'
+
+const ashe = championCatalog.championsByKey.get('Ashe')
+console.log(ashe?.base.attackDamage)
+console.log(ashe?.growth.attackSpeedPercent)
+
+if (ashe) {
+  const initialStats = championInitialStatBlock(ashe)
+  console.log(initialStats.health)
+  console.log(championCalculationBase(ashe).attackSpeedRatio)
+}
+```
+
+`championInitialStatBlock` 可以把英雄数据转换为属性块；`championCalculationBase` 会同时带入英雄独立的攻速收益系数，可直接展开到锻体计算输入。基础数据来自版本化的 Riot Data Dragon 快照，攻击力成长与攻速收益系数由固定版本的 League Wiki 加工快照补充。运行 `pnpm data:champions:curate` 可重复生成业务数据；详情见 [`data/curated/champions/README.md`](./data/curated/champions/README.md)。
+
+### 斗魂锻体属性来源
+
+`arenaChampionCalculationInput` 按模式规则分开组合英雄等级属性、第二回合棱彩装备表中的静态属性、历次属性锻造器和最终碎片之刃增幅。调用方必须传入 `findPrismaticItem` 返回的版本化装备，不再接受手填装备数值。符文、英雄特殊机制和装备被动不会被偷偷混入初始属性，需在对应的伤害或特殊机制模型中显式提供。
+
+```ts
+const input = arenaChampionCalculationInput({
+  champion: ashe,
+  level: 18,
+  prismaticItem: findPrismaticItem(447103), // 血术师之盔：装备表中的 70 AD
+  statAnvils: selections,
+  shardbladeEffectivenessPercent: 120,
+})
+```
+
 ## 射手英雄计算核心
 
 计算器目前提供远程英雄版本的纯函数接口：
@@ -124,6 +162,8 @@ console.log(benefit.totalDps.percent)
 ```
 
 候选收益使用 `候选后数值 - 当前数值`；百分比收益使用 `(候选后数值 / 当前数值 - 1) × 100%`。攻击属性主要比较 DPS，生命和双抗分别比较物理/魔法有效生命，经济碎片比较金币。基准值为 0 时，百分比收益返回 `null`。
+
+调用 `simulateSingleStatAnvilPurchase` 可以模拟购买一次 750 金币的属性锻造器：结果按照本次随机到的白银、黄金、棱彩品质分组，分别列出 13、13、10 种属性结果。每项结果同时包含属性增量、DPS、物理/魔法有效生命和金币收益；应按碎片影响的指标展示，而不是把所有碎片只按 DPS 排序。当前规则数据没有公布三个品质的出现概率，因此接口不会编造跨品质期望收益，`tierProbabilities` 返回 `null`。
 
 ### 按敌方大类和回合计算收益
 
