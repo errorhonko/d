@@ -5,6 +5,7 @@ import type {
   RangedAnvilBenefitInput,
   RangedAnvilBenefitResult,
 } from './benefit-model'
+import { ANVIL_TIERS, statAnvilCatalog } from '../stat-anvils'
 
 function clean(value: number): number {
   const rounded = Math.round(value * 1_000_000_000_000) / 1_000_000_000_000
@@ -95,4 +96,35 @@ export function compareRangedAnvilBenefits(
       candidate,
     }),
   )
+}
+
+/** 比较当前局面下白银、黄金和棱彩品质的全部属性锻造器。 */
+export function compareAllRangedAnvilBenefits(
+  input: Omit<RangedAnvilBenefitInput, 'candidate'> & {
+    readonly effectivenessPercent?: number
+    readonly roundsAlreadyLost?: number
+    readonly newRoundsAfterSelection?: number
+  },
+): readonly RangedAnvilBenefitResult[] {
+  const candidates = ANVIL_TIERS.flatMap((tier) =>
+    statAnvilCatalog.optionsByTier[tier].map((option) => ({
+      option,
+      ...(input.effectivenessPercent === undefined
+        ? {}
+        : { effectivenessPercent: input.effectivenessPercent }),
+      ...(input.roundsAlreadyLost === undefined
+        ? {}
+        : { roundsAlreadyLost: input.roundsAlreadyLost }),
+      ...(input.newRoundsAfterSelection === undefined
+        ? {}
+        : { newRoundsAfterSelection: input.newRoundsAfterSelection }),
+    })),
+  )
+
+  return compareRangedAnvilBenefits({
+    champion: input.champion,
+    target: input.target,
+    ...(input.profile === undefined ? {} : { profile: input.profile }),
+    candidates,
+  })
 }

@@ -1,5 +1,9 @@
 export { calculateRangedChampion, findStatAnvilOption } from './calculator'
-export { calculateRangedAnvilBenefit, compareRangedAnvilBenefits } from './benefit'
+export {
+  calculateRangedAnvilBenefit,
+  compareAllRangedAnvilBenefits,
+  compareRangedAnvilBenefits,
+} from './benefit'
 export {
   ARENA_CHAMPION_CATEGORIES,
   calculateCategoryRoundAnvilBenefits,
