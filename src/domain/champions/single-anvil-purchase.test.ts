@@ -1,37 +1,50 @@
 import { describe, expect, it } from 'vitest'
-import { simulateSingleStatAnvilPurchase } from '../calculation'
-import { championCalculationBase } from './calculation'
+import {
+  calculateRangedChampion,
+  findStatAnvilOption,
+  resolveArenaCategoryRoundTarget,
+  simulateSingleStatAnvilPurchase,
+} from '../calculation'
+import { findPrismaticItem } from '../prismatic-items'
+import { arenaChampionCalculationInput } from './calculation'
 import { championCatalog } from './catalog'
 
 describe('单次购买属性锻造器', () => {
-  it('在合理的中后期射手属性下覆盖单次购买的全部 36 种结果', () => {
+  it('仅用模式内合法来源构造局面并覆盖单次购买的全部 36 种结果', () => {
     const ashe = championCatalog.championsByKey.get('Ashe')!
+    const arenaInput = arenaChampionCalculationInput({
+      champion: ashe,
+      level: 18,
+      prismaticItem: findPrismaticItem(447103),
+      statAnvils: [
+        { option: findStatAnvilOption('gold', 'attack_damage') },
+        { option: findStatAnvilOption('gold', 'attack_speed') },
+        { option: findStatAnvilOption('gold', 'health') },
+        { option: findStatAnvilOption('silver', 'armor') },
+        { option: findStatAnvilOption('silver', 'magic_resistance') },
+      ],
+    })
+    const current = calculateRangedChampion(arenaInput)
+    const targetSample = resolveArenaCategoryRoundTarget('Marksman', 10)
     const purchase = simulateSingleStatAnvilPurchase({
-      champion: {
-        ...championCalculationBase(ashe),
-        initialStats: {
-          health: 2500,
-          attack_damage: 250,
-          ability_power: 100,
-          attack_speed: 1.5,
-          critical_strike_chance: 75,
-          critical_strike_damage: 175,
-          ability_haste: 30,
-          armor: 100,
-          magic_resistance: 70,
-          movement_speed: 325,
-          size: 100,
-        },
-        selections: [],
+      champion: arenaInput,
+      target: {
+        armor: targetSample.armor,
+        magicResistance: targetSample.magicResistance,
       },
-      profile: {
-        magicOnHitPerAttack: 50,
-        additionalMagicDps: 100,
-      },
-      target: { armor: 150, magicResistance: 100 },
       roundsAlreadyLost: 2,
       newRoundsAfterSelection: 3,
     })
+
+    expect(current.finalStats).toMatchObject({
+      health: 2702,
+      ability_power: 0,
+      attack_damage: 223.5,
+      armor: 119.2,
+      magic_resistance: 67.1,
+    })
+    expect(current.finalStats.attack_speed).toBeCloseTo(1.22388)
+    expect(targetSample.observations).toBeGreaterThan(0)
 
     expect(purchase.price).toBe(750)
     expect(purchase.allChoicesHaveSameTier).toBe(true)
@@ -48,7 +61,7 @@ describe('单次购买属性锻造器', () => {
         .outcomes.find((benefit) => benefit.option.id === id)!
 
     expect(outcome('silver', 'attack_damage').statDelta.attack_damage).toBe(15)
-    expect(outcome('silver', 'attack_damage').totalDps.percent).toBeCloseTo(4.368932)
+    expect(outcome('silver', 'attack_damage').totalDps.percent).toBeCloseTo(6.711409)
     expect(outcome('gold', 'attack_speed').statDelta.attack_speed).toBeCloseTo(0.2303)
     expect(outcome('gold', 'health').statDelta.health).toBe(375)
     expect(outcome('gold', 'armor').statDelta.armor).toBe(45)
