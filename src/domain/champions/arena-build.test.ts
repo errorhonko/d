@@ -43,12 +43,13 @@ describe('斗魂锻体英雄属性来源', () => {
       arenaChampionCalculationInput({
         champion: ashe,
         level: 18,
-        prismaticItem: findPrismaticItem(447100),
+        prismaticItem: findPrismaticItem(443054),
         statAnvils: [],
       }),
     )
 
-    expect(calculation.initialStats.attack_speed).toBeCloseTo(1.38838)
+    expect(calculation.initialStats.attack_speed).toBeCloseTo(1.32258)
+    expect(calculation.initialStats.armor).toBeCloseTo(159.2)
   })
 
   it('拒绝把碎片之刃增幅配置成削弱', () => {

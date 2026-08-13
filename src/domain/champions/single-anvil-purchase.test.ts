@@ -145,7 +145,7 @@ describe('单次购买属性锻造器', () => {
 
     expect(new Set(cases.map(({ level }) => level)).size).toBeGreaterThanOrEqual(12)
     expect(new Set(cases.map(({ existingAnvils }) => existingAnvils)).size).toBe(13)
-    expect(new Set(cases.map(({ item }) => item)).size).toBeGreaterThanOrEqual(20)
+    expect(new Set(cases.map(({ item }) => item)).size).toBeGreaterThanOrEqual(18)
     expect(new Set(cases.map(({ champion }) => champion)).size).toBeGreaterThanOrEqual(20)
   })
 })

@@ -10,3 +10,5 @@
 - 导出的所有英雄 `attackdamageperlevel` 均错误地为 `0`。
 
 当前快照保留两个游戏机制上的合法零值：赛娜没有常规每级攻击力成长；烬的传统攻击速度收益系数为零。其他英雄的数据生成时必须能够按 key 一一匹配。
+
+`26.15/prismatic-item-ids.json` 固定了 Wiki `Prismatic items` 分类中当前启用在 Arena 地图（map 30）的装备 ID，用于避免按连续客户端 ID 误收普通装备。
