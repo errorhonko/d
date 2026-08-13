@@ -1,4 +1,4 @@
-import type { AnvilOption } from '../stat-anvils'
+import type { AnvilOption, AnvilTier } from '../stat-anvils'
 import type { RangedDamageProfile, FixedDefenseTarget, RangedDpsResult } from './dps-model'
 import type {
   DefensiveSummary,
@@ -40,4 +40,17 @@ export interface RangedAnvilBenefitResult {
   readonly afterDps: RangedDpsResult
   readonly beforeDefense: DefensiveSummary
   readonly afterDefense: DefensiveSummary
+}
+
+export interface SingleStatAnvilTierOutcomes {
+  readonly tier: AnvilTier
+  readonly outcomes: readonly RangedAnvilBenefitResult[]
+}
+
+export interface SingleStatAnvilPurchaseResult {
+  readonly price: number
+  readonly allChoicesHaveSameTier: boolean
+  /** 数据源未公布各品质概率，因此这里只列出随机品质确定后的条件结果。 */
+  readonly tierProbabilities: null
+  readonly tiers: readonly SingleStatAnvilTierOutcomes[]
 }
