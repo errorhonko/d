@@ -6,6 +6,8 @@ import {
   simulateSingleStatAnvilPurchase,
 } from '../calculation'
 import { findPrismaticItem } from '../prismatic-items'
+import { prismaticItemCatalog } from '../prismatic-items'
+import { statAnvilCatalog } from '../stat-anvils'
 import { arenaChampionCalculationInput } from './calculation'
 import { championCatalog } from './catalog'
 
@@ -78,5 +80,72 @@ describe('单次购买属性锻造器', () => {
         expect(Number.isFinite(result.gold.absolute), result.option.name).toBe(true)
       }
     }
+  })
+
+  it('用固定种子的随机等级、已有锻体数量和棱彩装备回归 100 个局面', () => {
+    let state = 0x2615
+    const random = () => {
+      state = (Math.imul(state, 1_664_525) + 1_013_904_223) >>> 0
+      return state / 0x1_0000_0000
+    }
+    const pick = <T>(values: readonly T[]): T =>
+      values[Math.floor(random() * values.length)]!
+    const rangedChampions = championCatalog.champions.filter((champion) =>
+      champion.tags.includes('Marksman'),
+    )
+    const allAnvils = Object.values(statAnvilCatalog.optionsByTier).flat()
+    const cases: Array<{
+      champion: string
+      level: number
+      existingAnvils: number
+      item: number
+    }> = []
+
+    for (let index = 0; index < 100; index += 1) {
+      const champion = pick(rangedChampions)
+      const level = 3 + Math.floor(random() * 16)
+      const existingAnvils = Math.floor(random() * 13)
+      const item = pick(prismaticItemCatalog.items)
+      const statAnvils = Array.from({ length: existingAnvils }, () => ({
+        option: pick(allAnvils),
+        roundsAlreadyLost: Math.floor(random() * 5),
+        newRoundsAfterSelection: Math.floor(random() * 8),
+      }))
+      const arenaInput = arenaChampionCalculationInput({
+        champion,
+        level,
+        prismaticItem: item,
+        statAnvils,
+      })
+      const before = calculateRangedChampion(arenaInput)
+      const target = resolveArenaCategoryRoundTarget(
+        pick(['Marksman', 'Fighter', 'Mage', 'Assassin', 'Tank', 'Support'] as const),
+        3 + Math.floor(random() * 10),
+      )
+      const purchase = simulateSingleStatAnvilPurchase({
+        champion: arenaInput,
+        target: {
+          armor: target.armor,
+          magicResistance: target.magicResistance,
+        },
+        roundsAlreadyLost: Math.floor(random() * 5),
+        newRoundsAfterSelection: Math.floor(random() * 8),
+      })
+
+      cases.push({ champion: champion.key, level, existingAnvils, item: item.id })
+      expect(before.steps, `case ${index}`).toHaveLength(existingAnvils)
+      expect(purchase.tiers.flatMap(({ outcomes }) => outcomes), `case ${index}`).toHaveLength(36)
+      expect(before.finalStats.health, `case ${index}`).toBeGreaterThan(0)
+      for (const result of purchase.tiers.flatMap(({ outcomes }) => outcomes)) {
+        expect(Number.isFinite(result.totalDps.after), `case ${index} ${result.option.name}`).toBe(true)
+        expect(Number.isFinite(result.physicalEffectiveHealth.after), `case ${index} ${result.option.name}`).toBe(true)
+        expect(Number.isFinite(result.magicEffectiveHealth.after), `case ${index} ${result.option.name}`).toBe(true)
+      }
+    }
+
+    expect(new Set(cases.map(({ level }) => level)).size).toBeGreaterThanOrEqual(12)
+    expect(new Set(cases.map(({ existingAnvils }) => existingAnvils)).size).toBe(13)
+    expect(new Set(cases.map(({ item }) => item)).size).toBeGreaterThanOrEqual(20)
+    expect(new Set(cases.map(({ champion }) => champion)).size).toBeGreaterThanOrEqual(20)
   })
 })
