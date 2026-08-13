@@ -61,13 +61,13 @@ if (ashe) {
 
 ### 斗魂锻体属性来源
 
-`arenaChampionCalculationInput` 按模式规则分开组合英雄等级属性、第二回合棱彩装备的静态属性、历次属性锻造器和最终碎片之刃增幅。符文、英雄特殊机制和装备被动不会被偷偷混入初始属性，需由调用方在对应的伤害或特殊机制模型中显式提供。
+`arenaChampionCalculationInput` 按模式规则分开组合英雄等级属性、第二回合棱彩装备表中的静态属性、历次属性锻造器和最终碎片之刃增幅。调用方必须传入 `findPrismaticItem` 返回的版本化装备，不再接受手填装备数值。符文、英雄特殊机制和装备被动不会被偷偷混入初始属性，需在对应的伤害或特殊机制模型中显式提供。
 
 ```ts
 const input = arenaChampionCalculationInput({
   champion: ashe,
   level: 18,
-  prismaticItemStats: { attack_damage: 70, health: 500 },
+  prismaticItem: findPrismaticItem(447103), // 血术师之盔：装备表中的 70 AD
   statAnvils: selections,
   shardbladeEffectivenessPercent: 120,
 })

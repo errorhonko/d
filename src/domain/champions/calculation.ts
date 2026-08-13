@@ -4,12 +4,13 @@ import type {
   RangedChampionSelection,
 } from '../calculation'
 import type { ChampionInitialStats } from './model'
+import type { PrismaticItem } from '../prismatic-items'
 
 export interface ArenaChampionBuildInput {
   readonly champion: ChampionInitialStats
   readonly level: number
-  /** 第二回合棱彩装备提供的静态属性；装备被动由伤害 profile 单独建模。 */
-  readonly prismaticItemStats?: InitialStatBlock
+  /** 第二回合发放的棱彩装备，数值必须来自版本化装备表。 */
+  readonly prismaticItem?: PrismaticItem
   readonly statAnvils: readonly RangedChampionSelection[]
   /** 碎片之刃对全部属性锻体的最终效率，100 表示没有增幅。 */
   readonly shardbladeEffectivenessPercent?: number
@@ -102,11 +103,21 @@ export function arenaChampionCalculationInput(
     throw new Error('shardbladeEffectivenessPercent 必须是大于等于 100 的有限数字')
   }
 
+  const championStats = championStatsAtLevel(input.champion, input.level)
+  const item = input.prismaticItem
+  const initialStats = addStatBlocks(championStats, item?.staticStats)
+  const itemAttackSpeed =
+    input.champion.base.attackSpeedRatio *
+    ((item?.bonusAttackSpeedPercent ?? 0) / 100)
+
   return {
-    initialStats: addStatBlocks(
-      championStatsAtLevel(input.champion, input.level),
-      input.prismaticItemStats,
-    ),
+    initialStats: {
+      ...initialStats,
+      attack_speed: (initialStats.attack_speed ?? 0) + itemAttackSpeed,
+      critical_strike_chance:
+        (initialStats.critical_strike_chance ?? 0) +
+        (item?.criticalStrikeChance ?? 0),
+    },
     attackSpeedRatio: input.champion.base.attackSpeedRatio,
     selections: input.statAnvils.map((selection) => ({
       ...selection,

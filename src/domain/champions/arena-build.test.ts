@@ -2,6 +2,7 @@ import { describe, expect, it } from 'vitest'
 import { calculateRangedChampion, findStatAnvilOption } from '../calculation'
 import { arenaChampionCalculationInput, championStatsAtLevel } from './calculation'
 import { championCatalog } from './catalog'
+import { findPrismaticItem } from '../prismatic-items'
 
 describe('斗魂锻体英雄属性来源', () => {
   const ashe = championCatalog.championsByKey.get('Ashe')!
@@ -21,11 +22,7 @@ describe('斗魂锻体英雄属性来源', () => {
       arenaChampionCalculationInput({
         champion: ashe,
         level: 18,
-        prismaticItemStats: {
-          health: 500,
-          attack_damage: 70,
-          attack_speed: 0.25,
-        },
+        prismaticItem: findPrismaticItem(447103),
         statAnvils: [
           { option: findStatAnvilOption('gold', 'attack_damage') },
           { option: findStatAnvilOption('gold', 'attack_speed') },
@@ -34,11 +31,24 @@ describe('斗魂锻体英雄属性来源', () => {
       }),
     )
 
-    expect(calculation.initialStats.health).toBeCloseTo(2827)
+    expect(calculation.initialStats.health).toBeCloseTo(2327)
     expect(calculation.initialStats.attack_damage).toBeCloseTo(188.5)
     expect(calculation.finalStats.attack_damage).toBeCloseTo(230.5)
-    expect(calculation.finalStats.attack_speed).toBeCloseTo(1.51994)
+    expect(calculation.finalStats.attack_speed).toBeCloseTo(1.26994)
     expect(calculation.steps.map((step) => step.effectivenessPercent)).toEqual([120, 120])
+  })
+
+  it('按装备表应用棱彩装备攻速，而不是接收手填数值', () => {
+    const calculation = calculateRangedChampion(
+      arenaChampionCalculationInput({
+        champion: ashe,
+        level: 18,
+        prismaticItem: findPrismaticItem(447100),
+        statAnvils: [],
+      }),
+    )
+
+    expect(calculation.initialStats.attack_speed).toBeCloseTo(1.38838)
   })
 
   it('拒绝把碎片之刃增幅配置成削弱', () => {
