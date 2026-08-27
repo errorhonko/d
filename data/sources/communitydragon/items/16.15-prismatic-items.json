@@ -1,0 +1,2147 @@
+{
+  "schemaVersion": 1,
+  "patch": "26.15",
+  "communityDragonVersion": "16.15",
+  "source": "https://raw.communitydragon.org/16.15/game/items.cdtb.bin.json",
+  "items": [
+    {
+      "id": 226630,
+      "name": "渴血战斧",
+      "numericFields": {
+        "mAbilityHasteMod": 20,
+        "mFlatHPPoolMod": 400,
+        "mFlatPhysicalDamageMod": 55,
+        "PercentOmnivampMod": 0.10000000149011612
+      },
+      "dataValues": {
+        "Cooldown": 15,
+        "ADRatio": 1.75,
+        "MissingHealthHeal": 0.18000000715255737,
+        "MythicHasteAmount": 3,
+        "CleaveRadius": 450,
+        "HealBaseADRatio": 0.3499999940395355,
+        "MythicHealthAmount": 75
+      },
+      "calculations": {
+        "SlashDamage": {
+          "mFormulaParts": [
+            {
+              "mStat": 2,
+              "mStatFormula": 1,
+              "mDataValue": "ADRatio",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "CurrentMythicBonus": {
+          "mMultiplier": {
+            "mDataValue": "MythicHasteAmount",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          "mFormulaParts": [
+            {
+              "Coefficient": 1,
+              "epicness": 5,
+              "__type": "ByItemEpicnessCountCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "Heal": {
+          "mFormulaParts": [
+            {
+              "mStat": 2,
+              "mDataValue": "HealBaseADRatio",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "MythicHealthBonus": {
+          "mMultiplier": {
+            "mDataValue": "MythicHealthAmount",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          "mFormulaParts": [
+            {
+              "Coefficient": 1,
+              "epicness": 5,
+              "__type": "ByItemEpicnessCountCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 226693,
+      "name": "暗行者之爪",
+      "numericFields": {
+        "mAbilityHasteMod": 15,
+        "mFlatPhysicalDamageMod": 55,
+        "PhysicalLethality": 22
+      },
+      "dataValues": {
+        "LethalityAmount": 22,
+        "Cooldown": 15,
+        "BuffDuration": 3,
+        "DamageAmp": 0.20000000298023224,
+        "AmpDuration": 3,
+        "BaseDamage": 0.11999999731779099
+      },
+      "calculations": {
+        "DamageCalc": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "BaseDamage",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mStat": 2,
+              "mStatFormula": 2,
+              "mCoefficient": 0.0005000000237487257,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 443054,
+      "name": "暗钢利爪",
+      "numericFields": {
+        "mFlatArmorMod": 55,
+        "mPercentAttackSpeedMod": 0.5,
+        "mPercentMovementSpeedMod": 0.05000000074505806
+      },
+      "dataValues": {
+        "BaseMeleeOnHitMinTOOLTIP": 20,
+        "BaseMeleeOnHitMaxTOOLTIP": 40,
+        "MeleeOnHitARRatio": 0.25,
+        "BaseRangedOnHitMinTOOLTIP": 10,
+        "BaseRangedOnHitMaxTOOLTIP": 20,
+        "RangedOnHitARRatio": 0.20000000298023224
+      },
+      "calculations": {
+        "MeleeItemCalcValue": {
+          "mSimpleTooltipCalculationDisplay": 6,
+          "mExpandedTooltipCalculationDisplay": 6,
+          "mFormulaParts": [
+            {
+              "mStartValue": 20,
+              "mEndValue": 40,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            },
+            {
+              "mStat": 1,
+              "mStatFormula": 2,
+              "mDataValue": "MeleeOnHitARRatio",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "ChampRange": {
+          "mSimpleTooltipCalculationDisplay": 5,
+          "mExpandedTooltipCalculationDisplay": 5,
+          "mDefaultGameCalculation": "{792cf56b}",
+          "mConditionalGameCalculation": "{06387172}",
+          "mConditionalCalculationRequirements": {
+            "__type": "IsRangedCastRequirement"
+          },
+          "__type": "GameCalculationConditional"
+        },
+        "RangedItemCalcValue": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 10,
+              "mEndValue": 20,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            },
+            {
+              "mStat": 1,
+              "mStatFormula": 2,
+              "mDataValue": "RangedOnHitARRatio",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "{792cf56b}": {
+          "mFormulaParts": [
+            {
+              "mNumber": 1,
+              "__type": "NumberCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "{06387172}": {
+          "mFormulaParts": [
+            {
+              "mNumber": 2,
+              "__type": "NumberCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 443055,
+      "name": "爆鸣",
+      "numericFields": {
+        "mFlatPhysicalDamageMod": 55,
+        "mPercentAttackSpeedMod": 0.44999998807907104,
+        "mPercentMovementSpeedMod": 0.15000000596046448
+      },
+      "dataValues": {
+        "TargetCurrentHealthRatio": 0.12999999523162842
+      },
+      "calculations": {}
+    },
+    {
+      "id": 443056,
+      "name": "魔王之冕",
+      "numericFields": {},
+      "dataValues": {
+        "AmpBase": 0.25999999046325684,
+        "AmpPenality": -0.029999999329447746,
+        "AmpGain": 0.012000000104308128
+      },
+      "calculations": {}
+    },
+    {
+      "id": 443058,
+      "name": "熔石之盾",
+      "numericFields": {
+        "mFlatArmorMod": 100,
+        "mFlatHPPoolMod": 300
+      },
+      "dataValues": {
+        "ARMod": 0.20000000298023224,
+        "MaxBlock": 0.5
+      },
+      "calculations": {
+        "{7d38e7d6}": {
+          "mFormulaParts": [
+            {
+              "mNumber": 0.05000000074505806,
+              "__type": "NumberCalculationPart"
+            },
+            {
+              "mStat": 1,
+              "mCoefficient": 0.00019999999494757503,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 443059,
+      "name": "星夜斗篷",
+      "numericFields": {
+        "mFlatHPPoolMod": 300,
+        "mFlatSpellBlockMod": 100
+      },
+      "dataValues": {
+        "MRMod": 0.20000000298023224,
+        "DRMax": 0.5
+      },
+      "calculations": {
+        "{d6e744d1}": {
+          "mFormulaParts": [
+            {
+              "mNumber": 0.05000000074505806,
+              "__type": "NumberCalculationPart"
+            },
+            {
+              "mStat": 6,
+              "mCoefficient": 0.00019999999494757503,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 443060,
+      "name": "神圣之剑",
+      "numericFields": {
+        "mFlatCritChanceMod": 0.5
+      },
+      "dataValues": {
+        "AdaptiveForce": 110,
+        "CritChanceToDamage": 0.5
+      },
+      "calculations": {}
+    },
+    {
+      "id": 443061,
+      "name": "熵之力",
+      "numericFields": {
+        "mAbilityHasteMod": 30,
+        "mFlatCritChanceMod": 0.25,
+        "mFlatHPPoolMod": 900
+      },
+      "dataValues": {
+        "CritDurationMod": 0.33000001311302185,
+        "DurationBase": 0.25
+      },
+      "calculations": {}
+    },
+    {
+      "id": 443062,
+      "name": "血色赠礼",
+      "numericFields": {
+        "mAbilityHasteMod": 20,
+        "mFlatMagicDamageMod": 80,
+        "mPercentHealingAmountMod": 0.15000000596046448
+      },
+      "dataValues": {
+        "HealVampRatio": 0.15000000596046448,
+        "ChargeLimit": 333
+      },
+      "calculations": {}
+    },
+    {
+      "id": 443063,
+      "name": "艾莉莎的奇迹",
+      "numericFields": {
+        "mAbilityHasteMod": 25,
+        "mFlatArmorMod": 50,
+        "mFlatSpellBlockMod": 50
+      },
+      "dataValues": {
+        "HSPerHundredMissing": 0.02500000037252903,
+        "HSCap": 0.6000000238418579
+      },
+      "calculations": {}
+    },
+    {
+      "id": 443064,
+      "name": "飞升护符",
+      "numericFields": {},
+      "dataValues": {
+        "BaseGoldValue": 2933,
+        "PerRollGoldValue": 210,
+        "ChanceOneStat": 6,
+        "ChanceTwoStat": 18,
+        "ChanceThreeStat": 42,
+        "ChanceFourStat": 66,
+        "ChanceFiveStat": 90,
+        "ChanceSixStat": 100,
+        "VarianceOnGoldDistributionOfStats": 4,
+        "RerollCountPerBonusStat": 4
+      },
+      "calculations": {
+        "TTAS": {
+          "mFormulaParts": [
+            {
+              "mBuffName": "{5bf83cb1}",
+              "mCoefficient": 0.009999999776482582,
+              "__type": "BuffCounterByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "TTCrit": {
+          "mFormulaParts": [
+            {
+              "mBuffName": "{12711939}",
+              "mCoefficient": 0.009999999776482582,
+              "__type": "BuffCounterByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "TTCritDmg": {
+          "mFormulaParts": [
+            {
+              "mBuffName": "{1786279b}",
+              "mCoefficient": 0.009999999776482582,
+              "__type": "BuffCounterByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "TTHPRegen": {
+          "mFormulaParts": [
+            {
+              "mBuffName": "{7617b2a6}",
+              "mCoefficient": 0.009999999776482582,
+              "__type": "BuffCounterByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "TTMRegen": {
+          "mFormulaParts": [
+            {
+              "mBuffName": "{47e8483d}",
+              "mCoefficient": 0.009999999776482582,
+              "__type": "BuffCounterByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 443069,
+      "name": "断筋者",
+      "numericFields": {
+        "mFlatCritChanceMod": 0.25,
+        "mFlatPhysicalDamageMod": 45,
+        "mPercentAttackSpeedMod": 0.4000000059604645
+      },
+      "dataValues": {
+        "BurnDuration": 2,
+        "SlowAmount": 0.07000000029802322,
+        "SlowCap": 0.3499999940395355,
+        "SlowDuration": 2,
+        "BurnSecondsPerTick": 0.5,
+        "DamageDealtConversion": 0.25
+      },
+      "calculations": {
+        "TotalDamage": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 20,
+              "mEndValue": 80,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 443079,
+      "name": "涡轮炼金罐",
+      "numericFields": {
+        "mFlatHPPoolMod": 600
+      },
+      "dataValues": {
+        "SlowRes": 0.30000001192092896,
+        "MSMod": 0.800000011920929,
+        "MSDuration": 3,
+        "SlowAmount": 0.6000000238418579,
+        "SlowDuration": 2,
+        "SlowAoE": 450,
+        "Cooldown": 30,
+        "AdaptiveForce": 80,
+        "CannisterDistanceAway": 525,
+        "CannisterMaxAngle": 70,
+        "CannisterGroundDuration": 7,
+        "CannisterPickupRadius": 115,
+        "PickupCooldownRefund": 15,
+        "PickupHealthGain": 0.03999999910593033,
+        "CannisterDropHealthLoss": 0.03999999910593033
+      },
+      "calculations": {
+        "{11c11312}": {
+          "mFormulaParts": [
+            {
+              "mStat": 30,
+              "mCoefficient": 0.75,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "CooldownCalc": {
+          "mFormulaParts": [
+            {
+              "mLevel1Value": 30,
+              "mBreakpoints": [
+                {
+                  "mLevel": 6,
+                  "mAdditionalBonusAtThisLevel": -5,
+                  "__type": "Breakpoint"
+                },
+                {
+                  "mLevel": 11,
+                  "mAdditionalBonusAtThisLevel": -5,
+                  "__type": "Breakpoint"
+                },
+                {
+                  "mLevel": 16,
+                  "mAdditionalBonusAtThisLevel": -5,
+                  "__type": "Breakpoint"
+                }
+              ],
+              "__type": "ByCharLevelBreakpointsCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 443081,
+      "name": "海克斯弹丸配枪",
+      "numericFields": {
+        "mFlatPhysicalDamageMod": 70,
+        "mPercentAttackSpeedMod": 0.5,
+        "mPercentMovementSpeedMod": 0.05999999865889549
+      },
+      "dataValues": {
+        "CastRange": 700,
+        "BaseCooldown": 10
+      },
+      "calculations": {
+        "TotalDamage": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 50,
+              "mEndValue": 100,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 443083,
+      "name": "狂徒铠甲",
+      "numericFields": {
+        "mFlatHPPoolMod": 1100,
+        "mPercentMovementSpeedMod": 0.03999999910593033
+      },
+      "dataValues": {
+        "MaxHealthRatio": 0.03999999910593033,
+        "SecondsPerHeal": 0.5,
+        "HealthThreshold": 1350,
+        "OOCTimerChampion": 4,
+        "OOCTimer": 3,
+        "OOCMS": 0.03999999910593033,
+        "HPAmp": 1,
+        "PassiveMaxHPRegen": 0.004000000189989805
+      },
+      "calculations": {
+        "TotalHealing": {
+          "mFormulaParts": [
+            {
+              "mStat": 12,
+              "mDataValue": "MaxHealthRatio",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "TotalHealingTooltip": {
+          "mMultiplier": {
+            "mNumber": 2,
+            "__type": "NumberCalculationPart"
+          },
+          "mModifiedGameCalculation": "TotalHealing",
+          "__type": "GameCalculationModified"
+        },
+        "{f6892314}": {
+          "mFormulaParts": [
+            {
+              "mStat": 12,
+              "mDataValue": "{956bad81}",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "InCombatHealingTooltip": {
+          "mMultiplier": {
+            "mNumber": 2,
+            "__type": "NumberCalculationPart"
+          },
+          "mModifiedGameCalculation": "{f6892314}",
+          "__type": "GameCalculationModified"
+        }
+      }
+    },
+    {
+      "id": 443090,
+      "name": "收割者的过路费",
+      "numericFields": {
+        "mPercentAttackSpeedMod": 0.5,
+        "mPercentMovementSpeedMod": 0.05000000074505806,
+        "mPercentMultiplicativeAttackSpeedMod": 0.15000000596046448
+      },
+      "dataValues": {
+        "AdaptiveForce": 40,
+        "TTMultAS": 15,
+        "IncreasePerHit": 0.0010000000474974513
+      },
+      "calculations": {
+        "ChampRange": {
+          "mSimpleTooltipCalculationDisplay": 5,
+          "mExpandedTooltipCalculationDisplay": 5,
+          "mDefaultGameCalculation": "{792cf56b}",
+          "mConditionalGameCalculation": "{06387172}",
+          "mConditionalCalculationRequirements": {
+            "__type": "IsRangedCastRequirement"
+          },
+          "__type": "GameCalculationConditional"
+        },
+        "{792cf56b}": {
+          "mFormulaParts": [
+            {
+              "mNumber": 1,
+              "__type": "NumberCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "{06387172}": {
+          "mFormulaParts": [
+            {
+              "mNumber": 2,
+              "__type": "NumberCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "MeleeItemCalcValue": {
+          "mFormulaParts": [
+            {
+              "mNumber": 0.007000000216066837,
+              "__type": "NumberCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "mPrecision": 1,
+          "__type": "GameCalculation"
+        },
+        "RangedItemCalcValue": {
+          "mFormulaParts": [
+            {
+              "mNumber": 0.004999999888241291,
+              "__type": "NumberCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "mPrecision": 1,
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 443193,
+      "name": "石像鬼石板甲",
+      "numericFields": {
+        "mAbilityHasteMod": 15,
+        "mFlatArmorMod": 65,
+        "mFlatSpellBlockMod": 65,
+        "mPercentMovementSpeedMod": 0.10000000149011612
+      },
+      "dataValues": {
+        "ShieldDuration": 5,
+        "SizeIncrease": 0.25,
+        "BonusHealthShieldRatio": 1,
+        "BaseShieldAmount": 300,
+        "Cooldown": 30
+      },
+      "calculations": {
+        "TotalShield": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "BaseShieldAmount",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mStat": 12,
+              "mStatFormula": 2,
+              "mDataValue": "BonusHealthShieldRatio",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 444636,
+      "name": "暗夜收割者",
+      "numericFields": {
+        "mAbilityHasteMod": 25,
+        "mFlatHPPoolMod": 300,
+        "mFlatMagicDamageMod": 90
+      },
+      "dataValues": {
+        "MovementSpeedDuration": 1.5,
+        "PercentMovespeedGain": 0.4000000059604645,
+        "TimerDuration": 10,
+        "Cooldown": 10,
+        "MythicPassiveAbilityHaste": 5,
+        "BaseDamage": 160,
+        "APRatio": 0.4000000059604645,
+        "ADRatio": 0.25
+      },
+      "calculations": {
+        "ReaperDamage": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "BaseDamage",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mDataValue": "APRatio",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 444637,
+      "name": "恶魔之拥",
+      "numericFields": {
+        "mFlatHPPoolMod": 700,
+        "mFlatMagicDamageMod": 80
+      },
+      "dataValues": {
+        "APMod": 0.014999999664723873,
+        "HPIncrement": 100,
+        "HealthCost": 300,
+        "MSMod": 1.5,
+        "MSDuration": 3,
+        "APModCap": 0.44999998807907104,
+        "Cooldown": 1,
+        "MSModCap": 0.44999998807907104
+      },
+      "calculations": {}
+    },
+    {
+      "id": 444644,
+      "name": "破碎王后之冕",
+      "numericFields": {
+        "mAbilityHasteMod": 25,
+        "mFlatHPPoolMod": 350,
+        "mFlatMagicDamageMod": 85,
+        "flatMPPoolMod": 600
+      },
+      "dataValues": {
+        "OutOfCombatDuration": 30,
+        "MythicMovespeed": 0.02500000037252903,
+        "ShieldDRPercentage": 0.8999999761581421,
+        "ShieldLingerAfterInitiallyPopped": 1.25,
+        "MythicAbilityPower": 8,
+        "Cooldown": 30,
+        "GraceDuration": 3
+      },
+      "calculations": {
+        "BonusStatWhenShieldActive": {
+          "mFormulaParts": [
+            {
+              "mLevel1Value": 10,
+              "mBreakpoints": [
+                {
+                  "mLevel": 9,
+                  "mBonusPerLevelAtAndAfter": 3,
+                  "__type": "Breakpoint"
+                }
+              ],
+              "__type": "ByCharLevelBreakpointsCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 446632,
+      "name": "神圣分离者",
+      "numericFields": {
+        "mAbilityHasteMod": 20,
+        "mFlatHPPoolMod": 350,
+        "mFlatPhysicalDamageMod": 55
+      },
+      "dataValues": {
+        "MeleePercentHP": 0.05999999865889549,
+        "ADConversion": 0.25,
+        "SheenMult": 1.7999999523162842,
+        "RangedValue": 0.03999999910593033,
+        "MeleeValue": 0.05999999865889549,
+        "SpellbladeCooldown": 1.5,
+        "RangedPercentHP": 0.03999999910593033,
+        "HealConversionPercent": 0.699999988079071,
+        "Cooldown": 1.5
+      },
+      "calculations": {
+        "MinSpellbladeDamage": {
+          "mFormulaParts": [
+            {
+              "mStat": 2,
+              "mStatFormula": 1,
+              "mDataValue": "SheenMult",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "ChampRange": {
+          "mSimpleTooltipCalculationDisplay": 5,
+          "mExpandedTooltipCalculationDisplay": 5,
+          "mDefaultGameCalculation": "{792cf56b}",
+          "mConditionalGameCalculation": "{06387172}",
+          "mConditionalCalculationRequirements": {
+            "__type": "IsRangedCastRequirement"
+          },
+          "__type": "GameCalculationConditional"
+        },
+        "MonsterCap": {
+          "mSimpleTooltipCalculationDisplay": 6,
+          "mExpandedTooltipCalculationDisplay": 6,
+          "mFormulaParts": [
+            {
+              "mStat": 2,
+              "mStatFormula": 1,
+              "mCoefficient": 2.5,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "MeleeItemCalcValue": {
+          "tooltipOnly": true,
+          "mFormulaParts": [
+            {
+              "mDataValue": "MeleeValue",
+              "__type": "NamedDataValueCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "RangedItemCalcValue": {
+          "tooltipOnly": true,
+          "mFormulaParts": [
+            {
+              "mDataValue": "RangedValue",
+              "__type": "NamedDataValueCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "MeleeItemCalcValueB": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "MeleePercentHP",
+              "__type": "NamedDataValueCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "RangedItemCalcValueB": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "RangedPercentHP",
+              "__type": "NamedDataValueCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "{792cf56b}": {
+          "mFormulaParts": [
+            {
+              "mNumber": 1,
+              "__type": "NumberCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "{06387172}": {
+          "mFormulaParts": [
+            {
+              "mNumber": 2,
+              "__type": "NumberCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 446656,
+      "name": "永霜",
+      "numericFields": {
+        "mAbilityHasteMod": 25,
+        "mFlatHPPoolMod": 250,
+        "mFlatMagicDamageMod": 100,
+        "flatMPPoolMod": 600
+      },
+      "dataValues": {
+        "MythicStatAmount": 10,
+        "SlowAmount": 0.699999988079071,
+        "SlowDuration": 1.5,
+        "Cooldown": 30
+      },
+      "calculations": {
+        "DamageAmount": {
+          "mFormulaParts": [
+            {
+              "mNumber": 300,
+              "__type": "NumberCalculationPart"
+            },
+            {
+              "mCoefficient": 0.8500000238418579,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 446667,
+      "name": "辉耀美德",
+      "numericFields": {
+        "mFlatArmorMod": 35,
+        "mFlatHPPoolMod": 400,
+        "mFlatSpellBlockMod": 35,
+        "mPercentHealingAmountMod": 0.11999999731779099
+      },
+      "dataValues": {
+        "AuraRange": 5000,
+        "MythicPassiveHealth": 75,
+        "PercentMaxHealthIncrease": 0.15000000596046448,
+        "TranscendDuration": 9,
+        "HealCadence": 3,
+        "PercentMaxHealthPeriodicHeal": 0.03999999910593033,
+        "TranscendCooldown": 30,
+        "Cooldown": 45,
+        "UltimateHaste": 30
+      },
+      "calculations": {
+        "{3066c1c3}": {
+          "mFormulaParts": [
+            {
+              "Coefficient": 1,
+              "epicness": 5,
+              "__type": "ByItemEpicnessCountCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "MythicPassiveHealthCurrent": {
+          "mMultiplier": {
+            "mDataValue": "MythicPassiveHealth",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          "mModifiedGameCalculation": "{3066c1c3}",
+          "__type": "GameCalculationModified"
+        },
+        "HealthIncrease": {
+          "mFormulaParts": [
+            {
+              "mStat": 12,
+              "mDataValue": "PercentMaxHealthIncrease",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "{fe5a2b1e}": {
+          "mFormulaParts": [
+            {
+              "mPart1": {
+                "mStat": 12,
+                "mSubpart": {
+                  "mSubparts": [
+                    {
+                      "mNumber": 1,
+                      "__type": "NumberCalculationPart"
+                    },
+                    {
+                      "mDataValue": "PercentMaxHealthIncrease",
+                      "__type": "NamedDataValueCalculationPart"
+                    }
+                  ],
+                  "__type": "SumOfSubPartsCalculationPart"
+                },
+                "__type": "StatBySubPartCalculationPart"
+              },
+              "mPart2": {
+                "mDataValue": "PercentMaxHealthPeriodicHeal",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "TotalHealingTooltip": {
+          "mMultiplier": {
+            "mNumber": 4,
+            "__type": "NumberCalculationPart"
+          },
+          "mExpandedTooltipCalculationDisplay": 0,
+          "tooltipOnly": true,
+          "mModifiedGameCalculation": "{fe5a2b1e}",
+          "__type": "GameCalculationModified"
+        }
+      }
+    },
+    {
+      "id": 446671,
+      "name": "狂风之力",
+      "numericFields": {
+        "mFlatCritChanceMod": 0.25,
+        "mFlatPhysicalDamageMod": 65,
+        "mPercentAttackSpeedMod": 0.30000001192092896,
+        "mPercentMovementSpeedMod": 0.05999999865889549
+      },
+      "dataValues": {
+        "Cooldown": 30,
+        "MaxDistance": 600,
+        "MinDistance": 200,
+        "DashSpeed": 1350,
+        "ExecuteMaxThreshold": 0.25,
+        "ExecuteMaxDamage": 0.5,
+        "MaxDamageFromCrit": 200,
+        "MinDamageTooltip": 150,
+        "MaxDamageTooltip": 350
+      },
+      "calculations": {
+        "DamageAmount": {
+          "mFormulaParts": [
+            {
+              "mLevel1Value": 150,
+              "mBreakpoints": [
+                {
+                  "mLevel": 9,
+                  "mBonusPerLevelAtAndAfter": 20,
+                  "__type": "Breakpoint"
+                }
+              ],
+              "__type": "ByCharLevelBreakpointsCalculationPart"
+            },
+            {
+              "mStat": 2,
+              "mStatFormula": 2,
+              "mCoefficient": 0.800000011920929,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            {
+              "mCoefficient": 0.3499999940395355,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "MaximumDamage": {
+          "mMultiplier": {
+            "mSubparts": [
+              {
+                "mNumber": 1,
+                "__type": "NumberCalculationPart"
+              },
+              {
+                "mDataValue": "ExecuteMaxDamage",
+                "__type": "NamedDataValueCalculationPart"
+              }
+            ],
+            "__type": "SumOfSubPartsCalculationPart"
+          },
+          "mModifiedGameCalculation": "DamageAmount",
+          "__type": "GameCalculationModified"
+        }
+      }
+    },
+    {
+      "id": 446691,
+      "name": "德拉克萨的暮刃",
+      "numericFields": {
+        "mAbilityHasteMod": 20,
+        "mFlatPhysicalDamageMod": 50,
+        "PhysicalLethality": 20
+      },
+      "dataValues": {
+        "LethalityAmount": 20,
+        "StealthDuration": 1.5,
+        "Cooldown": 10,
+        "TakedownWindow": 3,
+        "MinHealthThreshold": 0.20000000298023224,
+        "SpellMaxAmp": 0.18000000715255737,
+        "SpellMaxAmpRanged": 0.09000000357627869,
+        "MeleeBonusADRatio": 0.4000000059604645,
+        "RangedBonusADRatio": 0.20000000298023224,
+        "LethalityPerDamageAmp": 10
+      },
+      "calculations": {
+        "MeleeItemCalcValue": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "SpellMaxAmp",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mStat": 29,
+              "statType": 8,
+              "OutputType": 2,
+              "mCoefficient": 0.0010000000474974513,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "ChampRange": {
+          "mSimpleTooltipCalculationDisplay": 5,
+          "mExpandedTooltipCalculationDisplay": 5,
+          "mDefaultGameCalculation": "{792cf56b}",
+          "mConditionalGameCalculation": "{06387172}",
+          "mConditionalCalculationRequirements": {
+            "__type": "IsRangedCastRequirement"
+          },
+          "__type": "GameCalculationConditional"
+        },
+        "RangedItemCalcValue": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "SpellMaxAmpRanged",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mStat": 29,
+              "mCoefficient": 0.000750000006519258,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "{792cf56b}": {
+          "mFormulaParts": [
+            {
+              "mNumber": 1,
+              "__type": "NumberCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "{06387172}": {
+          "mFormulaParts": [
+            {
+              "mNumber": 2,
+              "__type": "NumberCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447100,
+      "name": "幻境之刃",
+      "numericFields": {
+        "mPercentAttackSpeedMod": 0.6000000238418579,
+        "mPercentMovementSpeedMod": 0.05999999865889549
+      },
+      "dataValues": {
+        "DashCDPerHit": 0.20000000298023224,
+        "AdaptiveForce": 65,
+        "UltDashCDPerHit": 0.05000000074505806,
+        "MinCDR": 0.5
+      },
+      "calculations": {}
+    },
+    {
+      "id": 447101,
+      "name": "投机者之刃",
+      "numericFields": {
+        "mAbilityHasteMod": 40,
+        "mPercentAttackSpeedMod": 0.699999988079071,
+        "mPercentMovementSpeedMod": 0.07999999821186066
+      },
+      "dataValues": {
+        "GoldPerHitMin": 30,
+        "GoldPerHitMax": 245,
+        "PerAbilityCooldown": 2.5,
+        "GoldChance": 12,
+        "GoldPerCoin": 100,
+        "GoldLose": 0.25
+      },
+      "calculations": {}
+    },
+    {
+      "id": 447102,
+      "name": "实界裂缝",
+      "numericFields": {
+        "mFlatHPPoolMod": 300,
+        "mFlatMagicDamageMod": 80,
+        "mPercentAttackSpeedMod": 0.4000000059604645
+      },
+      "dataValues": {
+        "GrubBaseDamage": 6,
+        "GrubLifeTime": 3,
+        "GrubMS": 450,
+        "GrubCount": 8,
+        "Cooldown": 12,
+        "GrubCountDeath": 6
+      },
+      "calculations": {
+        "GrubDamageTotal": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "GrubBaseDamage",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mCoefficient": 0.07999999821186066,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            {
+              "mStat": 2,
+              "mCoefficient": 0.03999999910593033,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "{406d0a95}": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 100,
+              "mEndValue": 600,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            },
+            {
+              "mStat": 12,
+              "mCoefficient": 0.05000000074505806,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "{186d25d6}": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 10,
+              "mEndValue": 80,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447103,
+      "name": "血术师之盔",
+      "numericFields": {
+        "mAbilityHasteMod": 30,
+        "mFlatPhysicalDamageMod": 70,
+        "PercentOmnivampMod": 0.15000000596046448
+      },
+      "dataValues": {
+        "VampThreshold": 0.30000001192092896,
+        "ThresholdBonusHealth": 500,
+        "AuraRadius": 525,
+        "AuraVamp": 0.10000000149011612
+      },
+      "calculations": {
+        "{491ed915}": {
+          "mFormulaParts": [
+            {
+              "mStat": 18,
+              "mCoefficient": 1,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            {
+              "mStat": 20,
+              "mCoefficient": 1,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            {
+              "mStat": 19,
+              "mCoefficient": 1,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            {
+              "mStat": 21,
+              "mCoefficient": 1,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447104,
+      "name": "激发之匣",
+      "numericFields": {
+        "mAbilityHasteMod": 20,
+        "mFlatHPPoolMod": 200,
+        "mFlatMagicDamageMod": 70
+      },
+      "dataValues": {
+        "ChargeDetectionRange": 800,
+        "StacksToTransform": 30
+      },
+      "calculations": {
+        "ShieldAmount": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 400,
+              "mEndValue": 750,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "APAmount": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 100,
+              "mEndValue": 250,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "MSAmount": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 0.15000000596046448,
+              "mEndValue": 0.25,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447105,
+      "name": "至高天诺言",
+      "numericFields": {
+        "mAbilityHasteMod": 30,
+        "mFlatMagicDamageMod": 70,
+        "mPercentHealingAmountMod": 0.18000000715255737,
+        "percentBaseMPRegenMod": 1.25
+      },
+      "dataValues": {
+        "ShieldDuration": 5,
+        "ShieldRatioAP": 1,
+        "ShieldRatioBHealth": 0.10000000149011612,
+        "Cooldown": 20,
+        "DelayMovingTime": 0.5
+      },
+      "calculations": {
+        "ShieldAmount": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 100,
+              "mEndValue": 250,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            },
+            {
+              "mDataValue": "ShieldRatioAP",
+              "__type": "StatByNamedDataValueCalculationPart"
+            },
+            {
+              "mStat": 12,
+              "mStatFormula": 2,
+              "mDataValue": "ShieldRatioBHealth",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447106,
+      "name": "龙心",
+      "numericFields": {},
+      "dataValues": {
+        "BaseStatAmp": 0.03999999910593033,
+        "StatAmpPerSoul": 0.03999999910593033
+      },
+      "calculations": {}
+    },
+    {
+      "id": 447107,
+      "name": "斩首者",
+      "numericFields": {
+        "mPercentAttackSpeedMod": 0.5,
+        "mPercentMovementSpeedMod": 0.07999999821186066
+      },
+      "dataValues": {
+        "PercUltDamagePerStack": 0.029999999329447746,
+        "AdaptiveForce": 80,
+        "MaxStackRequired": 40,
+        "AAStacksMelee": 2,
+        "SpellStacksMelee": 4,
+        "UltAHPerStack": 1,
+        "UltimateHaste": 40,
+        "MaxAH": 80,
+        "AAStacksRangedMultiplier": 0.5,
+        "SpellStacksRangedMultiplier": 0.75
+      },
+      "calculations": {
+        "AAStacks": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "{4bd9daf6}",
+              "__type": "NamedDataValueCalculationPart"
+            }
+          ],
+          "mRangedMultiplier": {
+            "mDataValue": "{b47b239e}",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          "__type": "{e9a3c91d}"
+        },
+        "SpellStacks": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "{0053650c}",
+              "__type": "NamedDataValueCalculationPart"
+            }
+          ],
+          "mRangedMultiplier": {
+            "mDataValue": "{2b6b0ae8}",
+            "__type": "NamedDataValueCalculationPart"
+          },
+          "__type": "{e9a3c91d}"
+        }
+      }
+    },
+    {
+      "id": 447108,
+      "name": "符文雕刻者",
+      "numericFields": {
+        "mAbilityHasteMod": 20,
+        "mFlatMagicDamageMod": 80,
+        "mPercentMovementSpeedMod": 0.03999999910593033
+      },
+      "dataValues": {
+        "EnergizePerAbility": 15,
+        "CastIDLockout": 2.5
+      },
+      "calculations": {
+        "RuneDamage": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 20,
+              "mEndValue": 45,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            },
+            {
+              "mStat": 2,
+              "mStatFormula": 2,
+              "mCoefficient": 0.10999999940395355,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            {
+              "mCoefficient": 0.07999999821186066,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            {
+              "mStat": 12,
+              "mStatFormula": 2,
+              "mCoefficient": 0.003000000026077032,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447109,
+      "name": "残忍",
+      "numericFields": {
+        "mFlatArmorMod": 30,
+        "mFlatMagicDamageMod": 80,
+        "mFlatSpellBlockMod": 30
+      },
+      "dataValues": {
+        "DelayTime": 1,
+        "PerSpellLockout": 6,
+        "Radius": 300
+      },
+      "calculations": {
+        "TotalDamage": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 50,
+              "mEndValue": 150,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            },
+            {
+              "mCoefficient": 0.4000000059604645,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            {
+              "mStat": 12,
+              "mCoefficient": 0.03999999910593033,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447110,
+      "name": "月华咒刃",
+      "numericFields": {
+        "mFlatHPPoolMod": 400,
+        "mFlatMagicDamageMod": 85,
+        "mPercentTenacityItemMod": 0.30000001192092896
+      },
+      "dataValues": {
+        "ExtraAttackRange": 100,
+        "ExtraAttackSpeed": 0.8999999761581421,
+        "NumberOfEnhancedAttacks": 2,
+        "CDRPerAttack": 0.5
+      },
+      "calculations": {}
+    },
+    {
+      "id": 447112,
+      "name": "食肉斧剑",
+      "numericFields": {
+        "mAbilityHasteMod": 20,
+        "mFlatHPPoolMod": 500
+      },
+      "dataValues": {
+        "AdaptiveForce": 70,
+        "Shred": 3,
+        "ShredInternalCD": 1,
+        "ShredStackTime": 5,
+        "LethalityAmount": 18,
+        "TargetMaxHealthRatio": 0.18000000715255737,
+        "MaxStacks": 10,
+        "StatStealRatio": 0.10000000149011612
+      },
+      "calculations": {}
+    },
+    {
+      "id": 447113,
+      "name": "爆炸之球",
+      "numericFields": {
+        "mAbilityHasteMod": 20,
+        "mFlatMagicDamageMod": 90,
+        "mFlatMagicPenetrationMod": 12,
+        "flatMPPoolMod": 600
+      },
+      "dataValues": {
+        "StorageRatio": 0.20000000298023224,
+        "DetonationDelay": 3,
+        "CCStorageRatio": 0.25
+      },
+      "calculations": {}
+    },
+    {
+      "id": 447114,
+      "name": "混响之刃",
+      "numericFields": {
+        "mFlatArmorMod": 35,
+        "mFlatSpellBlockMod": 35,
+        "mPercentAttackSpeedMod": 0.4000000059604645
+      },
+      "dataValues": {
+        "ItemOnHitBaseDamage": 10,
+        "MaxStackAmount": 100,
+        "TakeDamageStackGain": 5,
+        "ImmobilzeStackGain": 25,
+        "SpellCooldown": 6,
+        "StackDuration": 10,
+        "OnHitApplyCount": 3,
+        "Cooldown": 8,
+        "WaveAoESize": 325,
+        "HealthPerAS": 5,
+        "ASHealthConversionTooltip": 10,
+        "BonusHealthRatio": 0.019999999552965164
+      },
+      "calculations": {
+        "{4cb348b5}": {
+          "mFormulaParts": [
+            {
+              "mStat": 4,
+              "mStatFormula": 2,
+              "mCoefficient": 1,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "{7ae42fa0}": {
+          "tooltipOnly": true,
+          "mFormulaParts": [
+            {
+              "mStat": 4,
+              "mStatFormula": 2,
+              "mCoefficient": 1,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "{9f0f5aef}": {
+          "mFormulaParts": [
+            {
+              "mStat": 4,
+              "mStatFormula": 2,
+              "mDataValue": "HealthPerAS",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "HealthFromASTooltip": {
+          "mMultiplier": {
+            "mNumber": 100,
+            "__type": "NumberCalculationPart"
+          },
+          "tooltipOnly": true,
+          "mFormulaParts": [
+            {
+              "mPart1": {
+                "mStat": 4,
+                "mStatFormula": 2,
+                "mCoefficient": 1,
+                "__type": "StatByCoefficientCalculationPart"
+              },
+              "mPart2": {
+                "mDataValue": "HealthPerAS",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "ItemOnHitDamage": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "ItemOnHitBaseDamage",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mStat": 12,
+              "mStatFormula": 2,
+              "mDataValue": "BonusHealthRatio",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447115,
+      "name": "弑王",
+      "numericFields": {
+        "mFlatPhysicalDamageMod": 60,
+        "mPercentMovementSpeedMod": 0.07999999821186066,
+        "PhysicalLethality": 15
+      },
+      "dataValues": {
+        "LethalityAmount": 15,
+        "PermanentADAmount": 15,
+        "TakedownWindow": 3,
+        "UltimateCooldownOnReset": 0.5
+      },
+      "calculations": {}
+    },
+    {
+      "id": 447116,
+      "name": "均衡十手",
+      "numericFields": {
+        "mAbilityHasteMod": 30,
+        "mFlatHPPoolMod": 400
+      },
+      "dataValues": {
+        "LethalityAmount": 12,
+        "WeakpointDuration": 500,
+        "WeakpointArmTimeBase": 4,
+        "RangeHasVision": 1200,
+        "RangeNoVision": 275,
+        "WeakpointHeat": 1.5,
+        "MSDuration": 1.5,
+        "AdaptiveForce": 85,
+        "WeakpointAngleWidth": 95
+      },
+      "calculations": {
+        "WeakpointDamage": {
+          "mFormulaParts": [
+            {
+              "mNumber": 0.029999999329447746,
+              "__type": "NumberCalculationPart"
+            },
+            {
+              "mStat": 2,
+              "mCoefficient": 0.00019999999494757503,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            {
+              "mCoefficient": 0.0001500000071246177,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "mPrecision": 2,
+          "__type": "GameCalculation"
+        },
+        "WeakpointMS": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 0.5,
+              "mEndValue": 0.75,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447118,
+      "name": "炎术师的披风",
+      "numericFields": {
+        "mAbilityHasteMod": 15,
+        "mFlatHPPoolMod": 400
+      },
+      "dataValues": {
+        "GroundDuration": 5,
+        "BaseFireDamagePerSecond": 100,
+        "FireDamagePerBurn": 60,
+        "BaseMSBoost": 0.20000000298023224,
+        "BaseVampBonus": 0.05000000074505806,
+        "MSDuration": 0.75,
+        "Cooldown": 5,
+        "AoESizePerAdditionalStack": 30,
+        "AOESize": 175,
+        "MaxRadiusBurnCount": 6,
+        "MinThrowDistance": 300,
+        "MaxThrowDistance": 700,
+        "SparkMaxAngle": 50,
+        "SparkDistanceAway": 525,
+        "PerAdditionalFireVampBonus": 0.02500000037252903,
+        "PerAdditionalStackMSBoost": 0.03999999910593033,
+        "MaxRadius": 1000,
+        "AdaptiveForce": 85,
+        "FireStarterCD": 5,
+        "FireStarterDuration": 3,
+        "MaxBurnCount": 10,
+        "BaseHealBonus": 50,
+        "PerAdditionalFireHealBonus": 30
+      },
+      "calculations": {
+        "MaxMoveSpeed": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "BaseMSBoost",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mPart1": {
+                "mSubparts": [
+                  {
+                    "mDataValue": "MaxBurnCount",
+                    "__type": "NamedDataValueCalculationPart"
+                  },
+                  {
+                    "mNumber": -1,
+                    "__type": "NumberCalculationPart"
+                  }
+                ],
+                "__type": "SumOfSubPartsCalculationPart"
+              },
+              "mPart2": {
+                "mDataValue": "PerAdditionalStackMSBoost",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "{da8a5191}": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "BaseVampBonus",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mPart1": {
+                "mSubparts": [
+                  {
+                    "mDataValue": "MaxBurnCount",
+                    "__type": "NamedDataValueCalculationPart"
+                  },
+                  {
+                    "mNumber": -1,
+                    "__type": "NumberCalculationPart"
+                  }
+                ],
+                "__type": "SumOfSubPartsCalculationPart"
+              },
+              "mPart2": {
+                "mDataValue": "PerAdditionalFireVampBonus",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "{04ff47e2}": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "BaseFireDamagePerSecond",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mPart1": {
+                "mDataValue": "MaxBurnCount",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              "mPart2": {
+                "mDataValue": "FireDamagePerBurn",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "CurrentTotalVampBonus": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "BaseVampBonus",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mPart1": {
+                "mBuffName": "{c798885c}",
+                "mDataValue": "PerAdditionalFireVampBonus",
+                "__type": "BuffCounterByNamedDataValueCalculationPart"
+              },
+              "mPart2": {
+                "mNumber": 1,
+                "__type": "NumberCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "CurrentTotalMSBonus": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "BaseMSBoost",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mPart1": {
+                "mBuffName": "{c798885c}",
+                "mDataValue": "PerAdditionalStackMSBoost",
+                "__type": "BuffCounterByNamedDataValueCalculationPart"
+              },
+              "mPart2": {
+                "mNumber": 1,
+                "__type": "NumberCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        },
+        "CurrentEnemyBlazeBurn": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "BaseFireDamagePerSecond",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mPart1": {
+                "mBuffName": "{c798885c}",
+                "mDataValue": "FireDamagePerBurn",
+                "__type": "BuffCounterByNamedDataValueCalculationPart"
+              },
+              "mPart2": {
+                "mNumber": 1,
+                "__type": "NumberCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "FireStarterDamage": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 100,
+              "mEndValue": 350,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "HealPerSecond": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 60,
+              "mEndValue": 150,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            },
+            {
+              "mPart1": {
+                "mBuffName": "{c798885c}",
+                "mDataValue": "PerAdditionalFireHealBonus",
+                "__type": "BuffCounterByNamedDataValueCalculationPart"
+              },
+              "mPart2": {
+                "mNumber": 1,
+                "__type": "NumberCalculationPart"
+              },
+              "__type": "ProductOfSubPartsCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447119,
+      "name": "闪电杖",
+      "numericFields": {
+        "mAbilityHasteMod": 20,
+        "mFlatArmorMod": 30,
+        "mFlatHPPoolMod": 500,
+        "mFlatSpellBlockMod": 30
+      },
+      "dataValues": {
+        "SlowAmount": 0.30000001192092896,
+        "BaseDamage": 150,
+        "PercentDamage": 0.10000000149011612,
+        "ShieldAmount": 0.14000000059604645,
+        "ShieldDuration": 2,
+        "APRatio": 0.5,
+        "ShieldAPRatio": 0.75,
+        "SlowDuration": 2,
+        "StartDelay": 5,
+        "BaseCooldown": 16,
+        "BonusADRatio": 0.30000001192092896,
+        "MinCooldown": 5
+      },
+      "calculations": {
+        "ShieldValue": {
+          "mFormulaParts": [
+            {
+              "mStat": 12,
+              "mSubpart": {
+                "mDataValue": "ShieldAmount",
+                "__type": "NamedDataValueCalculationPart"
+              },
+              "__type": "StatBySubPartCalculationPart"
+            },
+            {
+              "mDataValue": "ShieldAPRatio",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "CalculatedDamage": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 135,
+              "mEndValue": 230,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            },
+            {
+              "mDataValue": "APRatio",
+              "__type": "StatByNamedDataValueCalculationPart"
+            },
+            {
+              "mStat": 2,
+              "mStatFormula": 2,
+              "mDataValue": "BonusADRatio",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447120,
+      "name": "钻头长矛",
+      "numericFields": {
+        "mFlatAttackRangeMod": 75,
+        "mPercentAttackSpeedMod": 0.4000000059604645
+      },
+      "dataValues": {
+        "AttackRangeIncreaseTooltip": 75,
+        "MinRange": 200,
+        "MaxRange": 700,
+        "MaxDamageAbilityAmp": 0.5,
+        "AdaptiveForce": 75,
+        "MaxDamageAttackAmp": 0.30000001192092896
+      },
+      "calculations": {}
+    },
+    {
+      "id": 447121,
+      "name": "暮色之锋",
+      "numericFields": {
+        "mFlatMagicDamageMod": 100,
+        "mFlatPhysicalDamageMod": 70
+      },
+      "dataValues": {
+        "bADThreshold": 100,
+        "APThreshold": 140,
+        "SpiritWorldAP": 0.25,
+        "MaterialWorldAD": 0.25
+      },
+      "calculations": {
+        "SpiritWorldAH": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 30,
+              "mEndValue": 120,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "MaterialWorldAS": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 0.5,
+              "mEndValue": 1.5,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447122,
+      "name": "黑洞护手",
+      "numericFields": {
+        "mAbilityHasteMod": 25,
+        "mFlatHPPoolMod": 900
+      },
+      "dataValues": {
+        "MaxStacks": 50,
+        "SizePerAccretion": 0.019999999552965164,
+        "Cooldown": 30,
+        "BaseRadius": 225,
+        "Gravity": 150,
+        "HorizonRadius": 75,
+        "SlowAmount": 0.30000001192092896,
+        "SizeGrowthThreshold": 10,
+        "StackPerOnHit": 1,
+        "StackPerImmobilize": 5,
+        "BlackHoleBaseTimer": 2,
+        "HealthPerSecondLifetime": 0.0010000000474974513,
+        "SpellCooldown": 6,
+        "MaxSize": 3
+      },
+      "calculations": {
+        "DamagePerSecond": {
+          "mFormulaParts": [
+            {
+              "mStartValue": 30,
+              "mEndValue": 100,
+              "__type": "ByCharLevelInterpolationCalculationPart"
+            },
+            {
+              "mStat": 12,
+              "mCoefficient": 0.05000000074505806,
+              "__type": "StatByCoefficientCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        },
+        "BlackHoleLifetime": {
+          "mFormulaParts": [
+            {
+              "mDataValue": "BlackHoleBaseTimer",
+              "__type": "NamedDataValueCalculationPart"
+            },
+            {
+              "mStat": 12,
+              "mStatFormula": 2,
+              "mDataValue": "HealthPerSecondLifetime",
+              "__type": "StatByNamedDataValueCalculationPart"
+            }
+          ],
+          "__type": "GameCalculation"
+        }
+      }
+    },
+    {
+      "id": 447123,
+      "name": "傀儡操纵器",
+      "numericFields": {
+        "mAbilityHasteMod": 40,
+        "mPercentAttackSpeedMod": 0.30000001192092896,
+        "mPercentHealingAmountMod": 0.15000000596046448,
+        "percentBaseMPRegenMod": 1.5
+      },
+      "dataValues": {
+        "BonusBerserkMS": 0.4000000059604645,
+        "BerserkDuration": 2,
+        "MaxStacks": 4,
+        "CooldownPerSpellID": 3,
+        "StackDuration": 15,
+        "Cooldown": 25,
+        "CooldownReductionPerHealShieldBuff": 5
+      },
+      "calculations": {
+        "BonusBerserkAS": {
+          "mFormulaParts": [
+            {
+              "mStat": 34,
+              "mCoefficient": 1.5,
+              "__type": "StatByCoefficientCalculationPart"
+            },
+            {
+              "mNumber": 0.5,
+              "__type": "NumberCalculationPart"
+            }
+          ],
+          "mDisplayAsPercent": true,
+          "__type": "GameCalculation"
+        }
+      }
+    }
+  ]
+}

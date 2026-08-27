@@ -1,0 +1,787 @@
+[
+  {
+    "name": "Accelerating Sorcery",
+    "tier": "Prismatic",
+    "description": "Casting an ability grants {{as|12 ability haste}}. This effect stacks infinitely and lasts until the end of the current round phase."
+  },
+  {
+    "name": "ADAPt",
+    "tier": "Silver",
+    "description": "Convert {{as|100% of your '''bonus''' AD}} into {{as|ability power}}. Additionally, increase your {{as|ability power by 15%}}."
+  },
+  {
+    "name": "All For You",
+    "tier": "Gold",
+    "description": "Your {{tip|heals}} and {{tip|shields}} on allied champions are increased in effectiveness by 30%."
+  },
+  {
+    "name": "Apex Inventor",
+    "tier": "Gold",
+    "description": "Grants {{as|300 item haste|ability haste}}, which is equivalent to 75% cooldown reduction for items."
+  },
+  {
+    "name": "Back to Basics",
+    "tier": "Prismatic",
+    "description": "Gain 35% increased damage, {{tip|heal|healing}}, and {{tip|shield|shielding}}, and {{as|70 ability haste}}, but you can no longer cast your ultimate ability."
+  },
+  {
+    "name": "Banner of Command",
+    "tier": "Gold",
+    "description": "Replaces {{si|Flee}} with ''{{si|Banner of Command}}''.<br><br>[[File:Banner of Command augment spell.png|20px|link=]] {{sbc|Banner of Command:}} {{#invoke:SpellData|geteffect|Banner of Command}}"
+  },
+  {
+    "name": "Big Brain",
+    "tier": "Gold",
+    "description": "At the start of the combat phase in each round, gain a {{tip|shield}} that absorbs damage equal to {{as|300% AP}} and lasts until destroyed."
+  },
+  {
+    "name": "Blade Waltz",
+    "tier": "Prismatic",
+    "description": "Replaces {{si|Flee}} with ''{{si|Blade Waltz}}''.<br><br>[[File:Blade Waltz augment spell.png|20px|link=]] {{sbc|Blade Waltz:}} {{#invoke:SpellData|geteffect|Blade Waltz}}"
+  },
+  {
+    "name": "Blood Brother",
+    "tier": "Gold",
+    "description": "Gain {{cai|Hemorrhage|Darius}}.<br><br>{{sbc|Passive:}} Damaging basic attacks and abilities apply a stack of ''Hemorrhage'' to enemies for 5 seconds, refreshing on subsequent applications and stacking up to 5 times.<br><br>{{sbc|Hemorrhage:}} For each stack, the target is dealt{{ft|{{as|{{pp|15 to 45}}|physical damage}} {{as|(+ 40% AD)}} {{as|'''total''' physical damage}} over the duration,|{{as|{{pp|15/4 to 45/4}}|physical damage}} {{as|(+ {{ap|40/4}}% AD)}} {{as|physical damage}} every {{fd|1.25}} seconds over the duration,}}up to a maximum of{{ft|{{as|{{pp|15*5 to 45*5}}|physical damage}} {{as|(+ {{ap|40*5}}% AD)}} {{as|'''total''' physical damage}} over the duration.|{{as|{{pp|(15/4)*5 to (45/4)*5}}|physical damage}} {{as|(+ {{ap|(40/4)*5}}% AD)}} {{as|physical damage}} with each tick.}}<br><br>{{sbc|Noxian Might:}} When you apply 5 stacks of ''Hemorrhage'' to an enemy champion, become empowered with ''Noxian Might'' for 5 seconds, granting you {{pp|30 to 75 for 10;90 to 120 for 3;150 to 270 for 5|formula=30 + 5 per level until level 10, then + 15 per level until level 13, then + 30 per level|color=AD}} {{as|'''bonus''' attack damage}}.<br><br>This augment is only available for {{ci|Draven}}."
+  },
+  {
+    "name": "Blunt Force",
+    "tier": "Silver",
+    "description": "Increases {{as|attack damage}} by {{as|15%|AD}}."
+  },
+  {
+    "name": "Bread And Butter",
+    "tier": "Gold",
+    "description": "Your champion's first basic ability ''(Q)'' gains {{as|200 ability haste}}."
+  },
+  {
+    "name": "Bread And Cheese",
+    "tier": "Gold",
+    "description": "Your champion's third basic ability ''(E)'' gains {{as|200 ability haste}}."
+  },
+  {
+    "name": "Bread And Jam",
+    "tier": "Gold",
+    "description": "Your champion's second basic ability ''(W)'' gains {{as|200 ability haste}}."
+  },
+  {
+    "name": "Buff Buddies",
+    "tier": "Silver",
+    "description": "Grants {{bi|Crest of Cinders}} and {{bi|Crest of Insight}} permanently."
+  },
+  {
+    "name": "Can't Touch This",
+    "tier": "Prismatic",
+    "description": "Casting your ultimate grants you {{tip|invulnerability}} for 2 seconds (8 second cooldown)."
+  },
+  {
+    "name": "Cannon Fodder",
+    "tier": "Gold",
+    "description": "At the start of the combat phase in each round, launch yourself from a [[catapult]].<br><br>The catapult lasts for up to 20 seconds before expiring."
+  },
+  {
+    "name": "Castle",
+    "tier": "Silver",
+    "description": "Replaces {{si|Flee}} with ''{{si|Castle}}''.<br><br>[[File:Castle augment spell.png|20px|link=]] {{sbc|Castle:}} {{#invoke:SpellData|geteffect|Castle}}"
+  },
+  {
+    "name": "Celestial Body",
+    "tier": "Gold",
+    "description": "Gain {{as|1250 '''bonus''' health}}, but reduce your damage output by 10%."
+  },
+  {
+    "name": "Center of the Universe",
+    "tier": "Prismatic",
+    "description": "Gain {{cai|Center of the Universe|Aurelion Sol}}.<br><br>{{sbc|Center of the Universe:}} You are now constantly orbited by 6 ''Stars'' that exist at your attack range and each have a width of 50.<br><br>Each ''Star'' deals {{as|{{pp|5 to 160}}|magic damage}} {{as|(+ 25% '''bonus''' AD)}} {{as|(+ 12% AP)}} {{as|magic damage}} to enemies that come into contact with them."
+  },
+  {
+    "name": "Chain Lightning",
+    "tier": "Prismatic",
+    "description": "Dealing damage to an enemy champion also damages the nearest other champion within 1000 units of them for {{as|true damage}} equal to 50% of the damage instance {{tt|post-mitigation|Damage calculated after modifiers}}."
+  },
+  {
+    "name": "Chauffeur",
+    "tier": "Prismatic",
+    "description": "Become {{tip|attach|attached}} to your ally for the rest of the game, granting them {{as|100% of your '''bonus''' movement speed}} as well as granting you {{as|130 ability haste}} and {{as|65% '''bonus''' attack speed}}.<br><br>{{tip|Dash|Dashing}} or {{tip|blink|blinking}} detaches you for {{fd|1.5}} seconds before attaching you back to your ally."
+  },
+  {
+    "name": "Circle of Death",
+    "tier": "Prismatic",
+    "description": "{{tip|Heal|Healing}} you do causes you to deal 70% of that value in {{as|magic damage}} to the nearest enemy champion."
+  },
+  {
+    "name": "Clothesline",
+    "tier": "Silver",
+    "description": "Form a {{tip|tether}} between you and your ally that {{as|Burns|buzzword3}} enemies in a 50 radius width, dealing {{as|{{pp|5 to 75}} magic damage}} every {{fd|0.25}} seconds."
+  },
+  {
+    "name": "Combo Master",
+    "tier": "Gold",
+    "description": "Gain the {{ri|Electrocute}} and {{ri|Phase Rush}} keystone runes."
+  },
+  {
+    "name": "Contract Killer",
+    "tier": "Silver",
+    "description": "At the start of the combat phase in each round, mark a champion on the enemy team. The mark causes them to take 15% increased damage from your team and have a kill bounty of {{g|150}}. When the target dies, the mark is consumed to grant you and your ally their bounty."
+  },
+  {
+    "name": "Courage of the Colossus",
+    "tier": "Prismatic",
+    "description": "{{tip|immobilize|Immobilizing}} an enemy champion grants a {{tip|shield}} for 3 seconds that absorbs {{pp|100 to 300}} {{as|(+ 5% '''maximum''' health)}} damage. Shields can stack between multiple triggers of this effect, though not refreshing the duration of previous shields."
+  },
+  {
+    "name": "Critical Healing",
+    "tier": "Gold",
+    "description": "Your {{tip|heals}} and {{tip|shields}} now have a chance equal to {{as|100% critical strike chance}} to increase in effectiveness by 40%. Additionally, gain {{as|25% critical strike chance}}."
+  },
+  {
+    "name": "Dashing",
+    "tier": "Prismatic",
+    "description": "Abilities with {{tip|dash|dashes}} or {{tip|blink|blinks}} gain {{as|250 ability haste}}."
+  },
+  {
+    "name": "Dawnbringer's Resolve",
+    "tier": "Gold",
+    "description": "Upon dropping below {{as|50% '''maximum''' health}} for the first time, you are {{tip|heal|healed}} for {{as|30% '''maximum''' health}} over 3 seconds."
+  },
+  {
+    "name": "Defensive Maneuvers",
+    "tier": "Gold",
+    "description": "Replaces {{si|Flee}} with ''{{si|Defensive Maneuvers}}''.<br><br>[[File:Defensive Maneuvers augment spell.png|20px|link=]] {{sbc|Defensive Maneuvers:}} {{#invoke:SpellData|geteffect|Defensive Maneuvers}}<br><br>{{#invoke:SpellData|geteffect2|Defensive Maneuvers}}<br><br>{{#invoke:SpellData|geteffect3|Defensive Maneuvers}}"
+  },
+  {
+    "name": "Deft",
+    "tier": "Silver",
+    "description": "Grants {{as|60% '''bonus''' attack speed}}."
+  },
+  {
+    "name": "Dematerialize",
+    "tier": "Silver",
+    "description": "Scoring a champion {{tip|takedown}} grants a permanent {{adaptive|15}}. This effect can be triggered only once per champion per round.<br><br>If this is your second augment, also gain {{adaptive|30}}."
+  },
+  {
+    "name": "Demon's Dance",
+    "tier": "Gold",
+    "description": "Gain the {{ri|Fleet Footwork}} and {{ri|Grasp of the Undying}} keystone runes."
+  },
+  {
+    "name": "Die Another Day",
+    "tier": "Gold",
+    "description": "Replaces {{si|Flee}} with ''{{si|Die Another Day}}''.<br><br>[[File:Lamb's Respite.png|20px|link=]] {{sbc|Die Another Day:}} {{#invoke:SpellData|geteffect|Die Another Day}}"
+  },
+  {
+    "name": "Dive Bomber",
+    "tier": "Gold",
+    "description": "Your team's first death each round creates an explosion at the location of the champion that died, dealing {{as|true damage}} equal to {{as|20% of the target's '''maximum''' health}} to enemies within 500 units."
+  },
+  {
+    "name": "Don't Blink",
+    "tier": "Silver",
+    "description": "Deal 1% increased damage per {{as|10 movement speed}} you have more than the target."
+  },
+  {
+    "name": "Don't Chase",
+    "tier": "Silver",
+    "description": "Gain and activate {{cai|Poison Trail|Singed}}.<br><br>{{sbc|Poison Trail:}} Gain {{tip|ghosting}} and continually create a toxic cloud behind you that lingers for {{fd|3.25}} seconds. The cloud inflicts {{tip|poison}} to enemies within every {{fd|0.5}} seconds, which deals {{as|{{pp|3.75 to 37.5}}|magic damage}} {{as|(+ {{ap|20/4}}% '''bonus''' AD)}} {{as|(+ {{ap|10/4}}% AP)}} {{as|magic damage}} every {{fd|0.25}} seconds over 2 seconds."
+  },
+  {
+    "name": "Draw Your Sword",
+    "tier": "Prismatic",
+    "description": "Become {{tip|melee}}, modifying your attack range to 200 units. Additionally, gain {{as|35% '''bonus''' attack damage}}, {{as|25% '''bonus''' attack speed}}, {{as|35% '''bonus''' health}}, {{as|25% '''bonus''' movement speed}}, and 25% life steal. These bonuses are increased by {{pp|key=%|type=attack range|0 to 30 for 11|500 to 650}}.<br><br>This augment is only available for {{tip|ranged}} champions."
+  },
+  {
+    "name": "Dual Wield",
+    "tier": "Prismatic",
+    "description": "Increase your {{as|'''total''' attack speed}} by {{as|100%|attack speed}}, but your attacks and [[on-hit]] effects are modified to deal 55% damage."
+  },
+  {
+    "name": "Earthwake",
+    "tier": "Prismatic",
+    "description": "{{tip|Dash|Dashing}} or {{tip|blink|blinking}} causes you to leave behind a trail from the location you moved from that detonates after {{fd|0.75}} seconds in a 300 width radius, dealing up to {{as|{{pp|80 to 2000}}|physical damage}} {{as|(+ 100% '''bonus''' AD)}} {{as|(+ 30% AP)}} {{as|physical damage}} to enemies hit."
+  },
+  {
+    "name": "Erosion",
+    "tier": "Silver",
+    "description": "Each instance of damage dealt to an enemy reduces their {{as|armor}} and {{as|magic resistance}} by {{fd|1.5}}% for 4 seconds, stacking up to 20 times for a total of 30% resistances reduction."
+  },
+  {
+    "name": "EscAPADe",
+    "tier": "Silver",
+    "description": "Convert {{as|100% of your AP}} into {{as|'''bonus''' attack damage}}. Additionally, increase your {{as|attack damage by 10%}}."
+  },
+  {
+    "name": "Ethereal Weapon",
+    "tier": "Gold",
+    "description": "Your abilities apply on-hit effects at 100% effectiveness (1 second cooldown per target)."
+  },
+  {
+    "name": "Eureka",
+    "tier": "Prismatic",
+    "description": "Gain {{as|ability haste}} equal to {{as|30% AP}}."
+  },
+  {
+    "name": "Executioner",
+    "tier": "Silver",
+    "description": "Deal 15% increased damage to enemies below {{as|50% of their '''maximum''' health}}. Scoring a champion {{tip|takedown}} resets the cooldown of all your basic abilities."
+  },
+  {
+    "name": "Extendo-Arm",
+    "tier": "Gold",
+    "description": "{{as|Automatically|river}} casts {{cai|Rocket Grab|Blitzcrank}} at a nearby enemy champion, {{tip|airborne|pulling}} the first target hit towards you and {{tip|stun|stunning}} them for {{fd|0.65}} seconds (12 second cooldown)."
+  },
+  {
+    "name": "Fallen Aegis",
+    "tier": "Silver",
+    "description": "At the start of the combat phase in each round, gain {{cai|Black Shield|Morgana}}, granting you a {{tip|shield}} for 12 seconds that absorbs {{as|{{pp|50 to 350}} magic damage}} and grants {{tip|cc-immune|crowd control immunity}} while it holds.<br><br>The shield's duration is refreshed once the initial delay for the combat phase is over."
+  },
+  {
+    "name": "Fan the Hammer",
+    "tier": "Prismatic",
+    "description": "Your next basic attack in each cardinal direction within {{sti|attack range|750 range}} additionally on-attack fires 5 bolts at the target that each deal {{as|{{pp|10 to 52.5}}|physical damage}} {{as|(+ 15% '''bonus''' AD)}} {{as|physical damage}}, for a total of {{as|{{pp|10*5 to 52.5*5}}|physical damage}} {{as|(+ {{ap|15*5}}% '''bonus''' AD)}} {{as|physical damage}} (5 second cooldown per direction). Bolts' damage is increased by {{pp|type=distance travelled|0 to 50 for 11|0 to 750|key=%}}. Each bolt can {{tip|critically strike}} and applies on-hit effects at 20% effectiveness."
+  },
+  {
+    "name": "Feel the Burn",
+    "tier": "Prismatic",
+    "description": "Replaces {{si|Flee}} with ''{{si|Feel the Burn}}''.<br><br>[[File:Feel the Burn augment spell.png|20px|link=]] {{sbc|Feel the Burn:}} {{#invoke:SpellData|geteffect|Feel the Burn}}"
+  },
+  {
+    "name": "Fey Magic",
+    "tier": "Prismatic",
+    "description": "Damaging enemies with your ultimate ability {{tip|polymorph|polymorphs}} them into harmless critters for 2 seconds, during which their {{as|'''base''' movement speed}} is reduced by {{as|60|ms}}, and {{tip|disarm|disarms}} them for the same duration (15 second cooldown)."
+  },
+  {
+    "name": "Fire Sale",
+    "tier": "Silver",
+    "description": "Upon selecting this augment, all of your items are sold at the shop for 100% of their {{g|gold}} value ''({{sbc|Starter Items & Boots:}} {{g|500}}, {{sbc|Legendary Item:}} {{g|2500}}, {{sbc|Prismatic Item:}} {{g|4000}}).''<br><br>{{ii|Needlessly Large Rod}}, {{ii|The Golden Spatula}}, {{ii|Wooglet's Witchcap}}, and consumables will not be sold from this effect. {{ii|Heartsteel}} will also not be sold if you have the [[File:Quest: Steel Your Heart augment.png|20px|link=]] ''Quest: Steel Your Heart'' augment."
+  },
+  {
+    "name": "Firebrand",
+    "tier": "Gold",
+    "description": "Basic attacks apply a {{as|Burn|buzzword3}} for 5 seconds that deals {{as|'''bonus''' magic damage}} per second equal to {{as|{{fd|0.4}}% of the target's '''maximum''' health}} over the duration. The {{as|Burn|buzzword3}} stacks infinitely and refreshes with each application."
+  },
+  {
+    "name": "First-Aid Kit",
+    "tier": "Silver",
+    "description": "Grants 20% {{stil|heal and shield power}}."
+  },
+  {
+    "name": "Flashbang",
+    "tier": "Silver",
+    "description": "Using {{si|Flash}} creates an explosion around the blink location that deals {{as|{{pp|70 to 240}}|magic damage}} {{as|(+ 70% AD)}} {{as|(+ 60% AP)}} {{as|magic damage}} to nearby enemies and {{tip|slow|slows}} them by 35% for {{fd|1.25}} seconds. Additionally, your {{sis|Flash}} cooldown is now reset every round."
+  },
+  {
+    "name": "Flashy",
+    "tier": "Silver",
+    "description": "Your {{si|Flash}} now has 3 charges with a 3-second cooldown between casts, gaining maximum charges at the start of each phase in a round. Additionally, your {{sis|Flash}} cooldown is now reset every round."
+  },
+  {
+    "name": "From Beginning to End",
+    "tier": "Gold",
+    "description": "Gain the {{ri|Dark Harvest}} and {{ri|First Strike}} keystone runes."
+  },
+  {
+    "name": "Frost Wraith",
+    "tier": "Silver",
+    "description": "{{as|Automatically|river}} casts a cold pulse that {{tip|root|roots}} enemies within 450 units for {{fd|1.25}} seconds ({{fd|6.5}} second cooldown)."
+  },
+  {
+    "name": "Frozen Foundations",
+    "tier": "Silver",
+    "description": "Replaces {{si|Flee}} with ''{{si|Frozen Foundations}}''.<br><br>[[File:Crystallized Will augment spell.png|20px|link=]] {{sbc|Frozen Foundations:}} {{#invoke:SpellData|geteffect|Frozen Foundations}}"
+  },
+  {
+    "name": "Fruits of Your Labor",
+    "tier": "Gold",
+    "description": "Increase the effects of [[File:Power Flowers unit icon.png|20px|link=]] ''[[Arena_(League_of_Legends)#Gameplay|Power Flowers]]'' by 25%. Additionally, hitting a ''Power Flower'' now grants its effects to your ally if they are within 700 units of you, sharing the effects with them and also granting you both {{as|40% '''bonus''' movement speed}} for 2 seconds."
+  },
+  {
+    "name": "Gamba Anvil",
+    "tier": "Prismatic",
+    "description": "Gain {{g|1000}}. Additionally, {{ii|Prismatic Item|Prismatic Item Anvils}} now have their cost reduced to {{g|3000}}, and the resale value of ''Prismatic Items'' are reduced to {{g|1500}}."
+  },
+  {
+    "name": "Giant Slayer",
+    "tier": "Prismatic",
+    "description": "Become tiny, reducing your size by 75% and gaining {{as|30% '''bonus''' movement speed}}. Additionally, deal {{pp|key=%|type=target's size|10;15;25;30|Small;Medium;Large;Extra Large}} '''bonus''' damage against enemy champions with greater size than you."
+  },
+  {
+    "name": "Goliath",
+    "tier": "Prismatic",
+    "description": "Grants {{as|35% '''bonus''' health}}, 15% {{tip|adaptive force}}, and 50% increased size."
+  },
+  {
+    "name": "Goredrink",
+    "tier": "Silver",
+    "description": "Gain 20% omnivamp."
+  },
+  {
+    "name": "Guilty Pleasure",
+    "tier": "Silver",
+    "description": "{{tip|Immobilize|Immobilizing}} an enemy champion {{tip|heal|heals}} you for {{pp|10 to 150}} {{as|(+ {{fd|1.5}}% '''maximum''' health)}}."
+  },
+  {
+    "name": "Heavy Hitter",
+    "tier": "Silver",
+    "description": "Basic attacks deal {{as|'''bonus''' physical damage}} equal to {{as|{{fd|3.5}}% of your '''maximum''' health}}."
+  },
+  {
+    "name": "Hold Very Still",
+    "tier": "Silver",
+    "description": "Gain {{cai|Guerrilla Warfare|Teemo}}.<br><br>{{sbc|Guerrilla Warfare:}} Gain {{tip|invisibility}} after {{fd|1.5}} seconds without moving, taking damage, performing actions that {{tip|break stealth}}, {{tip|channel|channeling}}, or being in {{tip|stasis (buff)|stasis}}. Upon exiting the stealth, gain {{as|{{pp|key=%|20 to 80 for 4|1;5;10;15}} '''bonus''' attack speed}} for 5 seconds."
+  },
+  {
+    "name": "Holy Fire",
+    "tier": "Gold",
+    "description": "Your {{tip|heals}} and {{tip|shields}} cause you to fire a missile to the nearest enemy champion within 650 units over {{fd|0.32}} seconds, applying a {{as|Burn|buzzword3}} upon arrival that deals {{as|magic damage}} equal to {{as|{{fd|0.2}}% of the target's '''maximum''' health}} every second over 5 seconds, for a total of {{as|1%|hp}} ({{fd|1.5}}-second cooldown).<br><br>The {{as|Burn's|buzzword3}} per-tick damage increases to up to {{as|{{fd|0.8}}% of the target's '''maximum''' health}} based on the relative value of the triggering heal or shield against the {{as|'''maximum''' health}} of the ally recipient, for a total maximum damage of {{as|4% of the target's '''maximum''' health}}."
+  },
+  {
+    "name": "Homeguard",
+    "tier": "Silver",
+    "description": "Gain {{as|100% '''bonus''' movement speed}}. This bonus is lost for 3 seconds after taking damage."
+  },
+  {
+    "name": "Ice Cold",
+    "tier": "Silver",
+    "description": "Your {{tip|slow|slowing}} effects reduce the {{as|movement speed}} of targets by an additional {{as|100|ms}}."
+  },
+  {
+    "name": "Impassable",
+    "tier": "Gold",
+    "description": "Gain the {{ri|Aftershock}} and {{ri|Glacial Augment}} keystone runes."
+  },
+  {
+    "name": "Infernal Conduit",
+    "tier": "Prismatic",
+    "description": "Your abilities apply a {{as|Burn|buzzword3}} for 5 seconds that deals {{as|{{pp|1.2 to 12}}|magic damage}} {{as|(+ {{fd|2.8}}% '''bonus''' AD)}} {{as|(+ 6% AP)}} {{as|'''bonus''' magic damage}} per second over the duration (1 second cooldown). This {{as|Burn|buzzword3}} stacks infinitely and refreshes with each application. Damage over time abilities can apply the burn only once every 2 seconds.<br><br>Additionally, all of your {{as|Burn|buzzword3}} effects reduce the cooldowns of all your basic abilities by {{fd|0.08}} seconds for each tick of damage they deal to a target."
+  },
+  {
+    "name": "Infernal Soul",
+    "tier": "Silver",
+    "description": "Grants the {{bi|Infernal Dragon Soul}}."
+  },
+  {
+    "name": "It's Critical",
+    "tier": "Gold",
+    "description": "Grants {{as|40% critical strike chance}}."
+  },
+  {
+    "name": "It's Killing Time",
+    "tier": "Gold",
+    "description": "Upon casting your ultimate ability, you apply {{cai|Death Mark|Zed}} to all enemy champions (8 second cooldown). The mark stores 40% of all {{tt|pre-mitigation|Damage calculated before modifiers}} damage, excluding true damage, dealt to the affected target, detonating after 5 seconds to deal {{as|physical damage}} equal to the damage stored against them."
+  },
+  {
+    "name": "Jeweled Gauntlet",
+    "tier": "Prismatic",
+    "description": "Your abilities can now {{tip|critical strike|critically strike}} for {{critical damage|140|100}} damage. Additionally, gain {{as|25%|critical strike chance}} {{as|(+ {{fd|4.5}}% AP)}} {{as|critical strike chance}}."
+  },
+  {
+    "name": "Juice Box",
+    "tier": "Silver",
+    "description": "Each round, you and your ally gain a ''Juice'' ({{ii|Cappa Juice|icononly=true}} {{ii|Juice of Haste|icononly=true}} {{ii|Juice of Power|icononly=true}} {{ii|Juice of Vitality|icononly=true}}) for free that is automatically consumed at the start of the combat phase."
+  },
+  {
+    "name": "Keystone Conjurer",
+    "tier": "Gold",
+    "description": "Gain the {{ri|Arcane Comet}} and {{ri|Summon Aery}} keystone runes."
+  },
+  {
+    "name": "Laser Eyes",
+    "tier": "Prismatic",
+    "description": "Continuously fire a laser in a line 700 units from your facing direction, dealing {{as|{{pp|5 to 60}}|magic damage}} {{as|(+ {{ap|56/4}}% AD)}} {{as|(+ {{ap|36/4}}% AP)}} {{as|magic damage}} every {{fd|0.25}} seconds to enemies in its width of 80 units."
+  },
+  {
+    "name": "Light 'em Up!",
+    "tier": "Silver",
+    "description": "Basic attacks generate a stack, up to 4. The fourth stack consumes them all to quickly launch 4 fireworks at the target that each deal {{as|{{pp|11 to 80}}|magic damage}} {{as|(+ 35% '''bonus''' AD)}} {{as|(+ 19% AP)}} {{as|'''bonus''' magic damage}} on-hit, for a total of {{as|{{pp|11*4 to 80*4}}|magic damage}} {{as|(+ {{ap|35*4}}% '''bonus''' AD)}} {{as|(+ {{ap|19*4}}% AP)}}."
+  },
+  {
+    "name": "Light Warden",
+    "tier": "Gold",
+    "description": "{{as|Automatically|river}} casts a warding light towards your ally, which grants a {{tip|shield}} for {{pp|40 to 100}} {{as|(+ 10% '''bonus''' AD)}} {{as|(+ 30% AP)}} to you and your ally for {{fd|2.5}} seconds upon coming into contact with it. After reaching maximum range, the light then homes back to you to grant the same shield again when it passes through you and your ally, stacking with the previous shield and refreshing its duration (8 second cooldown)."
+  },
+  {
+    "name": "Lightning Strikes",
+    "tier": "Gold",
+    "description": "Gain {{as|{{fd|2.5}} '''bonus''' attack damage}} per {{as|10% attack speed}}."
+  },
+  {
+    "name": "Mad Scientist",
+    "tier": "Prismatic",
+    "description": "At the start of the combat phase in each round, gain either 30% {{tip|adaptive force}}, {{as|20% '''bonus''' health}}, and 40% increased size or {{as|70 ability haste}}, {{as|40% '''bonus''' movement speed}}, and 40% reduced size."
+  },
+  {
+    "name": "Magic Missile",
+    "tier": "Gold",
+    "description": "Dealing damage to an enemy with an ability within 1000 units fires 3 missiles at them that each deal {{as|true damage}} equal to {{as|{{fd|0.3{{recurring|3}}}}% of the target's '''maximum''' health}}, increased to up to {{as|1%|health}} based on distance travelled. This effect can only trigger once every 6 seconds from the same cast."
+  },
+  {
+    "name": "Marksmage",
+    "tier": "Gold",
+    "description": "Basic attacks deal {{as|'''bonus''' physical damage}} equal to {{as|100% AP}}."
+  },
+  {
+    "name": "Master of Duality",
+    "tier": "Prismatic",
+    "description": "Basic attacks grant {{as|{{pp|6 to 18}} ability power}} and ability casts grant {{as|{{pp|3 to 9}} '''bonus''' attack damage}}. This effect stacks infinitely and lasts until the end of the current round phase."
+  },
+  {
+    "name": "Mind to Matter",
+    "tier": "Silver",
+    "description": "Grants {{as|'''bonus''' health}} equal to {{as|50% '''maximum''' mana}}."
+  },
+  {
+    "name": "Minionmancer",
+    "tier": "Gold",
+    "description": "Your {{tip|pet|pets}} deal 40% increased damage as well as gain 40% {{as|'''bonus''' health}} and size."
+  },
+  {
+    "name": "Mirror Image",
+    "tier": "Silver",
+    "description": "Gain {{cai|Mirror Image|LeBlanc}}.<br><br>{{sbc|Mirror Image:}} Upon being damaged to {{as|30% '''maximum''' health}}, create a {{tip|clone}} of yourself, after which you both instantly become {{tip|invisible}} for {{fd|1.25}} seconds (60 second cooldown). Your clone can basic attack to deal no damage, lasts for 8 seconds, and moves to a random location in front of you."
+  },
+  {
+    "name": "Mountain Soul",
+    "tier": "Silver",
+    "description": "Grants the {{bi|Mountain Dragon Soul}}."
+  },
+  {
+    "name": "Mystic Punch",
+    "tier": "Prismatic",
+    "description": "Basic attacks [[on-hit]] reduce the cooldowns of all your abilities by {{fd|1.25}} seconds."
+  },
+  {
+    "name": "Nesting Doll",
+    "tier": "Prismatic",
+    "description": "Upon taking fatal damage, you enter a downed state as normal but modify the arm time for the revive to 2 seconds and automatically revive yourself without the help of your ally over 8 seconds. Additionally, you can enter the downed state for revival an additional time after the first revive, for a total of 2 revives per round. Each time you revive however, you respawn with reduced {{as|'''maximum''' health}} and size. The first revive reduces your {{as|'''maximum''' health}} by {{as|60%|hp}} and size by 20% and the second does so by {{as|75%|hp}} and 40% ({{as|40% '''total maximum''' health}} and 80% size for first revive, then {{as|25% '''total maximum''' health}} and 60% size for the second).<br><br>This effect only activates while your ally is alive and is cancelled immediately if they die while you are in the downed state. You and your ally can enter the downed state even after one of you has already been revived from one, though not a second time for your ally. If your ally stands in your revival zone, the revive occurs faster. Upon reviving, you {{tip|airborne|knock back}} all nearby enemies."
+  },
+  {
+    "name": "Now You See Me",
+    "tier": "Silver",
+    "description": "Replaces {{si|Flee}} with ''{{si|Now You See Me}}''.<br><br>[[File:Now You See Me augment spell.png|20px|link=]] {{sbc|Now You See Me:}}<br><br>{{#invoke:SpellData|geteffect|Now You See Me}}<br><br>{{#invoke:SpellData|geteffect2|Now You See Me}}"
+  },
+  {
+    "name": "Oathsworn",
+    "tier": "Gold",
+    "description": "Replaces {{si|Flee}} with ''{{cai|Fate's Call|Kalista}}''.<br><br>{{sbc|Fate's Call:}} Retrieve your ally and hold them for 4 seconds, {{tip|dash|pulling}} them to yourself over 1 second and {{tip|cleanse|cleansing}} them from all {{tip|crowd control}}, as well as rendering them {{tip|invulnerable}} and {{tip|untargetable}} for the duration (60 second cooldown).<br><br>While being held, your ally is {{tip|vanish|vanished}} and can {{tip|dash}} with {{tip|displacement immunity}} to end ''Fate's Call's'' effects and reappear at the target location; after the duration, they will automatically do so at maximum range from your facing direction. The ally's dash stops upon colliding with an enemy {{tip|champion}}, {{tip|airborne|knocking}} up all nearby enemies briefly and landing to their '''base''' attack range from the target collided with."
+  },
+  {
+    "name": "Ocean Soul",
+    "tier": "Silver",
+    "description": "Grants the {{bi|Ocean Dragon Soul}}, which has a modified base heal value of 100."
+  },
+  {
+    "name": "OK Boomerang",
+    "tier": "Gold",
+    "description": "{{as|Automatically|river}} casts {{cai|Boomerang Blade|Sivir}} at a nearby enemy, dealing {{pp|40 to 200}} {{as|(+ 22% '''bonus''' AD)}} {{as|(+ 15% AP)}} {{tip|adaptive damage}} to enemies hit (7 second cooldown)."
+  },
+  {
+    "name": "Omni Soul",
+    "tier": "Prismatic",
+    "description": "Grants 3 random {{bi|Dragon Soul|Dragon Souls}}."
+  },
+  {
+    "name": "Orbital Laser",
+    "tier": "Prismatic",
+    "description": "Replaces {{si|Flee}} with ''{{si|Orbital Laser}}''.<br><br>[[File:Orbital Laser augment spell.png|20px|link=]] {{sbc|Orbital Laser:}} {{#invoke:SpellData|geteffect|Orbital Laser}}"
+  },
+  {
+    "name": "Outlaw's Grit",
+    "tier": "Gold",
+    "description": "{{tip|Dash|Dashing}} or {{tip|blink|blinking}} grants 12 {{as|'''bonus''' armor}} and {{as|'''bonus''' magic resistance}}, stacking up to 5 times for a total of 60 '''bonus''' resistances. This effect lasts indefinitely until the end of the current round phase."
+  },
+  {
+    "name": "Parasitic Relationship",
+    "tier": "Gold",
+    "description": "You {{tip|heal}} for 15% of the damage dealt by your ally."
+  },
+  {
+    "name": "Perseverance",
+    "tier": "Gold",
+    "description": "Grants {{as|800% '''base''' health regeneration}}, increased to {{as|1600%|health}} while below {{as|25% '''maximum''' health}}."
+  },
+  {
+    "name": "Phenomenal Evil",
+    "tier": "Gold",
+    "description": "Gain {{cai|Phenomenal Evil Power|Veigar}}.<br><br>{{sbc|Phenomenal Evil Power:}} Generate a permanent stack of ''Phenomenal Evil'' for each enemy you hit with your [[champion ability|abilities]] ({{fd|0.75}}-second cooldown per ability). This effect cannot trigger more than once every 5 seconds from the same cast. For each stack, gain {{as|1 ability power}}.<br><br>If this is your second augment, start with 40 ''Phenomenal Evil'' stacks, granting you {{as|40 ability power}}."
+  },
+  {
+    "name": "Prismatic Egg",
+    "tier": "Prismatic",
+    "description": "Scoring a champion {{tip|takedown}} generates a stack, once per champion per round. Gain a free {{ii|Prismatic Item|Prismatic Item Anvil}} at 5 stacks and every 6 stacks thereafter.<br><br>The {{ii|Prismatic Item|Prismatic Item Anvil}} is granted at the start of the shop phase after a combat phase where the stack requirement is achieved."
+  },
+  {
+    "name": "Quantum Computing",
+    "tier": "Prismatic",
+    "description": "{{as|Automatically|river}} slash in a 650 radius around you over {{fd|0.75}} seconds, afterwards dealing {{as|{{pp|200 to 350}}|physical damage}} {{as|(+ 85% '''bonus''' AD)}} {{as|(+ 50% AP)}} {{as|physical damage}} to enemies within the area (10 second cooldown). Enemies hit by the outer edge of the circle take {{as|'''bonus''' physical damage}} equal to {{as|10%|hp}} {{as|(+ {{fd|2.5}}% per 100 '''bonus''' AD)}} {{as|(+ {{fd|1.6}}% per 100 AP)}} {{as|(+ {{fd|0.1}}% per 100 '''bonus''' health)}} {{as|of their '''maximum''' health}} and are {{tip|slow|slowed}} by 80% decaying over 2 seconds. Additionally, you are {{tip|heal|healed}} for 80% of the '''bonus''' damage {{tt|post-mitigation|Damage calculated after modifiers}} against enemy champions in the outer edge."
+  },
+  {
+    "name": "Quest: Angel of Retribution",
+    "tier": "Gold",
+    "description": "{{sbc|Quest:}} {{tip|Heal}} allied champions for 2500 in total, or mitigate 2500 damage for them.<br><br>{{sbc|Reward:}} Upon completing your {{sbc|Quest}}, gain {{as|100% '''bonus''' attack speed}} and empower your basic attacks to deal {{as|'''bonus''' magic damage}} equal to 350% of your heal and shield power."
+  },
+  {
+    "name": "Quest: Steel Your Heart",
+    "tier": "Gold",
+    "description": "{{sbc|Quest:}} Obtain {{ii|Heartsteel}} and accumulate over {{as|325 '''bonus''' health}} from ''Colossal Consumption''.<br><br>{{sbc|Reward:}} Upon completing your {{sbc|Quest}}, increase the {{as|'''bonus''' health}} gained from {{iis|Heartsteel}} ''Colossal Consumption'' by 500% and gain {{as|'''bonus''' health regeneration}} equal to {{as|10% of the '''bonus''' health}} gained from ''Colossal Consumption''."
+  },
+  {
+    "name": "Quest: Urf's Champion",
+    "tier": "Gold",
+    "description": "{{sbc|Quest:}} Score 10 champion {{tip|takedown|takedowns}}. Takedowns scored prior to the quest '''do''' count for this effect. If this is your second augment, the requirement is increased to 13 takedowns.<br><br>{{sbc|Reward:}} Upon completing your {{sbc|Quest}}, you receive {{ii|The Golden Spatula}}."
+  },
+  {
+    "name": "Quest: Wooglet's Witchcap",
+    "tier": "Prismatic",
+    "description": "Gain a {{ii|Needlessly Large Rod}} that has its {{as|ability power}} stat modified to {{as|120 AP}}.<br><br>{{sbc|Quest:}} Obtain {{ii|Rabadon's Deathcap}} and {{ii|Zhonya's Hourglass}}.<br><br>{{sbc|Reward:}} Upon completing your {{sbc|Quest}}, convert the items you obtained for the quest into {{ii|Wooglet's Witchcap}}."
+  },
+  {
+    "name": "Rabble Rousing",
+    "tier": "Gold",
+    "description": "Casting an ability {{tip|heal|heals}} you for {{pp|5 to 60}} {{as|(+ 1% '''maximum''' health)}}."
+  },
+  {
+    "name": "Raid Boss",
+    "tier": "Prismatic",
+    "description": "At the start of the combat phase in each round, you are now imprisoned in the center of the battlefield for 9 seconds, becoming {{tip|suppression|suppressed}} in the duration. While imprisoned, you gain {{pp|key=%|type=current round|40 to 70 for 11|1;2;3;4;5;6;7;8;9;10;11+}} damage reduction and {{tip|cc-immune|crowd control immunity}}, and increase your {{as|attack damage}}, {{as|ability power}}, {{as|'''maximum''' health}}, and size by {{pp|key=%|type=seconds imprisoned|0 to 40 for 10|0 to 9|formula=4.44% for every second imprisoned, capped at 9 seconds}}.<br><br>Afterwards or upon being damaged to {{as|50% '''maximum''' health}}, you are set free, {{tip|airborne|knocking back}} all nearby enemies and losing the damage reduction and crowd control immunity but keeping the other bonuses until the end of the round. Additionally, you {{tip|heal}} for {{as|30% '''missing''' health}} and receive a {{tip|shield}} that absorbs damage equal to {{as|35% '''maximum''' health}} and lasts until destroyed."
+  },
+  {
+    "name": "Recursion",
+    "tier": "Gold",
+    "description": "Grants {{as|60 ability haste}}."
+  },
+  {
+    "name": "Repulsor",
+    "tier": "Silver",
+    "description": "Upon dropping below {{as|60%|health}} or {{as|30% of your '''maximum''' health}}, {{tip|airborne|knock back}} all enemies within a 500 radius by 750 units."
+  },
+  {
+    "name": "Restart",
+    "tier": "Gold",
+    "description": "Your basic abilities' cooldowns are refreshed every 10 seconds."
+  },
+  {
+    "name": "Restless Restoration",
+    "tier": "Gold",
+    "description": "{{tip|Heal}} for {{pp|20/100 to 120/100}} {{as|(+ {{ap|2/100}}% '''maximum''' health)}} per 10 units travelled."
+  },
+  {
+    "name": "Scoped Weapons",
+    "tier": "Silver",
+    "description": "Gain {{rd|75|50}} '''bonus''' attack range."
+  },
+  {
+    "name": "Scopier Weapons",
+    "tier": "Gold",
+    "description": "Gain {{rd|200|100}} '''bonus''' attack range."
+  },
+  {
+    "name": "Scopiest Weapons",
+    "tier": "Prismatic",
+    "description": "Gain {{rd|250|150}} '''bonus''' attack range."
+  },
+  {
+    "name": "Searing Dawn",
+    "tier": "Gold",
+    "description": "Gain {{cai|Sunlight|Leona}}.<br><br>{{sbc|Sunlight:}} Your abilities mark enemies, causing them to take {{as|{{pp|40 to 200}} '''bonus''' magic damage}} from your ally's next basic attack or ability hit against them ({{fd|0.5}}-second cooldown per target)."
+  },
+  {
+    "name": "Self Destruct",
+    "tier": "Silver",
+    "description": "At the start of the combat phase in each round, you have a bomb attached to you that detonates after 15 seconds, creating an explosion that deals {{as|true damage}} equal to {{as|20% of the target's '''maximum''' health}} to enemies within 350 units and {{tip|airborne|knocks them up}} for {{fd|0.75}} seconds.<br><br>The bomb's duration is not refreshed when the initial delay for the combat phase elapses."
+  },
+  {
+    "name": "Serve Beyond Death",
+    "tier": "Silver",
+    "description": "Upon taking fatal damage for the first time, you are restored to {{as|100% '''maximum''' health}} but suffer {{as|true damage}} equal to {{as|10% of your '''maximum''' health}} every {{rutngt|0.25}} until you die from reaching 0 health. Scoring a champion {{tip|takedown}} ends this effect's damage immediately and sets your {{as|'''current''' health}} to {{as|20% '''maximum''' health}}."
+  },
+  {
+    "name": "Shadow Runner",
+    "tier": "Silver",
+    "description": "After {{tip|dash|dashing}}, {{tip|blink|blinking}}, or exiting {{tip|stealth}}, gain {{as|300 '''bonus''' movement speed}} for 2 seconds."
+  },
+  {
+    "name": "Shrink Ray",
+    "tier": "Gold",
+    "description": "Basic attacks reduce the target's damage dealt by 15% for 3 seconds, refreshing with each hit. Their size is also reduced significantly for the duration."
+  },
+  {
+    "name": "Skilled Sniper",
+    "tier": "Gold",
+    "description": "Hitting an enemy with a basic ability at over 700 units reduces the '''current''' cooldown of that ability to {{fd|0.5}} seconds. If the ability hit is from a damage over time effect, the cooldown of the ability is instead reduced to 3 seconds if it is not already below that."
+  },
+  {
+    "name": "Slap Around",
+    "tier": "Silver",
+    "description": "{{tip|Immobilize|Immobilizing}} an enemy champion grants you {{adaptive|20}}, stacking infinitely. This effect lasts until the end of the current round phase."
+  },
+  {
+    "name": "Slime Time",
+    "tier": "Silver",
+    "description": "{{as|Automatically|river}} releases a burst of slime in a {{tip|cr|icononly=true}} 450 radius around you, dealing {{as|{{pp|40 to 80}}|magic damage}} {{as|(+ {{pp|3 to 7|key=%}} {{as|(+ {{fd|1.5}}% per 100 '''bonus''' AD)}} {{as|(+ {{fd|1.5}}% per 100 AP)}} of target's '''maximum''' health)}} {{as|magic damage}} to enemies hit (7 second cooldown). Additionally, hitting a champion secretes a slime blob toward a nearby location. Both you and enemy champions can interact with the blob by moving over it; you may consume it to {{tip|heal}} yourself for {{as|{{pp|3 to 6|key=%}} of your '''maximum''' health}}, while an enemy may destroy it to deny the effect."
+  },
+  {
+    "name": "Slow Cooker",
+    "tier": "Prismatic",
+    "description": "Surrounds you in flames, causing you to apply a {{as|Burn|buzzword3}} every second to enemies within 500 units for 5 seconds that deals {{as|magic damage}} every second equal to {{as|{{fd|0.35}}% of your '''maximum''' health}} over the duration. This {{as|Burn|buzzword3}} stacks infinitely and refreshes with each application."
+  },
+  {
+    "name": "Snowball Fight!",
+    "tier": "Silver",
+    "description": "Replaces {{si|Flee}} with ''{{si|Mark}}'' / ''{{si|Dash}}''.<br><br>{{sbc|Mark:}} Throws a snowball in the target direction that deals {{as|{{pp|15 to 100}} true damage}} to the first enemy hit and marks them for 3 seconds (6 second cooldown). While the target is marked, you are granted the ability to cast {{si|Dash}}.<br><br>{{sbc|Dash:}} You {{tip|dash}} to the marked target while being {{tip|untargetable}}, dealing the same damage again upon arrival."
+  },
+  {
+    "name": "Sonic Boom",
+    "tier": "Silver",
+    "description": "Granting a [[buff]], {{tip|heal}}, or {{tip|shield}} to your ally deals {{as|{{pp|30 to 150}} true damage}} to enemies within 450 units of them and {{tip|slow|slows}} targets by 30% for 2 seconds (2 second cooldown)."
+  },
+  {
+    "name": "Soul Siphon",
+    "tier": "Gold",
+    "description": "Your {{tip|critical strike|critical strikes}} {{tip|heal}} you for 12% of damage dealt. Additionally, gain {{as|25% critical strike chance}}."
+  },
+  {
+    "name": "Spellwake",
+    "tier": "Prismatic",
+    "description": "Hitting an enemy champion with an ability sends a trail from you to the location they were hit, detonating in a 100 width radius after {{fd|0.75}} seconds to deal up to {{as|{{pp|80 to 200}}|magic damage}} {{as|(+ 165% '''bonus''' AD)}} {{as|(+ 30% AP)}} {{as|magic damage}} to enemies within. This effect can only trigger once every 6 seconds from the same cast."
+  },
+  {
+    "name": "Spin To Win",
+    "tier": "Silver",
+    "description": "Your {{tt|spinning abilities|Any ability with 'spinning' properties}} deal 30% increased damage and benefit from 30 ability haste."
+  },
+  {
+    "name": "Spirit Link",
+    "tier": "Prismatic",
+    "description": "Redirect 15% of the damage dealt to your ally to you, and {{tip|heal}} yourself equal to 50% of the healing they receive."
+  },
+  {
+    "name": "Stackosaurus Rex",
+    "tier": "Silver",
+    "description": "Increase the number of permanent stacks you gain from abilities by 75%."
+  },
+  {
+    "name": "Stats!",
+    "tier": "Silver",
+    "description": "Upon selecting this augment, gain 2 {{ii|Stat Bonus|Stat Bonus Anvils}} for free."
+  },
+  {
+    "name": "Stats on Stats!",
+    "tier": "Gold",
+    "description": "Upon selecting this augment, gain 3 {{ii|Stat Bonus|Stat Bonus Anvils}} for free."
+  },
+  {
+    "name": "Stats on Stats on Stats!",
+    "tier": "Prismatic",
+    "description": "Upon selecting this augment, gain 4 {{ii|Stat Bonus|Stat Bonus Anvils}} for free."
+  },
+  {
+    "name": "Summoner Revolution",
+    "tier": "Gold",
+    "description": "Using a summoner spell resets its {{sti|cooldown}} immediately after its effect {{tt|starts|For instant-cast spells}} or has {{tt|elapsed|For duration-based spells}}. This may occur only once per phase in a round."
+  },
+  {
+    "name": "Summoner's Roulette",
+    "tier": "Prismatic",
+    "description": "Replace both of your summoner spells with random ones available in a pool. After using a summoner spell during the combat phase, replace the spell in the respective slot with another random one (5 second cooldown per slot). You cannot have the same summoner spell in both slots.<br><br>{{sbc|Summoner Spell Pool:}} {{si|Banner of Command}}, {{si|Barrier}}, {{si|Blade Waltz}}, {{si|Castle}}, {{si|Cleanse}}, {{si|Mark}} / {{si|Dash}}, {{si|Defensive Maneuvers}}, {{si|Die Another Day}}, {{si|Exhaust}}, {{si|Feel the Burn}}, {{si|Flash}}, {{si|Flee}}, {{si|Ghost}}, {{si|Heal}}, {{si|Ignite}}, {{si|Vanish}}"
+  },
+  {
+    "name": "Symphony of War",
+    "tier": "Prismatic",
+    "description": "Gain the {{ri|Conqueror}} and {{ri|Lethal Tempo}} keystone runes."
+  },
+  {
+    "name": "Tank It Or Leave It",
+    "tier": "Silver",
+    "description": "Gain ''Critical Defend Chance'' equal to {{as|100% critical strike chance}}, up to 50%. Additionally, gain {{as|25% critical strike chance}}.<br><br>{{sbc|Critical Defend Chance:}} Grants you a chance to reduce an instance of damage taken by 20%."
+  },
+  {
+    "name": "Tap Dancer",
+    "tier": "Prismatic",
+    "description": "Basic attacks grant {{as|10 '''bonus''' movement speed}}, stacking infinitely and lasting until the end of the current round phase. Additionally, gain {{as|'''bonus''' attack speed}} equal to {{as|10% movement speed}}."
+  },
+  {
+    "name": "The Brutalizer",
+    "tier": "Gold",
+    "description": "Grants {{as|25 '''bonus''' attack damage}}, {{as|10 ability haste}}, and {{as|5 lethality}}."
+  },
+  {
+    "name": "Thread the Needle",
+    "tier": "Gold",
+    "description": "Grants 20% {{as|armor penetration}} and {{as|magic penetration|magic resistance}}."
+  },
+  {
+    "name": "Tormentor",
+    "tier": "Silver",
+    "description": "{{tip|Immobilize|Immobilizing}} an enemy champion inflicts them with a {{as|Burn|buzzword3}} for 5 seconds, dealing {{as|magic damage}} every second equal to {{as|{{fd|0.8}}% of the target's '''maximum''' health}} over the duration. This {{as|Burn}} stacks infinitely and refreshes with each application."
+  },
+  {
+    "name": "Trailblazer",
+    "tier": "Silver",
+    "description": "{{tip|Dash|Dashing}} or {{tip|blink|blinking}} causes you to {{as|Burn|buzzword3}} the nearest enemy champion within 650 units for 5 seconds, dealing {{as|magic damage}} every second equal to {{as|{{fd|0.8}}% of the target's '''maximum''' health}} over the duration. This {{as|Burn|buzzword3}} stacks infinitely and refreshes with each application. The same cast instance cannot trigger this effect more than once every {{fd|1.5}} seconds."
+  },
+  {
+    "name": "Trueshot Prodigy",
+    "tier": "Prismatic",
+    "description": "{{as|Automatically|river}} cast {{cai|Trueshot Barrage|Ezreal}} in the direction of an enemy upon damaging them from over {{tt|700 units away|center-to-edge}}, which deals {{as|{{pp|250 to 750}}|magic damage}} {{as|(+ 140% '''bonus''' AD)}} {{as|(+ 100% AP)}} {{as|magic damage}} to enemies hit (5 second cooldown)."
+  },
+  {
+    "name": "Twice Thrice",
+    "tier": "Gold",
+    "description": "Basic attacks generate a stack, up to 2 times. At 2 stacks, your next basic attack consumes all stacks to apply {{tip|on-hit}} effects again at 150% effectiveness."
+  },
+  {
+    "name": "Typhoon",
+    "tier": "Silver",
+    "description": "Basic attacks fire a bolt at an additional target that deals {{as|30% AD}} and applies on-hit effects at 100% effectiveness."
+  },
+  {
+    "name": "Ultimate Revolution",
+    "tier": "Prismatic",
+    "description": "Casting your ultimate ability resets its {{sti|cooldown}} immediately after its effect {{tt|starts|For instant-cast spells}} or has {{tt|elapsed|For duration-based spells}}. This may occur only once per phase in a round."
+  },
+  {
+    "name": "Ultimate Roulette",
+    "tier": "Prismatic",
+    "description": "Replaces {{si|Flee}} with a random champion's ultimate ability, available from a pool. After using the granted ultimate ability during the combat phase, replace the ultimate in the respective slot with another random one after the cooldown for this effect elapses ({{pp|20 to 15 for 3|1;6;16}} second {{tt|cooldown|Affected by ultimate haste}}, increased to {{pp|25 to 20 for 3|1;6;16}} for {{cai|Maximum Dosage|Dr. Mundo}}).<br><br>{{sbc|Ultimate Ability Pool:}} {{cai|Feast|Cho'Gath}}, {{cai|Maximum Dosage|Dr. Mundo}}, {{cai|Cannon Barrage|Gangplank}}, {{cai|Explosive Cask|Gragas}}, {{cai|The Culling|Lucian}}, {{cai|Final Spark|Lux}}, {{cai|Soul Shackles|Morgana}}.<br><br>You can receive your own champion's ultimate ability from this augment. Ultimate abilities granted by this effect count as an ultimate for all purposes."
+  },
+  {
+    "name": "Ultimate Unstoppable",
+    "tier": "Silver",
+    "description": "Casting your ultimate ability grants you {{tip|cc-immune|crowd control immunity}} for 3 seconds (8 second cooldown)."
+  },
+  {
+    "name": "Vanish",
+    "tier": "Gold",
+    "description": "Replaces {{si|Flee}} with ''{{si|Vanish}}''.<br><br>[[File:Vanish augment spell.png|20px|link=]] {{sbc|Vanish:}} {{#invoke:SpellData|geteffect|Vanish}}"
+  },
+  {
+    "name": "Vengeance",
+    "tier": "Gold",
+    "description": "After your ally dies once, gain 28% increased damage and 28% omnivamp for the remainder of the round."
+  },
+  {
+    "name": "Vulnerability",
+    "tier": "Silver",
+    "description": "Damage dealt by items and damage over time effects can now {{tip|critical strike|critically strike}} for {{critical damage|145|100}} '''bonus''' damage. Additionally, gain {{as|25% critical strike chance}}."
+  },
+  {
+    "name": "Warmup Routine",
+    "tier": "Silver",
+    "description": "Replaces {{si|Flee}} with ''{{si|Warmup Routine}}''.<br><br>[[File:Warmup Routine augment spell.png|20px|link=]] {{sbc|Warmup Routine:}} {{#invoke:SpellData|geteffect|Warmup Routine}}"
+  },
+  {
+    "name": "Willing Sacrifice",
+    "tier": "Gold",
+    "description": "When your ally drops below {{as|25% of their '''maximum''' health}}, reduce your {{as|'''current''' health}} by {{as|25%|hp}} to grant them a {{tip|shield}} equal to that same amount for 10 seconds."
+  },
+  {
+    "name": "Wisdom of Ages",
+    "tier": "Prismatic",
+    "description": "Grants 1 level for the current round and an additional level at the start of every other round. Additionally, the level cap for your champion is removed, allowing them to benefit from effects that scale past level 18, including stat growth."
+  },
+  {
+    "name": "Witchful Thinking",
+    "tier": "Silver",
+    "description": "Grants {{as|70 ability power}}."
+  }
+]

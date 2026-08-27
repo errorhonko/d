@@ -4,7 +4,16 @@ export {
   sampleMarksmanPrismaticItem,
   samplePrismaticItemForCategory,
 } from './selection'
+export {
+  filterMarksmanPrismaticItemProfiles,
+  findMarksmanPrismaticItemProfile,
+  marksmanPrismaticItemModel,
+} from './marksman'
 export type {
+  MarksmanPrismaticItemFilter,
+  MarksmanPrismaticItemModel,
+  MarksmanPrismaticItemProfile,
+  MarksmanPrismaticItemTag,
   PrismaticItem,
   PrismaticItemCatalog,
   PrismaticDpsEffect,

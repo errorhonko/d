@@ -180,3 +180,37 @@ export interface SampledPrismaticItem {
   readonly probability: number
   readonly distribution: PrismaticItemSelectionDistribution
 }
+
+export type MarksmanPrismaticItemTag =
+  | 'attack_damage'
+  | 'attack_speed'
+  | 'critical_strike'
+  | 'ability_power'
+  | 'penetration'
+  | 'mobility'
+  | 'durability'
+  | 'damage_effect'
+  | 'scaling'
+
+export interface MarksmanPrismaticItemProfile {
+  readonly item: PrismaticItem
+  readonly selectionRank: number
+  readonly weightedSelections: number
+  readonly selectionProbability: number
+  readonly tags: readonly MarksmanPrismaticItemTag[]
+  readonly modelCoverage: 'damage_and_stats' | 'stats_only'
+}
+
+export interface MarksmanPrismaticItemModel {
+  readonly patch: string
+  readonly participants: number
+  readonly recognizedParticipants: number
+  readonly profiles: readonly MarksmanPrismaticItemProfile[]
+  readonly profilesById: ReadonlyMap<number, MarksmanPrismaticItemProfile>
+  readonly damageModeledSelectionProbability: number
+}
+
+export interface MarksmanPrismaticItemFilter {
+  readonly tags?: readonly MarksmanPrismaticItemTag[]
+  readonly damageModeledOnly?: boolean
+}

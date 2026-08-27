@@ -1,0 +1,68 @@
+﻿CommunityDragon 鎬荤鏂囨暟: 225
+====================================================
+
+========================================
+apiName: WarmupRoutine
+涓枃鍚? 鐑韩鍔ㄤ綔
+rarity: 0
+id: 93
+desc: 鑾峰緱鍙敜甯堟妧鑳?spellName>鐑韩鍔ㄤ綔</spellName>銆?br><br>寮曞浣犵殑鍐呭湪涔嬭垶锛屾瘡绉掍娇浣犵殑浼ゅ鎻愬崌2%锛岃嚦澶氳嚦@MaxStacks@%銆?--- dataValues ---
+  DamagePerStack: [0.009999999776482582, 0.009999999776482582, 0.009999999776482582, 0.009999999776482582, 0.009999999776482582, 0.009999999776482582, 0.009999999776482582]
+  MaxLevel: [2, 2, 2, 2, 2, 2, 2]
+  MaxLevelExtraStacksPerSuccess: [2, 2, 2, 2, 2, 2, 2]
+  MaxStacks: [20, 20, 40, 60, 60, 60, 60]
+
+========================================
+apiName: Vanish
+涓枃鍚? 閬佸叆鏆楀奖
+rarity: 1
+id: 89
+desc: 鑾峰緱鍙敜甯堟妧鑳?spellName>閬佸叆鏆楀奖</spellName>銆?br><br><rules><spellName>閬佸叆鏆楀奖</spellName>浼氫娇浣犺繘鍏?keywordStealth>娼滆</keywordStealth>鐘舵€併€?/rules>
+--- dataValues ---
+  MSBoost: [0.25, 0.25, 0.25, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645]
+  MaxLevel: [2, 2, 2, 2, 2, 2, 2]
+  StealthDuration: [3, 3, 6, 6, 6, 6, 6]
+
+========================================
+apiName: GoHChemtechPutrifier
+涓枃鍚? 鐐奸噾绉戞妧绾寲鍣?rarity: 4
+id: 347
+desc: 浣犻€犳垚鐨勬墍鏈変激瀹抽兘浼氭柦鍔?keyword>閲嶄激</keyword>銆?--- dataValues ---
+  GrievousAmount: [0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645, 0.4000000059604645]
+  GrievousDuration: [3, 3, 3, 3, 3, 3, 3]
+  MaxLevel: [1, 1, 1, 1, 1, 1, 1]
+
+========================================
+apiName: GoHLamb
+涓枃鍚? 缇婄伒鐢熸伅
+rarity: 4
+id: 359
+desc: 鑾峰緱@RevivesToGain@娆￠澶栧娲伙紝骞朵笖灏嗗娲绘墍闇€鐨勬椂闂村噺鍗娿€?--- dataValues ---
+  LambRezDelayMod: [2, 2, 2, 2, 2, 2, 2]
+  LambRezTimerMod: [2, 2, 2, 2, 2, 2, 2]
+  MaxLevel: [1, 1, 1, 1, 1, 1, 1]
+  RevivesToGain: [1, 1, 1, 1, 1, 1, 1]
+  SizeAdjustment: [0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224, 0.20000000298023224]
+
+========================================
+apiName: Cerberus
+涓枃鍚? 鍦扮嫳涓夊ご鐘?rarity: 2
+id: 323
+desc: 鑾峰緱<spellName>涓涘垉</spellName>鍜?spellName>寮烘敾</spellName>鍩虹煶绗︽枃銆?--- dataValues ---
+node : file:///C:/baiduwangpan/github-pull-errorhonko-d/scripts/dump-all-augment-datavalues.mjs:25
+所在位置 行:1 字符: 1
++ node scripts/dump-all-augment-datavalues.mjs 2>&1 | Out-File -Encodin ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (file:///C:/baid...tavalues.mjs:25:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+    console.log(`  ${key}: [${vals.join(', ')}]`)
+                                   ^
+
+TypeError: vals.join is not a function
+    at file:///C:/baiduwangpan/github-pull-errorhonko-d/scripts/dump-all-augment-datavalues.mjs:25:36
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.15.0

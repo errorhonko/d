@@ -24,6 +24,8 @@ export interface RangedChampionCalculationInput {
   readonly initialStats: InitialStatBlock
   /** 攻速成长所使用的英雄攻击速度比率；未提供时使用初始攻击速度。 */
   readonly attackSpeedRatio?: number
+  /** 英雄基础攻击距离，用于依赖射程的强化符文计算。 */
+  readonly attackRange?: number
   readonly selections: readonly RangedChampionSelection[]
   readonly prismaticItemDps?: PrismaticItemDpsContext
   readonly statAmplificationPercent?: Readonly<Partial<Record<StatKey, number>>>

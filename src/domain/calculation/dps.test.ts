@@ -77,4 +77,27 @@ describe('calculateRangedDps', () => {
       }),
     ).toThrow('不能小于 0')
   })
+
+  it('按总效能倍率放大一次主攻击附带的攻击特效', () => {
+    const stats = calculateRangedChampion({
+      initialStats: { attack_damage: 0, attack_speed: 2 },
+      selections: [],
+    }).finalStats
+
+    const result = calculateRangedDps({
+      stats,
+      target: { armor: 0, magicResistance: 0 },
+      profile: {
+        onHitEffectiveness: 1.4,
+        physicalOnHitPerAttack: 10,
+        magicOnHitPerAttack: 20,
+        trueOnHitPerAttack: 5,
+      },
+    })
+
+    expect(result.physical.raw).toBe(28)
+    expect(result.magic.raw).toBe(56)
+    expect(result.true.raw).toBe(14)
+    expect(result.totalDps).toBe(98)
+  })
 })

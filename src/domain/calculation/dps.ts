@@ -439,6 +439,10 @@ export function calculateRangedDps(input: RangedDpsInput): RangedDpsResult {
       criticalStrikeChance,
     )
   const basicAttackCanCrit = profile.basicAttackCanCrit ?? true
+  const onHitEffectiveness = nonNegative(
+    profile.onHitEffectiveness ?? 1,
+    'profile.onHitEffectiveness',
+  )
   const expectedCritMultiplier = basicAttackCanCrit
     ? 1 +
       (criticalStrikeChance / 100) *
@@ -458,9 +462,11 @@ export function calculateRangedDps(input: RangedDpsInput): RangedDpsResult {
       attackDamageRatio *
       expectedCritMultiplier *
       itemDps.basicAttackDamageMultiplier +
-    profileValue(profile, 'physicalOnHitPerAttack')
-  const magicPerAttack = profileValue(profile, 'magicOnHitPerAttack')
-  const truePerAttack = profileValue(profile, 'trueOnHitPerAttack')
+    profileValue(profile, 'physicalOnHitPerAttack') * onHitEffectiveness
+  const magicPerAttack =
+    profileValue(profile, 'magicOnHitPerAttack') * onHitEffectiveness
+  const truePerAttack =
+    profileValue(profile, 'trueOnHitPerAttack') * onHitEffectiveness
 
   const rawPhysicalDps =
     physicalPerAttack * attacksPerSecond +

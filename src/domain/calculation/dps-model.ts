@@ -39,6 +39,8 @@ export interface RangedDamageProfile {
   readonly attackDamageRatio?: number
   /** 是否允许普攻的 AD 部分暴击。 */
   readonly basicAttackCanCrit?: boolean
+  /** 攻击特效的总效能倍率；1.4 表示每次主攻击合计触发 140% 特效伤害。 */
+  readonly onHitEffectiveness?: number
   readonly physicalOnHitPerAttack?: number
   readonly magicOnHitPerAttack?: number
   readonly trueOnHitPerAttack?: number
