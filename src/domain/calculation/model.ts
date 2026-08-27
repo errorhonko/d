@@ -26,6 +26,8 @@ export interface RangedChampionCalculationInput {
   readonly attackSpeedRatio?: number
   /** 英雄基础攻击距离，用于依赖射程的强化符文计算。 */
   readonly attackRange?: number
+  /** 英雄当前等级，用于随等级成长的强化符文数值。 */
+  readonly championLevel?: number
   readonly selections: readonly RangedChampionSelection[]
   readonly prismaticItemDps?: PrismaticItemDpsContext
   readonly statAmplificationPercent?: Readonly<Partial<Record<StatKey, number>>>

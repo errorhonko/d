@@ -55,6 +55,18 @@ function formatModifiers(mods: readonly AugmentStatModifier[]): string {
 
 type MutableStatBlock = { -readonly [K in keyof StatBlock]: StatBlock[K] }
 
+function clampedChampionLevel(input: RangedChampionCalculationInput): number {
+  return Math.min(18, Math.max(1, input.championLevel ?? 18))
+}
+
+function levelInterpolation(start: number, end: number, level: number): number {
+  return start + ((end - start) * (level - 1)) / 17
+}
+
+function lethalTempoRangedAttackSpeedPerStack(level: number): number {
+  return 8 + [3, 6, 9, 12].filter((breakpoint) => level >= breakpoint).length
+}
+
 export function calculateAugmentStackOutcome(
   baseInput: RangedChampionCalculationInput,
   augment: AugmentDefinition,
@@ -79,17 +91,26 @@ export function calculateAugmentStackOutcome(
 
   // 3. 确定叠层配置（优先当前等级的 stacking）
   const activeStacking = currentLevelConfig.stacking ?? augment.stacking
+  let appliedStacks = 0
   if (activeStacking) {
-    const validStacks = Math.min(Math.max(0, stacks), activeStacking.maxStacks)
-    if (activeStacking.perStackStats && validStacks > 0) {
+    const nonNegativeStacks = Math.max(0, Math.floor(stacks))
+    appliedStacks =
+      activeStacking.maxStacks === undefined
+        ? nonNegativeStacks
+        : Math.min(nonNegativeStacks, activeStacking.maxStacks)
+    if (activeStacking.perStackStats && appliedStacks > 0) {
       for (const mod of activeStacking.perStackStats) {
         appliedModifiers.push({
           stat: mod.stat,
-          value: mod.value * validStacks,
+          value: mod.value * appliedStacks,
         })
       }
     }
-    if (validStacks === activeStacking.maxStacks && activeStacking.fullStackStats) {
+    if (
+      activeStacking.maxStacks !== undefined &&
+      appliedStacks === activeStacking.maxStacks &&
+      activeStacking.fullStackStats
+    ) {
       appliedModifiers.push(...activeStacking.fullStackStats)
     }
   }
@@ -140,6 +161,40 @@ export function calculateAugmentStackOutcome(
     }
   }
 
+  const attackSpeedRatio =
+    baseInput.attackSpeedRatio ?? (baseInput.initialStats.attack_speed ?? 0.658)
+  const championLevel = clampedChampionLevel(baseInput)
+  let lethalTempoStacks = 0
+  let conquerorStacks = 0
+  let tapDancerMovementSpeed = 0
+  let tapDancerAttackSpeedPercent = 0
+
+  if (augment.id === 'tapdancer') {
+    const movementSpeedPerHit = level >= 2 ? 10 : 6
+    tapDancerMovementSpeed = movementSpeedPerHit * appliedStacks
+    modifiedStats.movement_speed += tapDancerMovementSpeed
+    tapDancerAttackSpeedPercent = modifiedStats.movement_speed * 0.1
+    modifiedStats.attack_speed +=
+      attackSpeedRatio * (tapDancerAttackSpeedPercent / 100)
+  }
+
+  if (augment.id === 'symphonyofwar') {
+    lethalTempoStacks = Math.min(appliedStacks, 6)
+    conquerorStacks = Math.min(appliedStacks, 12)
+    const attackSpeedPerStack =
+      lethalTempoRangedAttackSpeedPerStack(championLevel)
+    const adaptiveForcePerStack = levelInterpolation(
+      3,
+      5.5,
+      championLevel,
+    )
+    modifiedStats.attack_speed +=
+      attackSpeedRatio *
+      ((attackSpeedPerStack * lethalTempoStacks) / 100)
+    modifiedStats.attack_damage +=
+      adaptiveForcePerStack * 0.6 * conquerorStacks
+  }
+
   // 特殊机制：瞄准脑袋 (Aim For The Head)
   // 暴击几率封顶 50%，超出部分按比例转化为暴击伤害 (Lv1: 40%, Lv2: 60%)
   if (augment.id === 'aimforthehead') {
@@ -171,6 +226,16 @@ export function calculateAugmentStackOutcome(
   if (augment.id === 'heavyhitter') {
     const hpRatio = level === 1 ? 0.035 : 0.05
     physicalOnHitPerAttack = (modifiedStats.health ?? 0) * hpRatio
+  }
+  if (augment.id === 'symphonyofwar' && lethalTempoStacks === 6) {
+    const bonusAttackSpeedRatio = Math.max(
+      0,
+      modifiedStats.attack_speed / attackSpeedRatio - 1,
+    )
+    physicalOnHitPerAttack +=
+      levelInterpolation(9, 30, championLevel) *
+      (1 + bonusAttackSpeedRatio) *
+      0.8
   }
 
   // 特殊机制：闪电打击 (Lightning Strikes)
@@ -208,6 +273,20 @@ export function calculateAugmentStackOutcome(
   } else if (augment.id === 'drawyoursword' && drawYourSwordRangeMod > 0) {
     const bonusPctStr = Math.round(drawYourSwordRangeMod * 1000) / 10
     statsSummary = `${statsSummary} (基于舍弃射程额外放大 +${bonusPctStr}%)`
+  } else if (augment.id === 'tapdancer') {
+    statsSummary =
+      `无限叠加：${appliedStacks} 次普攻提供 +${tapDancerMovementSpeed} 移动速度，` +
+      `总移动速度转化 +${tapDancerAttackSpeedPercent.toFixed(1)}% 攻击速度`
+  } else if (augment.id === 'symphonyofwar') {
+    const attackSpeedPerStack =
+      lethalTempoRangedAttackSpeedPerStack(championLevel)
+    const adaptiveForcePerStack = levelInterpolation(3, 5.5, championLevel)
+    const attackDamage = adaptiveForcePerStack * 0.6 * conquerorStacks
+    statsSummary =
+      `致命节奏 ${lethalTempoStacks}/6 层：+${(attackSpeedPerStack * lethalTempoStacks).toFixed(1)}% 攻击速度` +
+      `${lethalTempoStacks === 6 ? `，满层弩箭每次攻击 +${physicalOnHitPerAttack.toFixed(1)} 原始物理伤害` : ''}；` +
+      `征服者 ${conquerorStacks}/12 层：+${attackDamage.toFixed(1)} 攻击力` +
+      `${conquerorStacks === 12 ? '，满层远程伤害转治疗 8%' : ''}`
   }
 
   return {
@@ -230,15 +309,29 @@ export function calculateAugmentBenefit(
   const level = specifiedLevel ?? 1
   const currentLevelConfig = augment.levels.find((l) => l.level === level) ?? augment.levels[0]!
   const activeStacking = currentLevelConfig.stacking ?? augment.stacking
-  const maxStacks = activeStacking?.maxStacks ?? 0
-  const defaultStacks = specifiedStacks !== undefined ? specifiedStacks : (activeStacking?.defaultStacks ?? maxStacks)
+  const previewStacks = activeStacking?.previewStacks ?? []
+  const fallbackStacks =
+    activeStacking?.maxStacks ?? previewStacks.at(-1) ?? 0
+  const defaultStacks =
+    specifiedStacks !== undefined
+      ? specifiedStacks
+      : (activeStacking?.defaultStacks ?? fallbackStacks)
 
   // 生成阶梯（0层、半层、满层）
   const stackLadder: AugmentStackOutcome[] = []
   if (activeStacking) {
-    const half = Math.round(maxStacks / 2)
-    const ladderLevels = Array.from(new Set([0, half, maxStacks])).sort((a, b) => a - b)
-    for (const lvl of ladderLevels) {
+    const ladderLevels =
+      previewStacks.length > 0
+        ? [...previewStacks]
+        : [
+            0,
+            Math.round((activeStacking.maxStacks ?? 0) / 2),
+            activeStacking.maxStacks ?? 0,
+          ]
+    const uniqueLadderLevels = Array.from(new Set(ladderLevels)).sort(
+      (a, b) => a - b,
+    )
+    for (const lvl of uniqueLadderLevels) {
       stackLadder.push(calculateAugmentStackOutcome(baseInput, augment, target, level, lvl))
     }
   } else {

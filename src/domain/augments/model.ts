@@ -8,7 +8,10 @@ export interface AugmentStatModifier {
 }
 
 export interface AugmentStackingConfig {
-  readonly maxStacks: number
+  /** 游戏内真实层数上限；省略表示无限叠加。 */
+  readonly maxStacks?: number
+  /** 无限叠层时供界面快速预览的层数，不代表游戏上限。 */
+  readonly previewStacks?: readonly number[]
   readonly stepName: string
   readonly defaultStacks?: number
   /** 每层提供的属性 */

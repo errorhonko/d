@@ -152,4 +152,57 @@ describe('AD 强化符文全量计算模型深度核验', () => {
     expect(blunt.tier).toBe('silver')
     expect(blunt.levels[0].stats[0].value).toBe(10)
   })
+
+  it('踢踏舞：层数不封顶，并按总移动速度的 10% 转换攻速', () => {
+    const tapDancer = AD_AUGMENTS_CATALOG.find((a) => a.id === 'tapdancer')!
+    const at15 = calculateAugmentBenefit(
+      arenaInput,
+      tapDancer,
+      dummyTarget,
+      2,
+      15,
+    )
+    const at50 = calculateAugmentBenefit(
+      arenaInput,
+      tapDancer,
+      dummyTarget,
+      2,
+      50,
+    )
+
+    expect(at50.currentStacks).toBe(50)
+    expect(at50.currentOutcome.dps).toBeGreaterThan(at15.currentOutcome.dps)
+    expect(at50.currentOutcome.statsDeltaSummary).toContain('无限叠加')
+    expect(at50.currentOutcome.statsDeltaSummary).toContain('+500 移动速度')
+  })
+
+  it('战争交响乐：分别计算 6 层致命节奏和 12 层征服者', () => {
+    const symphony = AD_AUGMENTS_CATALOG.find(
+      (a) => a.id === 'symphonyofwar',
+    )!
+    const at6 = calculateAugmentBenefit(
+      arenaInput,
+      symphony,
+      dummyTarget,
+      1,
+      6,
+    )
+    const at12 = calculateAugmentBenefit(
+      arenaInput,
+      symphony,
+      dummyTarget,
+      1,
+      12,
+    )
+
+    expect(at6.currentOutcome.statsDeltaSummary).toContain(
+      '致命节奏 6/6 层：+66.0% 攻击速度',
+    )
+    expect(at6.currentOutcome.statsDeltaSummary).toContain('满层弩箭')
+    expect(at12.currentOutcome.statsDeltaSummary).toContain('征服者 12/12 层')
+    expect(at12.currentOutcome.statsDeltaSummary).toContain(
+      '满层远程伤害转治疗 8%',
+    )
+    expect(at12.currentOutcome.dps).toBeGreaterThan(at6.currentOutcome.dps)
+  })
 })

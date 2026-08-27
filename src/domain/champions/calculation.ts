@@ -149,6 +149,7 @@ export function arenaChampionCalculationInput(
     attackSpeedRatio:
       input.champion.base.attackSpeedRatio * attackSpeedMultiplier,
     attackRange: input.champion.base.attackRange,
+    championLevel: input.level,
     ...(item === undefined
       ? {}
       : {

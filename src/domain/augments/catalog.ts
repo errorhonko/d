@@ -583,8 +583,7 @@ export const AD_AUGMENTS_CATALOG: readonly AugmentDefinition[] = [
   },
 
   // TapDancer 踢踏舞 | MaxLevel=2
-  // MSPerHit: [6, 8, 10, 12, 14, 16, 18]
-  // MSToASConversion: [0.001, ...] (0.1% 移速 → 攻速)
+  // 每次攻击获得 6/10 移速，无层数上限；总移速 × 0.1% 转为额外攻速。
   {
     id: 'tapdancer',
     name: '踢踏舞',
@@ -593,51 +592,30 @@ export const AD_AUGMENTS_CATALOG: readonly AugmentDefinition[] = [
     levels: [
       {
         level: 1,
-        description: '每次普攻提供 6 移动速度（无限叠加），并将移速的 0.1% 转换为额外攻击速度。',
+        description: '每次普攻提供 6 移动速度（无限叠加），并获得等于总移动速度 10% 的额外攻击速度。',
         stats: [],
         stacking: {
-          maxStacks: 15,
-          stepName: '层',
+          previewStacks: [0, 10, 25, 50],
+          stepName: '次普攻',
           defaultStacks: 10,
-          perStackStats: [
-            { stat: 'attack_speed', value: 6 },
-            { stat: 'movement_speed', value: 6 },
-          ],
         },
       },
       {
         level: 2,
-        description: '每次普攻提供 10 移动速度（无限叠加），并将移速的 0.1% 转换为额外攻击速度。',
+        description: '每次普攻提供 10 移动速度（无限叠加），并获得等于总移动速度 10% 的额外攻击速度。',
         stats: [],
         stacking: {
-          maxStacks: 15,
-          stepName: '层',
+          previewStacks: [0, 10, 25, 50],
+          stepName: '次普攻',
           defaultStacks: 10,
-          perStackStats: [
-            { stat: 'attack_speed', value: 10 },
-            { stat: 'movement_speed', value: 10 },
-          ],
         },
       },
     ],
-    stacking: {
-      maxStacks: 15,
-      stepName: '层',
-      defaultStacks: 10,
-      perStackStats: [
-        { stat: 'attack_speed', value: 6 },
-        { stat: 'movement_speed', value: 6 },
-      ],
-    },
     tags: ['移速转攻速', '无限叠速', '拉扯机动'],
   },
 
   // SymphonyofWar 战争交响乐 | MaxLevel=1
-  // StackCap: [6, ...] MaxStacks: [12, ...] (征服者)
-  // MinAdaptivePerStack: [3, ...] MaxAdaptivePerStack: [5.5, ...]
-  // Duration: [6, ...] (致命节奏)
-  // HealingPercent: [0.1, ...] BuffDuration: [5, ...]
-  // ASCap: [10, ...] RangeBonus: [50, ...]
+  // 致命节奏最多 6 层；征服者最多 12 层。界面统一用 0~12 战斗层数表达。
   {
     id: 'symphonyofwar',
     name: '战争交响乐',
@@ -646,16 +624,15 @@ export const AD_AUGMENTS_CATALOG: readonly AugmentDefinition[] = [
     levels: [
       {
         level: 1,
-        description: '获得【征服者】（每层 3-5.5 适应之力，满 12 层后获得 10% 全能吸血）和【致命节奏】（叠 6 层攻速，满层后突破攻速上限至 10 并获得 50 攻击距离）。',
+        description: '获得【征服者】（每层 3-5.5 适应之力，满 12 层后远程英雄获得 8% 伤害转治疗）和【致命节奏】（最多 6 层等级成长攻速，满层后攻速上限提升至 10、获得 50 攻击距离并发射额外伤害弩箭）。',
         stats: [],
       },
     ],
     stacking: {
-      maxStacks: 6,
-      stepName: '层',
-      defaultStacks: 6,
-      perStackStats: [{ stat: 'attack_speed', value: 15 }],
-      fullStackStats: [{ stat: 'attack_damage', value: 40 }],
+      maxStacks: 12,
+      previewStacks: [0, 6, 12],
+      stepName: '战斗层',
+      defaultStacks: 12,
     },
     tags: ['致命节奏', '征服者', '突破上限'],
   },

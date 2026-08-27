@@ -230,7 +230,8 @@ export function PrismaticRecommendation({
                           >
                             {step.stacks === 0
                               ? '0层'
-                              : step.stacks === activeStacking.maxStacks
+                              : activeStacking.maxStacks !== undefined &&
+                                step.stacks === activeStacking.maxStacks
                               ? `满层 (${step.stacks})`
                               : `${step.stacks}层`}
                             <span className="step-gain">+{step.dpsPercentGain.toFixed(1)}%</span>
@@ -240,16 +241,38 @@ export function PrismaticRecommendation({
 
                       <div className="stack-slider-wrap">
                         <div className="slider-label-row">
-                          <span>微调层数: {currentStacks} / {activeStacking.maxStacks} {activeStacking.stepName}</span>
+                          <span>
+                            微调层数: {currentStacks}
+                            {activeStacking.maxStacks === undefined
+                              ? ` ${activeStacking.stepName}（无上限）`
+                              : ` / ${activeStacking.maxStacks} ${activeStacking.stepName}`}
+                          </span>
                         </div>
-                        <input
-                          type="range"
-                          min={0}
-                          max={activeStacking.maxStacks}
-                          value={currentStacks}
-                          onChange={(e) => onSetAugmentStack(augment.id, Number(e.target.value))}
-                          className="form-slider"
-                        />
+                        {activeStacking.maxStacks === undefined ? (
+                          <input
+                            type="number"
+                            min={0}
+                            step={1}
+                            value={currentStacks}
+                            onChange={(e) =>
+                              onSetAugmentStack(
+                                augment.id,
+                                Math.max(0, Number(e.target.value)),
+                              )
+                            }
+                            className="form-input-number"
+                            aria-label={`${augment.name}叠层次数`}
+                          />
+                        ) : (
+                          <input
+                            type="range"
+                            min={0}
+                            max={activeStacking.maxStacks}
+                            value={currentStacks}
+                            onChange={(e) => onSetAugmentStack(augment.id, Number(e.target.value))}
+                            className="form-slider"
+                          />
+                        )}
                       </div>
                     </div>
                   )}
